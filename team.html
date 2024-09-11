@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SCLab - Members</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .gray-bg {
+            background-color: #f5f5f5;
+        }
+
+        img {
+            max-width: 70%;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        /* About Me ---------------------*/
+        .about-text h3 {
+            font-size: 45px;
+            font-weight: 700;
+            margin: 0 0 6px;
+        }
+
+        @media (max-width: 767px) {
+            .about-text h3 {
+                font-size: 35px;
+            }
+        }
+
+        .about-text h6 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 767px) {
+            .about-text h6 {
+                font-size: 18px;
+            }
+        }
+
+        .about-text p {
+            font-size: 18px;
+            max-width: 450px;
+        }
+
+        .about-text p mark {
+            font-weight: 600;
+            color: #20247b;
+        }
+
+        .about-list {
+            padding-top: 10px;
+        }
+
+        .about-list .media {
+            padding: 5px 0;
+        }
+
+        .about-list label {
+            color: #20247b;
+            font-weight: 600;
+            width: 88px;
+            margin: 0;
+            position: relative;
+        }
+
+        .about-list label:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 11px;
+            width: 1px;
+            height: 12px;
+            background: #20247b;
+            -moz-transform: rotate(15deg);
+            -o-transform: rotate(15deg);
+            -ms-transform: rotate(15deg);
+            -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+            margin: auto;
+            opacity: 0.5;
+        }
+
+        .about-list p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        @media (max-width: 991px) {
+            .about-avatar {
+                margin-top: 30px;
+            }
+        }
+
+        .about-section .counter {
+            padding: 22px 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+        }
+
+        .about-section .counter .count-data {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .about-section .counter .count {
+            font-weight: 700;
+            color: #20247b;
+            margin: 0 0 5px;
+        }
+
+        .about-section .counter p {
+            font-weight: 600;
+            margin: 0;
+        }
+
+        mark {
+            background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+            background-size: 100% 3px;
+            background-repeat: no-repeat;
+            background-position: 0 bottom;
+            background-color: transparent;
+            padding: 0;
+            color: currentColor;
+        }
+
+        .theme-color {
+            color: #fc5356;
+        }
+
+        .dark-color {
+            color: #20247b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="m-0">Chakrabarty Lab</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="research.html" class="nav-item nav-link">Research</a>
+                    <a href="publication.html" class="nav-item nav-link">Publications</a>
+                    <a href="team.html" class="nav-item nav-link active">Team</a>
+                    <a href="positions.html" class="nav-item nav-link">Positions</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-members">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h3 class="text-white display-3 mb-4">Members</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-white">Team</li>
+                </ol>
+        </div>
+    </div>
+    <!-- Header End -->
+    <section class="section about-section gray-bg" id="about">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6">
+                    <div class="about-avatar text-center">
+                        <img src="img/ToonMe_Suman1.jpg" title="" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-text go-to">
+                        <h2 class="dark-color">Dr. Suman Chakrabarty</h2>
+                        <h6 class="theme-color lead">
+                            Associate Proffesor &amp; group leader</h6>
+                        <p>Department of chemical and biological sciences</p>
+                        <p>
+                            <mark>Research and Scholarly Interests:</mark> Molecular Simulation, Statistical
+                            Thermodynamics,
+                            Machine Learning, Enhanced Sampling,
+                            Protein Signaling, Protein Folding, Self-Assembly
+                        </p>
+                    </div>
+                    <div class="main__socials">
+                        <a href="mailto:sumanc@bose.res.in">
+                            <button class="Link__email">
+                                <i class="fa fa-envelope email" aria-hidden="true" style="font-size: 30px;"></i>
+                            </button></a>
+                        <a href="https://www.facebook.com/namusite">
+                            <button class="Link__facebook">
+                                <i class="fab fa-facebook facebook" aria-hidden="true" style="font-size: 30px;"></i>
+                            </button></a>
+                        <a href="https://www.linkedin.com/in/namusite/">
+                            <button class="Link__linkedin">
+                                <i class="fab fa-linkedin linkedin" aria-hidden="true" style="font-size: 30px;"></i>
+                            </button></a>
+                        <!-- <a href="https://www.instagram.com/namusite/">
+                            <button class="Link__instagram">
+                                <i class="fab fa-instagram instagram" aria-hidden="true" style="font-size: 30px;"></i>
+                            </button></a> -->
+                        <a href="https://twitter.com/namusite">
+                            <button class="Link__twitter">
+                                <i class="fab fa-twitter twitter" aria-hidden="true" style="font-size: 30px;"></i>
+                            </button></a>
+                        <a href="https://github.com/namus">
+                            <button class="Link__github">
+                                <i class="fab fa-github github" aria-hidden="true" style="font-size: 30px;"></i>
+                            </button></a>
+                        <!-- <a href="https://www.youtube.com/user/sumanc">
+                            <button class="Link__youtube">
+                                <i class="fab fa-youtube" aria-hidden="true" style="font-size: 30px;"></i>
+                            </button></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Start -->
+
+ <div class="container-fluid blog py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h1 class="section-title px-3">PhD Scholars</h1>
+                </div>
+                <div class="row g-4 justify-content-center">                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <div class="blog-img-inner">
+                                    <img class="img-fluid w-100 rounded-top" src="./img/ToonMe_Krish1.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="blog-content border border-top-0 rounded-bottom p-4">
+                                <p class="mb-3">SRF/Chemistry</p>
+                                <a href="#" class="h4">Krishnendu Sinha</a>
+                                <p class="my-3">Protein signalling, hydrophobic interaction and solvation effects on protein conformational free energy landscape</p>
+                                <div class="guide-icon rounded-pill p-2" style="display: flex; margin: auto; text-align: center; justify-content: center;">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <div class="blog-img-inner">
+                                    <img class="img-fluid w-100 rounded-top" src="./img/ToonMe_Abhinandan.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="blog-content border border-top-0 rounded-bottom p-4">
+                                <p class="mb-3">SRF/Chemistry</p>
+                                <a href="#" class="h4">Abhinandan Das</a>
+                                <p class="my-3">Acetylcholinesterase - Rational design of inhibitors, protein-ligand interaction and dynamics</p>
+                                <div class="guide-icon rounded-pill p-2" style="display: flex; margin: auto; text-align: center; justify-content: center;">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <div class="blog-img-inner">
+                                    <img class="img-fluid w-100 rounded-top" src="./img/ToonMe_Dibyendu.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="blog-content border border-top-0 rounded-bottom p-4">
+                                <p class="mb-3">SRF/Physics</p>
+                                <a href="#" class="h4">Dibyendu Maity</a>
+                                <p class="my-3">Nucleation and growth; Crystalliszation; Enhanced sampling; Machine leaning</p>
+                                <div class="guide-icon rounded-pill p-2" style="display: flex; margin: auto; text-align: center; justify-content: center;">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:dibyendumaity1999@bose.res.in"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <div class="blog-img-inner">
+                                    <img class="img-fluid w-100 rounded-top" src="./img/ToonMe_Sutanu.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="blog-content border border-top-0 rounded-bottom p-4">
+                                <p class="mb-3">SRF/Chemistry</p>
+                                <a href="#" class="h4">Sutanu Mukhopadhyay</a>
+                                <p class="my-3">Allostery, Deno-drug design, Machine Learning</p>
+                                <div class="guide-icon rounded-pill p-2" style="display: flex; margin: auto; text-align: center; justify-content: center;">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <div class="blog-img-inner">
+                                    <img class="img-fluid w-100 rounded-top" src="./img/ToonMe_Sreyan.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="blog-content border border-top-0 rounded-bottom p-4">
+                                <p class="mb-3">SRF/Physics</p>
+                                <a href="#" class="h4">Sreyan Bhowmick</a>
+                                <p class="my-3">Dynamic allostery, Protein signaling, Kinetic modelling</p>
+                                <div class="guide-icon rounded-pill p-2" style="display: flex; margin: auto; text-align: center; justify-content: center;">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <div class="blog-img-inner">
+                                    <img class="img-fluid w-100 rounded-top" src="./img/ToonMe_sayari.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="blog-content border border-top-0 rounded-bottom p-4">
+                                <p class="mb-3">JRF/Physics</p>
+                                <a href="#" class="h4">Sayari Bhattacharya</a>
+                                <p class="my-3">Protein folding, Protein aggregation, Protein-ligand interaction, Intrinsically disordered Proteins</p>
+                                <div class="guide-icon rounded-pill p-2" style="display: flex; margin: auto; text-align: center; justify-content: center;">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <div class="blog-img-inner">
+                                    <img class="img-fluid w-100 rounded-top" src="./img/ToonMe_Shaheerah.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="blog-content border border-top-0 rounded-bottom p-4">
+                                <p class="mb-3">JRF/Physics</p>
+                                <a href="#" class="h4">Shaheerah Shahid</a>
+                                <p class="my-3">Machine learning in molecular dynamics, Protein folding, ANN prediction of drug like molecules</p>
+                                <div class="guide-icon rounded-pill p-2" style="display: flex; margin: auto; text-align: center; justify-content: center;">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div></div></div></div><div class="container-fluid guide py-2">
+                <div class="container py-2">
+                    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                        <h1 class="section-title px-3">Postdoctoral Fellows</h1>
+                    </div>
+                    <div class="row g-4 justify-content-center">                <div class="col-md-6 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects">
+                                <img src="./img/ToonMe_Saheb.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner" style="margin-top:10px;">
+                            <p class="mb-0">Postdoctoral Fellow</p>
+                            <h4 class="mt-0">Dr. Saheb Dutta</h4>
+                            <p class="mb-0"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <div class="col-md-6 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects">
+                                <img src="./img/ToonMe_Sameer2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner" style="margin-top:10px;">
+                            <p class="mb-0">Postdoctoral Fellow</p>
+                            <h4 class="mt-0">Dr. Sameer Ahmed</h4>
+                            <p class="mb-0"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div></div><div class="container-fluid guide py-2">
+                <div class="container py-2">
+                    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                        <h1 class="section-title px-3">Project Students</h1>
+                    </div>
+                    <div class="row g-4 justify-content-center">                <div class="col-md-6 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects">
+                                <img src="./img/ToonMe_Muskan.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="mailto:#"><i
+                                        class="fa fa-envelope"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner" style="margin-top:10px;">
+                            <p class="mb-0">TRC Project</p>
+                            <h4 class="mt-0">Muskan Sharma</h4>
+                            <p class="mb-0">Drug designing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div></div><div class="container-fluid guide py-2">
+                <div class="container py-2">
+                    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                        <h1 class="section-title px-3">Alumni</h1>
+                    </div>
+                    <div class="row g-4 justify-content-center">                <div class="col-md-5 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects text-center">
+                                <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=SVI-s2AAAAAJ&citpid=3" class="img-fluid w-100" alt="Image" style="max-height:250px; object-fit:cover;">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner">
+                                <p class="mb-0 mt-2"><strong style="color:black;margin:auto; padding:auto;">Role: </strong>PhD student and Postdoc</p>
+                                <h4 class="mt-0">Amit Kumawat</h4>
+                                <p class="mb-0"><strong style="color:red;">Current: </strong>Fixed-term researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <div class="col-md-5 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects text-center">
+                                <img src="./img/vh.jpeg" class="img-fluid w-100" alt="Image" style="max-height:250px; object-fit:cover;">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner">
+                                <p class="mb-0 mt-2"><strong style="color:black;margin:auto; padding:auto;">Role: </strong>PhD student</p>
+                                <h4 class="mt-0">Vrushali Hande</h4>
+                                <p class="mb-0"><strong style="color:red;">Current: </strong>Fixed-term researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <div class="col-md-5 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects text-center">
+                                <img src="https://namusite.weebly.com/uploads/9/9/4/8/99489940/editor/ipsita.jpg?1581158715" class="img-fluid w-100" alt="Image" style="max-height:250px; object-fit:cover;">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner">
+                                <p class="mb-0 mt-2"><strong style="color:black;margin:auto; padding:auto;">Role: </strong>Postdoc</p>
+                                <h4 class="mt-0">Ipsita Basu</h4>
+                                <p class="mb-0"><strong style="color:red;">Current: </strong>Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <div class="col-md-5 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects text-center">
+                                <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=5Y4YV9YAAAAJ&citpid=2" class="img-fluid w-100" alt="Image" style="max-height:250px; object-fit:cover;">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner">
+                                <p class="mb-0 mt-2"><strong style="color:black;margin:auto; padding:auto;">Role: </strong>TRC Project</p>
+                                <h4 class="mt-0">Shivam Pandit</h4>
+                                <p class="mb-0"><strong style="color:red;">Current: </strong>Researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <div class="col-md-5 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects text-center">
+                                <img src="https://namusite.weebly.com/uploads/9/9/4/8/99489940/published/kankana.jpg" class="img-fluid w-100" alt="Image" style="max-height:250px; object-fit:cover;">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner">
+                                <p class="mb-0 mt-2"><strong style="color:black;margin:auto; padding:auto;">Role: </strong>TRC Project</p>
+                                <h4 class="mt-0">Kankana Bhattacharjee</h4>
+                                <p class="mb-0"><strong style="color:red;">Current: </strong>PhD student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                <div class="col-md-5 col-lg-3">
+                    <div class="guide-item">
+                        <div class="guide-img">
+                            <div class="guide-img-efects text-center">
+                                <img src="https://namusite.weebly.com/uploads/9/9/4/8/99489940/published/shounak.jpg?250" class="img-fluid w-100" alt="Image" style="max-height:250px; object-fit:cover;">
+                            </div>
+                            <div class="guide-icon rounded-pill p-2">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i
+                                        class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4">
+                            <div class="guide-title-inner">
+                                <p class="mb-0 mt-2"><strong style="color:black;margin:auto; padding:auto;">Role: </strong>Project Student</p>
+                                <h4 class="mt-0">Shounak Mukherjee</h4>
+                                <p class="mb-0"><strong style="color:red;">Current: </strong>Researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div></div>
+    <!-- Member End -->
+    <div id="watermark">
+        <h1 style="color:red">Under active development</h1>
+    </div>
+    <!-- Positions Start -->
+    <div class="container-fluid booking py-5">
+        <div class="container text-center py-5">
+            <div class="mx-auto text-center" style="max-width: 900px;">
+                <!-- <h5 class="subscribe-title text-light px-3">Join Us</h5> -->
+                <h1 class="text-white mb-4">We Need You!</h1>
+                <p class="text-white mb-5">
+                    We are looking for bright and motivated students who are curious to unravel the mysteries of nature
+                    from a molecular
+                    point of view! Interest in physical chemistry, chemical physics, biophysics, statistical mechanics
+                    and programming are
+                    desirable. For more information, please visit the <a href="positions.html"
+                        style="color: #a9bdff; font-weight: bold;">positions</a> page.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Positions End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-body py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12 text-center mb-md-0">
+                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">namusite.com</a>, All right
+                    reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "New member in the group",
+        "category": "info",
+        "content": "Shaheerah Shahid joins as a JRF in the group.",
+        "message": "Welcome Shaheerah!"
+    },
+    {
+        "title": "Dr. Chakrabarty receives award",
+        "category": "award",
+        "content": "Dr. Suman Chakrabarty received the CRSI Bronze medal 2025",
+        "link": "https://x.com/ChemResSocIndia/status/1809264682374738052"
+    },
+    {
+        "title": "New Paper",
+        "category": "paper",
+        "content": "K. Sinha published a paper in Chemical Physics Impact",
+        "link": "https://scholar.google.co.in/citations?view_op=view_citation&hl=en&user=dcj-bnsAAAAJ&sortby=pubdate&citation_for_view=dcj-bnsAAAAJ:2_BaaiyHPJIC"
+    },
+    {
+        "title": "TRC project position open",
+        "category": "position",
+        "content": "We have a position open for a project student under the TRC project scheme",
+        "link": "https://www.bose.res.in/departments/TRC/index.jsp"
+    },
+    {
+        "title": "News2",
+        "category": "position",
+        "content": "Some other things",
+        "link": "https://www.bose.res.in/departments/TRC/index.jsp"
+    }
+]
