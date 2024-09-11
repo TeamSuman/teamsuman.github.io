@@ -98,17 +98,6 @@
     ], 
 
     "project": [
-        {
-            "name": "Muskan Sharma",
-            "desig": "TRC Project",
-            "img": "./img/ToonMe_Muskan.jpg",
-            "fb": "#",
-            "tw": "#",
-            "mail": "#",
-            "linkedin": "#",
-            "interest": "Drug designing",
-            "role": "PhD student"
-        }
     ], 
 
     "alumni": [
@@ -143,6 +132,17 @@
         "desig": "Researcher",
         "role":"Project Student",
         "mail":"#",
-        "img": "https://namusite.weebly.com/uploads/9/9/4/8/99489940/published/shounak.jpg?250"}
+        "img": "https://namusite.weebly.com/uploads/9/9/4/8/99489940/published/shounak.jpg?250"},
+        {
+            "name": "Muskan Sharma",
+            "desig": "TRC Project",
+            "img": "./img/ToonMe_Muskan.jpg",
+            "fb": "#",
+            "tw": "#",
+            "mail": "#",
+            "linkedin": "#",
+            "interest": "Drug designing",
+            "role": "Project Student"
+        }
     ]
 }
