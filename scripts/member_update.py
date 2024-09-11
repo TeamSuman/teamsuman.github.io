@@ -97,14 +97,14 @@ def return_head_tail(mem_type, style = 1):
         section_head = f"""<div class="container-fluid guide py-2">
                 <div class="container py-2">
                     <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                        <h1 class="section-title px-3">{mem_type}</h1>
+                        <h5 class="section-title px-3">{mem_type}</h5>
                     </div>
                     <div class="row g-4 justify-content-center">"""
     else: 
         section_head = f""" <div class="container-fluid blog py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h1 class="section-title px-3">{mem_type}</h1>
+                    <h5 class="section-title px-3">{mem_type}</h5>
                 </div>
                 <div class="row g-4 justify-content-center">"""
 
