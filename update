@@ -2,9 +2,10 @@
 python ./scripts/announce_update.py
 python ./scripts/member_update.py
 python ./scripts/publication_update.py
+python ./scripts/collab_update.py
 push ()
 {
-  git add . && git commit -m $1 && git push origin main  
+  git add . && git commit -m $1 && git push origin develop  
 }
 
 # Note that we use "$@" to let each command-line parameter expand to a

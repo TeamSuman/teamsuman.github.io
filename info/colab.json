@@ -1,0 +1,34 @@
+{
+    "colab": [
+        {
+            "name": "Ruth Nussinov",
+            "desig": "Professor and Senior Principal Investigator",
+            "univ": "National Cancer Institute and Tel Aviv University",
+            "img": "./img/ruth.jpeg"
+        },
+        {
+            "name": "Gautam Basu",
+            "desig": "Professor (retired)",
+            "univ": "Biophysics, Bose Institute",
+            "img": "./img/gbasu.jpg"
+        },
+        {
+            "name": "Supratim Banerjee",
+            "desig": "Associate Professor",
+            "univ": "DCS, IISERK",
+            "img": "./img/supra.png"
+        },
+        {
+            "name": "Rajnish Kumar",
+            "desig": "Professor",
+            "univ": "Chemical Engineering, IITM",
+            "img": "./img/rajnish.jpg"
+        },
+        {
+            "name": "Dibyendu Das",
+            "desig": "Associate Professor",
+            "univ": "Chemistry, IISERK",
+            "img": "./img/ddas.jpeg"
+        }
+    ]
+}
