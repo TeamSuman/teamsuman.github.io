@@ -31,7 +31,7 @@ def return_head_tail():
     return section_head, section_tail
 
 infos = json.load(open('./info/colab.json'))
-template = open('./templates/index_template.html').readlines()
+template = open('./index.html').readlines()
 
 for i, line in enumerate(template):
     if "<!-- Collaborator Start -->" in line:
