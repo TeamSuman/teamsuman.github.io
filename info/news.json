@@ -1,4 +1,10 @@
-[
+[{
+        "title": "Param Boson is working",
+        "category": "info",
+        "content": "New cluster added",
+        "message": "Hurray!"
+    },
+
     {
         "title": "New member in the group",
         "category": "info",

@@ -25,10 +25,10 @@
             "img": "./img/rajnish.jpg"
         },
         {
-            "name": "Dibyendu Das",
+            "name": "Rajib Kumar Mitra",
             "desig": "Associate Professor",
-            "univ": "Chemistry, IISERK",
-            "img": "./img/ddas.jpeg"
+            "univ": "SNBNCBS",
+            "img": "./img/rajib.jpg"
         }
     ]
 }
