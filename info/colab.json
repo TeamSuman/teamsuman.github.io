@@ -23,6 +23,12 @@
             "desig": "Professor",
             "univ": "Chemical Engineering, IITM",
             "img": "./img/rajnish.jpg"
+        },
+        {
+            "name": "Dibyendu Das",
+            "desig": "Associate Professor",
+            "univ": "Chemistry, IISERK",
+            "img": "./img/ddas.jpeg"
         }
     ]
 }
