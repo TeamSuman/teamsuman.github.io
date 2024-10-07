@@ -1,4 +1,5 @@
 import os
+
 from django.conf import settings  # type: ignore
 from django.core.mail import send_mail  # type: ignore
 from django.http import HttpResponse, HttpResponseRedirect  # type: ignore
@@ -9,6 +10,8 @@ from .forms import ContactForm
 from .models import PHD, Alumni, Colab, Gallery, News, PostDoc, Project, Publication
 
 sync = False
+
+
 def error_404(request, exception):
     return render(request, "home/404.html", status=404)
 
@@ -32,10 +35,10 @@ def home(request):
     else:
         form = ContactForm()
     text = render(
-            request,
-            "home/home.html",
-            {"object": query, "news": news, "form": form, "result": result},
-        )
+        request,
+        "home/home.html",
+        {"object": query, "news": news, "form": form, "result": result},
+    )
     if sync:
         with open("index.html", "wb") as f:
             f.write(text.content)
@@ -48,7 +51,7 @@ def team(request):
     project = Project.objects.all()
     alumni = Alumni.objects.all()
 
-    text =  render(
+    text = render(
         request,
         "home/team.html",
         {"phd": phd, "postdoc": postdoc, "project": project, "alumni": alumni},
@@ -77,9 +80,10 @@ def contacts(request):
         form = ContactForm()
     text = render(request, "home/contact.html", {"form": form, "result": result})
     if sync:
-        with open("contact.html", "wb") as f:
+        with open("contacts.html", "wb") as f:
             f.write(text.content)
     return text
+
 
 def research(request):
     text = render(request, "home/research.html")

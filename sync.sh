@@ -3,7 +3,7 @@ rm *html
 # Change sync status in views.py
 sed -i "s/sync = False/sync = True/" home/views.py
 #making the server up
-python manage.py runserver & 
+nohup python manage.py runserver & 
 # Render the pages and save them
 content=`wget -O - http://127.0.0.1:8000/`
 wait
