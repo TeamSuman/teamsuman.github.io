@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,22 +19,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+    
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-<style>
-    a.fill-div {
-    display: block;
-    margin: auto;
-    display:grid; 
-}
-</style>
+    <link href="/static/css/style.css" rel="stylesheet">
+
+    <style>
+        a.fill-div {
+            display: block;
+            margin: auto;
+            display: grid;
+        }
+    </style>
 </head>
 
 <body>
@@ -60,13 +60,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="research.html" class="nav-item nav-link active">Research</a>
-                    <a href="publication.html" class="nav-item nav-link">Publications</a>
-                    <a href="team.html" class="nav-item nav-link">Team</a>
-                    <a href="positions.html" class="nav-item nav-link">Positions</a>
-                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/news" class="nav-item nav-link">News</a>
+                    <a href="/research" class="nav-item nav-link active">Research</a>
+                    <a href="/publication" class="nav-item nav-link">Publications</a>
+                    <a href="/softwares" class="nav-item nav-link">Softwares</a>
+                    <a href="/team" class="nav-item nav-link">Team</a>
+                    <a href="/positions" class="nav-item nav-link">Positions</a>
+                    <a href="/gallery" class="nav-item nav-link">Gallery</a>
+                    <a href="/contacts" class="nav-item nav-link">Contact</a>
                 </div>
             </div>
         </nav>
@@ -78,7 +80,7 @@
         <div class="container text-center py-5" style="max-width: 900px;">
             <h3 class="text-white display-3 mb-4">Research</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active text-white">Research</li>
                 </ol>
         </div>
@@ -114,8 +116,7 @@
                             <a class="fill-div" href="#" data-bs-toggle="modal" data-bs-target="#research1">
                                 <div class="col-md-6 col-lg-4">
                                     <div class="national-item">
-                                        <img src="./img/research1.webp"
-                                            class="img-fluid w-100 rounded" alt="Image">
+                                        <img src="/static/img/research1.webp" class="img-fluid w-100 rounded" alt="Image">
                                         <div class="national-content w-100">
                                             <div class="national-info">
                                                 <h4 class="text-white mb-2">(Bio)molecular recognition and
@@ -130,8 +131,7 @@
                             </a>
                             <div class="col-md-6 col-lg-4">
                                 <div class="national-item">
-                                    <img src="./img/research2.png"
-                                        class="img-fluid w-100 rounded" alt="Image">
+                                    <img src="/static/img/research2.png" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="national-content">
                                         <div class="national-info">
                                             <h4 class="text-white mb-2">Properties of interfacial and
@@ -144,8 +144,7 @@
                             </div>
                             <div class="col-md-6 col-lg-4">
                                 <div class="national-item">
-                                    <img src="./img/research3.webp"
-                                        class="img-fluid w-100 rounded" alt="Image">
+                                    <img src="/static/img/research3.webp" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="national-content">
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">Nucleation and growth in phase
@@ -158,8 +157,7 @@
                             </div>
                             <div class="col-md-6 col-lg-4">
                                 <div class="national-item">
-                                    <img src="./img/research4.webp"
-                                        class="img-fluid w-100 rounded" alt="Image">
+                                    <img src="/static/img/research4.webp" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="national-content">
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">Protein misfolding and
@@ -173,7 +171,7 @@
                             </div>
                             <div class="col-md-6 col-lg-4">
                                 <div class="national-item">
-                                    <img src="img/figure2.jpg" class="img-fluid w-100 rounded" alt="Image">
+                                    <img src="/static/img/figure2.jpg" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="national-content">
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2"> Machine Learning in molecular
@@ -186,7 +184,7 @@
                             </div>
                             <div class="col-md-6 col-lg-4">
                                 <div class="national-item">
-                                    <img src="img/toc.png" class="img-fluid w-100 rounded" alt="Image">
+                                    <img src="/static/img/toc.png" class="img-fluid w-100 rounded" alt="Image">
                                     <div class="national-content">
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">De-NOVO Drug design and Property
@@ -220,7 +218,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
-                        <img src="./img/research1.webp" alt="Image" class="img-fluid"
+                        <img src="/static/img/research1.webp" alt="Image" class="img-fluid"
                             style="background-color: #b2fcff;width: 100%; height: 30vh; object-fit: cover;">
                         <div class="content-text p-4">
 
@@ -289,14 +287,13 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="/static/js/main.js"></script>
 </body>
 
 </html>

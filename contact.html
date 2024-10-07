@@ -8,26 +8,25 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    
+    
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,13 +52,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="research.html" class="nav-item nav-link">Research</a>
-                    <a href="publication.html" class="nav-item nav-link">Publications</a>
-                    <a href="team.html" class="nav-item nav-link">Team</a>
-                    <a href="positions.html" class="nav-item nav-link">Positions</a>
-                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/news" class="nav-item nav-link">News</a>
+                    <a href="/research" class="nav-item nav-link">Research</a>
+                    <a href="/publication" class="nav-item nav-link">Publications</a>
+                    <a href="/softwares" class="nav-item nav-link">Softwares</a>
+                    <a href="/team" class="nav-item nav-link">Team</a>
+                    <a href="/positions" class="nav-item nav-link">Positions</a>
+                    <a href="/gallery" class="nav-item nav-link">Gallery</a>
+                    <a href="/contacts" class="nav-item nav-link active">Contact</a>
                 </div>
             </div>
         </nav>
@@ -72,7 +73,7 @@
         <div class="container text-center py-5" style="max-width: 900px;">
             <h3 class="text-white display-3 mb-4">Contact Us</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                     <li class="breadcrumb-item active text-white">Contact</li>
                 </ol>
@@ -118,43 +119,40 @@
                         We are open to work with you. Please feel free to contact us for any query.
                     </p>
                     <div class="form">
-                        <form action="https://formspree.io/f/xwkzeonq" id="my-form" method="POST" role="form"
-                            class="contactForm" novalidate="novalidate">
+                        <form id="my-form" method="POST" role="form" class="contactForm" novalidate="novalidate">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="rW9OY7EYEMlBScCnsmGC25N87i7dGqszUJAkZU8gwbU7IsYD0E5LRFON8erFrR4C">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="name" name="name"
-                                            placeholder="Your Name">
+                                        <input type="text" name="name" class="form-control" placeholder="Your Name" name="name" id="name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="email" name="email"
-                                            placeholder="Your Email">
+                                        <input type="text" name="email" class="form-control" placeholder="Your Email" name="email" id="email" maxlength="320" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" name="phone" id="subject"
-                                            placeholder="Subject">
+                                        <input type="text" name="subject" class="form-control" placeholder="Subject" name="subject" id="subject" required>
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here"
-                                            name="message" id="message" style="height: 160px"></textarea>
+                                        <!-- <textarea class="form-control border-0" placeholder="Leave a message here"
+                                                                    name="message" id="message" style="height: 160px"></textarea> -->
+                                        <textarea name="message" cols="40" rows="10" class="form-control" placeholder="Message!" name="message" id="message" style="height: 160px;" required>
+</textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                                 </div>
-                                <p class="text-center"
-                                    style="color: #00e27b;font-family: 'Spectral'; font-weight: bold;"
-                                    id="my-form-status"></p>
+                                <p class="text-center" style="color: #00e27b;font-family: 'Spectral'; font-weight: bold;" id="my-form-status"></p>
                             </div>
                         </form>
                     </div>
@@ -176,7 +174,7 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="d-flex align-items-center">
+                    <a href="/" class="d-flex align-items-center">
                         <span class="sitename">Chakrabarty Lab</span>
                     </a>
                     <div class="footer-contact pt-3">
@@ -261,10 +259,10 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
     <script>
         var form = document.getElementById("my-form");
 
@@ -299,7 +297,7 @@
     </script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="/static/js/main.js"></script>
 </body>
 
 </html>
