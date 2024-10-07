@@ -20,9 +20,16 @@ from django.contrib import admin
 from django.urls import include, path, re_path
 
 #from dynamic import views
+handler404 = 'home.views.error_404'
 
 urlpatterns = [
     re_path(r"^admin/", admin.site.urls),
     re_path("", include("home.urls"))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += (
+        static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) +
+        static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+        )
 

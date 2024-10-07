@@ -300,7 +300,7 @@
                                     <p class="mb-0">{{ x.role }}</p>
                                     <span class="job_post text-small"><strong><span style="color: green;">Currently: </span>{{ x.desig }}</strong></span>
                                     <p class="mb-0">{{ x.mail }}</p>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -364,9 +364,12 @@
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
     <script>
+     window.onload = function (){
         var photo = document.getElementById('photo');
         var photo_text = document.getElementById('photo_text');
         photo_text.style.maxWidth = photo.width + 'px';
+
+     };
     </script>
 </body>
 
