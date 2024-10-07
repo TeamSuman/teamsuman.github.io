@@ -1,3 +1,4 @@
+import os
 from django.conf import settings  # type: ignore
 from django.core.mail import send_mail  # type: ignore
 from django.http import HttpResponse, HttpResponseRedirect  # type: ignore
@@ -7,7 +8,7 @@ from django.shortcuts import redirect, render  # type: ignore
 from .forms import ContactForm
 from .models import PHD, Alumni, Colab, Gallery, News, PostDoc, Project, Publication
 
-
+sync = False
 def error_404(request, exception):
     return render(request, "home/404.html", status=404)
 
@@ -30,11 +31,15 @@ def home(request):
             return HttpResponseRedirect(reverse("home"))
     else:
         form = ContactForm()
-    return render(
-        request,
-        "home/home.html",
-        {"object": query, "news": news, "form": form, "result": result},
-    )
+    text = render(
+            request,
+            "home/home.html",
+            {"object": query, "news": news, "form": form, "result": result},
+        )
+    if sync:
+        with open("index.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 
 def team(request):
@@ -43,11 +48,15 @@ def team(request):
     project = Project.objects.all()
     alumni = Alumni.objects.all()
 
-    return render(
+    text =  render(
         request,
         "home/team.html",
         {"phd": phd, "postdoc": postdoc, "project": project, "alumni": alumni},
     )
+    if sync:
+        with open("team.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 
 def contacts(request):
@@ -66,32 +75,58 @@ def contacts(request):
             return HttpResponseRedirect(reverse("home"))
     else:
         form = ContactForm()
-    return render(request, "home/contact.html", {"form": form, "result": result})
-
+    text = render(request, "home/contact.html", {"form": form, "result": result})
+    if sync:
+        with open("contact.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 def research(request):
-    return render(request, "home/research.html")
+    text = render(request, "home/research.html")
+    if sync:
+        with open("research.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 
 def news(request):
     news = News.objects.all().order_by("-date")
-    return render(request, "home/news.html", {"news": news})
+    text = render(request, "home/news.html", {"news": news})
+    if sync:
+        with open("news.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 
 def publication(request):
     publication = Publication.objects.all()
-    return render(request, "home/publication.html", {"publication": publication})
+    text = render(request, "home/publication.html", {"publication": publication})
+    if sync:
+        with open("publication.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 
 def gallery(request):
     gallery = Gallery.objects.all().order_by("-date")
-    return render(request, "home/gallery.html", {"gallery": gallery})
+    text = render(request, "home/gallery.html", {"gallery": gallery})
+    if sync:
+        with open("gallery.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 
 def softwares(request):
-    return render(request, "home/softwares.html")
+    text = render(request, "home/softwares.html")
+    if sync:
+        with open("softwares.html", "wb") as f:
+            f.write(text.content)
+    return text
 
 
 def positions(request):
-    return render(request, "home/position.html")
-
+    text = render(request, "home/position.html")
+    if sync:
+        with open("positions.html", "wb") as f:
+            f.write(text.content)
+    return text
