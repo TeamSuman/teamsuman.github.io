@@ -20,10 +20,10 @@ class PHD(models.Model):
     desig = models.TextField()
     interest = models.TextField()
     subject = models.TextField()
-    mail = models.EmailField()
-    github = models.URLField()
-    twitter = models.URLField()
-    linkedin = models.URLField()
+    mail = models.EmailField(null=True, blank=True)
+    github = models.URLField(null=True, blank=True)
+    twitter = models.URLField(null=True, blank=True)
+    linkedin = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -34,10 +34,10 @@ class PostDoc(models.Model):
     degree = models.TextField()
     interest = models.TextField()
     subject = models.TextField()
-    mail = models.EmailField()
-    github = models.URLField()
-    twitter = models.URLField()
-    linkedin = models.URLField()
+    mail = models.EmailField(null=True, blank=True)
+    github = models.URLField(null=True, blank=True)
+    twitter = models.URLField(null=True, blank=True)
+    linkedin = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -48,10 +48,10 @@ class Project(models.Model):
     desig = models.TextField()
     interest = models.TextField()
     subject = models.TextField()
-    mail = models.EmailField()
-    github = models.URLField()
-    twitter = models.URLField()
-    linkedin = models.URLField()
+    mail = models.EmailField(null=True, blank=True)
+    github = models.URLField(null=True, blank=True)
+    twitter = models.URLField(null=True, blank=True)
+    linkedin = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -62,7 +62,7 @@ class Alumni(models.Model):
     desig = models.TextField()
     role = models.TextField()
     subject = models.TextField()
-    mail = models.EmailField()
+    mail = models.EmailField(null=True, blank=True)
 
 
     def __str__(self):

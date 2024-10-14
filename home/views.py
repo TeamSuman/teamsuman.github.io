@@ -5,6 +5,7 @@ from django.core.mail import send_mail  # type: ignore
 from django.http import HttpResponse, HttpResponseRedirect  # type: ignore
 from django.shortcuts import reverse  # type: ignore
 from django.shortcuts import redirect, render  # type: ignore
+from django.template.loader import render_to_string
 
 from .forms import ContactForm
 from .models import PHD, Alumni, Colab, Gallery, News, PostDoc, Project, Publication
@@ -28,7 +29,7 @@ def home(request):
                 f"Via website : Message from {form.cleaned_data['name']} <{form.cleaned_data['email']}>\n\n"
                 f"{form.cleaned_data['message']}",  # message
                 {form.cleaned_data["email"]},  # from email
-                ["sumanc@bose.res.in"],  # replace with your email
+                ["dibyendumaity1999@bose.res.in"],  # replace with your email
             )
             result = "Your message has been sent!"
             return HttpResponseRedirect(reverse("home"))
@@ -67,15 +68,7 @@ def contacts(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            send_mail(
-                form.cleaned_data["subject"],  # subject
-                f"Message from {form.cleaned_data['name']} <{form.cleaned_data['email']}>\n\n"
-                f"{form.cleaned_data['message']}",  # message
-                None,  # from email
-                ["dibyendumaity1999@gmail.com"],  # replace with your email
-            )
-            result = "Your message has been sent!"
-            return HttpResponseRedirect(reverse("home"))
+            return formated_mail(form)
     else:
         form = ContactForm()
     text = render(request, "home/contact.html", {"form": form, "result": result})
@@ -83,6 +76,34 @@ def contacts(request):
         with open("contacts.html", "wb") as f:
             f.write(text.content)
     return text
+
+
+# TODO Rename this here and in `contacts`
+def formated_mail(form):
+    subject = (form.cleaned_data["subject"],)
+    from_name = form.cleaned_data["name"]
+    from_email = form.cleaned_data["email"]
+    message = form.cleaned_data["message"]
+    html_content = render_to_string(
+        "home/email.html",
+        context={
+            "name": from_name,
+            "email": from_email,
+            "message": message,
+            "subject": subject,
+        },
+    )
+
+    send_mail(
+        form.cleaned_data["subject"],  # subject
+        f"Message from {form.cleaned_data['name']} <{form.cleaned_data['email']}>\n\n"
+        f"{form.cleaned_data['message']}",  # message
+        None,  # from email
+        ["dibyendumaity1999@bose.res.in"],  # replace with your email
+        html_message=html_content,
+    )
+    result = "Your message has been sent!"
+    return HttpResponseRedirect(reverse("home"))
 
 
 def research(request):

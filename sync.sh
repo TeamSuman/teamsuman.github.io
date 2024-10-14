@@ -33,7 +33,7 @@ sync ()
     kill -9 $(lsof -t -i:8000)
 }
 #export local file to pythonanywhere.com
-## rsync -avzhe ssh ./* teamsuman@ssh.pythonanywhere.com:/home/teamsuman/website/ --exclude "*settings.py"
+#rsync -avzhe ssh ./* teamsuman@ssh.pythonanywhere.com:/home/teamsuman/website/ --exclude "*settings.py"
 #import files from pythonanywhere to local repository
 ## rsync -avzhe ssh teamsuman@ssh.pythonanywhere.com:/home/teamsuman/website . 
 

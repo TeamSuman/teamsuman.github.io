@@ -171,17 +171,17 @@
         }
 
 
-/* Scale from center */
- a::after {
-  opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
-}
+        /* Scale from center */
+        a::after {
+            opacity: 1;
+            transform: scale(0);
+            transform-origin: center;
+        }
 
- a:hover::after,
-    a:focus::after{
-  transform: scale(1);
-}
+        a:hover::after,
+        a:focus::after {
+            transform: scale(1);
+        }
     </style>
 </head>
 
@@ -208,13 +208,16 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="{% url 'home' %}" class="nav-item nav-link active" style="text-decoration: none;">Home</a>
-                    <a href="{% url 'news' %}" class="nav-item nav-link" style="text-decoration: none;" >News</a>
+                    <a href="{% url 'news' %}" class="nav-item nav-link" style="text-decoration: none;">News</a>
                     <a href="{% url 'research' %}" class="nav-item nav-link" style="text-decoration: none;">Research</a>
-                    <a href="{% url 'publication' %}" class="nav-item nav-link" style="text-decoration: none;">Publications</a>
-                    <a href="{% url 'softwares' %}" class="nav-item nav-link" style="text-decoration: none;">Softwares</a>
+                    <a href="{% url 'publication' %}" class="nav-item nav-link"
+                        style="text-decoration: none;">Publications</a>
+                    <a href="{% url 'softwares' %}" class="nav-item nav-link"
+                        style="text-decoration: none;">Softwares</a>
                     <a href="{% url 'team' %}" class="nav-item nav-link" style="text-decoration: none;">Team</a>
-                    <a href="{% url 'positions' %}" class="nav-item nav-link" style="text-decoration: none;" >Positions</a>
-                    <a href="{% url 'gallery' %}" class="nav-item nav-link" style="text-decoration: none;" >Gallery</a>
+                    <a href="{% url 'positions' %}" class="nav-item nav-link"
+                        style="text-decoration: none;">Positions</a>
+                    <a href="{% url 'gallery' %}" class="nav-item nav-link" style="text-decoration: none;">Gallery</a>
                     <a href="{% url 'contacts' %}" class="nav-item nav-link" style="text-decoration: none;">Contact</a>
                 </div>
             </div>
@@ -336,7 +339,8 @@
                                         <div class="national-info">
                                             <h4 class="text-white mb-2">(Bio)molecular recognition and
                                                 signalling</h4>
-                                            <a href="{% url 'research' %}" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="{% url 'research' %}" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -350,7 +354,8 @@
                                         <div class="national-info">
                                             <h4 class="text-white mb-2">Properties of interfacial and
                                                 confined water</h4>
-                                            <a href="{% url 'research' %}" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="{% url 'research' %}" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -364,7 +369,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">Nucleation and growth in phase
                                                 transition</h5>
-                                            <a href="{% url 'research' %}" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="{% url 'research' %}" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -378,7 +384,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">Protein misfolding and
                                                 aggregation</h5>
-                                            <a href="{% url 'research' %}" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="{% url 'research' %}" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More! <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -392,7 +399,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2"> Machine Learning in molecular
                                                 dynamics</h5>
-                                            <a href="{% url 'research' %}" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="{% url 'research' %}" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -405,7 +413,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">De-NOVO Drug design and Property
                                                 prediction</h5>
-                                            <a href="{% url 'research' %}" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="{% url 'research' %}" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -416,8 +425,8 @@
                 </div>
 
                 <div class="d-flex align-items-center justify-content-center py-5">
-                    <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5"
-                        href="research.html" style="text-decoration: none;">Discover
+                    <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="research.html"
+                        style="text-decoration: none;">Discover
                         More</a>
                 </div>
             </div>
@@ -497,65 +506,6 @@
                     </div>
                 </div>
                 {% endfor %}
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid booking py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <h5 class="section-booking-title pe-3">contact us</h5>
-                    <h1 class="text-white mb-4">Send us a message</h1>
-                    <p class="text-white mb-4">
-                        We are open to work with new collaborators. If you are interested in working with us, please
-
-                        <a href="contact.html" class="link"><span class="text-warning">contact us.</span></a>
-
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="form">
-
-                        <form id="my-form" method="POST" role="form"
-                            class="contactForm" novalidate="novalidate">
-                            {% csrf_token %}
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                            {{ form.name }}
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        {{ form.email }}
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                            {{ form.subject }}
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <!-- <textarea class="form-control border-0" placeholder="Leave a message here"
-                                            name="message" id="message" style="height: 160px"></textarea> -->
-                                            {{ form.message }}
-                                            <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                                <p class="text-center"
-                                    style="color: #00e27b;font-family: 'Spectral'; font-weight: bold;"
-                                    id="my-form-status">{{ result }}</p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
