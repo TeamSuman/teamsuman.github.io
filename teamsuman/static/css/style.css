@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow);
+@import url(https://fonts.googleapis.com/css?family=Jost);
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -155,12 +157,12 @@
 
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Jost', sans-serif;
     position: relative;
     padding: 35px 15px;
     color: var(--bs-white) !important;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
     outline: none;
     transition: .5s;
 }

@@ -1,3 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow);
+@import url(https://fonts.googleapis.com/css?family=Jost);
+
+:root {
+    --bs-primary: #13357b;
+    --bs-secondary: #ffffff;
+    --bs-light: #f8f9fa;
+}
+
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -155,32 +164,37 @@
 
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Jost', sans-serif;
     position: relative;
     padding: 35px 15px;
-    color: var(--bs-white) !important;
+    /* color: var(--bs-white) !important; */
+    color: #13357b !important; 
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
     outline: none;
     transition: .5s;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 15px;
-    color: var(--bs-dark) !important;
+    /* color: var(--bs-dark) !important; */
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--bs-white) !important;
+    /* color: var(--bs-white) !important; */
+    color:red !important;
+    text-decoration: underline !important;
 }
 
 .navbar-light .navbar-brand h1 {
-    color: var(--bs-white);
+    /* color: var(--bs-white); */
+    color: #13357b;
 }
 
 .sticky-top.navbar-light .navbar-brand h1 {
-    color: var(--bs-primary);
+    /* color: var(--bs-primary); */
+    color: #13357b;
 }
 
 .navbar-light .navbar-brand img {
@@ -235,13 +249,15 @@
     }
 
     .navbar-light .navbar-brand h1 {
-        color: var(--bs-primary);
+        /* color: var(--bs-primary); */
+        color: #13357b;
     }
 
     .navbar.navbar-expand-lg .navbar-toggler {
         padding: 10px 20px;
         border: 1px solid var(--bs-primary);
-        color: var(--bs-primary);
+        /* color: var(--bs-primary); */
+        color: #13357b;
     }
 
     .navbar-light .navbar-collapse {
@@ -258,6 +274,7 @@
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
         color: var(--bs-primary) !important;
+        
     }
 
     .navbar-light .navbar-brand img {
@@ -287,7 +304,7 @@
         height: 0;
         bottom: -1px;
         left: 0;
-        background: var(--bs-primary);
+        /* background: var(--bs-primary); */
         transition: .5s;
         z-index: -1;
     }
@@ -423,7 +440,7 @@
 /*** Gallery Hero Header End ***/
 /*** News Hero Header Start ***/
 .bg-news {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/anounce.webp);
+    background: linear-gradient(rgba(175, 193, 228, 0.8), rgba(19, 53, 123, 0.5)), url(../img/anounce.webp);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -439,7 +456,7 @@
 
 /*** Softwares Hero Header Start ***/
 .bg-software {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/softwares3.jpg);
+    background: linear-gradient(rgba(102, 134, 197, 0.8), rgba(19, 53, 123, 0.5)), url(../img/softwares3.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -471,7 +488,7 @@
 
 /*** Research Hero Header Start ***/
 .bg-research {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/research.webp);
+    background: linear-gradient(rgba(116, 145, 204, 0.8), rgba(19, 53, 123, 0.5)), url(../img/research.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -487,7 +504,7 @@
 
 /*** Publication page Hero Header Start ***/
 .bg-publication {
-    background: linear-gradient(rgba(19, 53, 123, 0.7), rgba(19, 53, 123, 0.7)), url(../img/wordcloud.jpeg);
+    background: linear-gradient(rgba(141, 148, 160, 0.9), rgba(164, 168, 177, 0.5)), url(../../wordcloud.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -520,7 +537,7 @@
 
 /*** Members page Start ***/
 .bg-members {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/afpro.png);
+    background: linear-gradient(rgba(94, 138, 226, 0.8), rgba(255, 255, 255, 0.9)), url(../img/afpro.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
