@@ -1,12 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Barlow);
-@import url(https://fonts.googleapis.com/css?family=Jost);
-
-:root {
-    --bs-primary: #13357b;
-    --bs-secondary: #ffffff;
-    --bs-light: #f8f9fa;
-}
-
+@import url(https://fonts.googleapis.com/css?family=Jost:wght@500;600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lora:ital,wght@0,400..700;1,400..700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap);
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -167,8 +162,7 @@
     font-family: 'Jost', sans-serif;
     position: relative;
     padding: 35px 15px;
-    /* color: var(--bs-white) !important; */
-    color: #13357b !important; 
+    color: var(--bs-white) !important;
     font-size: 17px;
     font-weight: 600;
     outline: none;
@@ -177,24 +171,20 @@
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 15px;
-    /* color: var(--bs-dark) !important; */
+    color: var(--bs-dark) !important;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    /* color: var(--bs-white) !important; */
-    color:red !important;
-    text-decoration: underline !important;
+    color: var(--bs-white) !important;
 }
 
 .navbar-light .navbar-brand h1 {
-    /* color: var(--bs-white); */
-    color: #13357b;
+    color: var(--bs-white);
 }
 
 .sticky-top.navbar-light .navbar-brand h1 {
-    /* color: var(--bs-primary); */
-    color: #13357b;
+    color: var(--bs-primary);
 }
 
 .navbar-light .navbar-brand img {
@@ -249,15 +239,13 @@
     }
 
     .navbar-light .navbar-brand h1 {
-        /* color: var(--bs-primary); */
-        color: #13357b;
+        color: var(--bs-primary);
     }
 
     .navbar.navbar-expand-lg .navbar-toggler {
         padding: 10px 20px;
         border: 1px solid var(--bs-primary);
-        /* color: var(--bs-primary); */
-        color: #13357b;
+        color: var(--bs-primary);
     }
 
     .navbar-light .navbar-collapse {
@@ -274,7 +262,6 @@
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
         color: var(--bs-primary) !important;
-        
     }
 
     .navbar-light .navbar-brand img {
@@ -304,7 +291,7 @@
         height: 0;
         bottom: -1px;
         left: 0;
-        /* background: var(--bs-primary); */
+        background: var(--bs-primary);
         transition: .5s;
         z-index: -1;
     }
@@ -440,7 +427,7 @@
 /*** Gallery Hero Header End ***/
 /*** News Hero Header Start ***/
 .bg-news {
-    background: linear-gradient(rgba(175, 193, 228, 0.8), rgba(19, 53, 123, 0.5)), url(../img/anounce.webp);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/anounce.webp);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -456,7 +443,7 @@
 
 /*** Softwares Hero Header Start ***/
 .bg-software {
-    background: linear-gradient(rgba(102, 134, 197, 0.8), rgba(19, 53, 123, 0.5)), url(../img/softwares3.jpg);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/softwares3.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -488,7 +475,7 @@
 
 /*** Research Hero Header Start ***/
 .bg-research {
-    background: linear-gradient(rgba(116, 145, 204, 0.8), rgba(19, 53, 123, 0.5)), url(../img/research.webp);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/research.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -504,7 +491,7 @@
 
 /*** Publication page Hero Header Start ***/
 .bg-publication {
-    background: linear-gradient(rgba(141, 148, 160, 0.9), rgba(164, 168, 177, 0.5)), url(../../wordcloud.jpg);
+    background: linear-gradient(rgba(19, 53, 123, 0.7), rgba(19, 53, 123, 0.7)), url(../img/wordcloud.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -537,7 +524,7 @@
 
 /*** Members page Start ***/
 .bg-members {
-    background: linear-gradient(rgba(94, 138, 226, 0.8), rgba(255, 255, 255, 0.9)), url(../img/afpro.png);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/afpro.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1577,7 +1564,6 @@
 .facebook {
     color: #0866ff;
 }
-
 .Link__gscholar {
     padding: 0.8em;
     outline: none;
@@ -1591,19 +1577,16 @@
 .gscholar {
     color: #1e3050;
 }
-
 .Link__gscholar:hover {
     cursor: pointer;
     scale: 1.1;
-    background-color: #1e3050;
+    background-color:#1e3050;
 }
-
 .Link__gscholar:hover .gscholar {
     fill: white;
     color: white;
 
 }
-
 .Link__linkedin {
     padding: 0.8em;
     outline: none;
@@ -1889,3 +1872,157 @@
     background-clip: text;
     filter: drop-shadow(-1px -1px white) drop-shadow(1px 1px rgb(0, 0, 0)) drop-shadow(1px 1px #000000) drop-shadow(1px 1px #757575) drop-shadow(1px 1px #707070) drop-shadow(1px 1px #000000) drop-shadow(1px 1px #000000) drop-shadow(0px 0px #616161) drop-shadow(0px 0px #5c5c5c) drop-shadow(0px 0px #575757) drop-shadow(0px 0px #525252) drop-shadow(0px 0px #4d4d4d) drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.3)) drop-shadow(6px 6px 5px rgba(0, 0, 0, 0.3));
 }
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+#intro {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url("/static/img/afpro.png") no-repeat;
+    background-size: cover;
+  }
+  
+  #intro .intro-content {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #intro .intro-content h2 {
+    color: #0c2e8a;
+    margin-bottom: 30px;
+    font-size: 64px;
+    font-weight: 700;
+  }
+  
+  #intro .intro-content h2 span {
+    color: #50d8af;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 767px) {
+    #intro .intro-content h2 {
+      font-size: 34px;
+    }
+  }
+  
+  #intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    color: #fff;
+  }
+  
+  #intro .intro-content .btn-get-started {
+    background: #0c2e8a;
+    border: 2px solid #0c2e8a;
+  }
+  
+  #intro .intro-content .btn-get-started:hover {
+    background: none;
+    color: #0c2e8a;
+  }
+  
+  #intro .intro-content .btn-projects {
+    background: #50d8af;
+    border: 2px solid #50d8af;
+  }
+  
+  #intro .intro-content .btn-projects:hover {
+    background: none;
+    color: #50d8af;
+  }
+  
+  #intro #intro-carousel {
+    z-index: 8;
+  }
+  
+  #intro #intro-carousel::before {
+    content: '';
+    background-color: rgba(3, 24, 49, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+  }
+  
+  #intro #intro-carousel .item {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .averia-libre-light {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .averia-libre-regular {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .averia-libre-bold {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .averia-libre-light-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .averia-libre-regular-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .averia-libre-bold-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .texturina {
+    font-family: "Texturina", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  a {
+    color: #0c2e8a;
+    text-decoration: none;
+  }

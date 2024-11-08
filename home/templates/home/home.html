@@ -14,10 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -32,112 +31,162 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-<link href="{% static 'css/home.css' %}" rel="stylesheet">
-<style>
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <style>
 
-/*--------------------------------------------------------------
-# Intro Section
---------------------------------------------------------------*/
 #intro {
-  width: 100%;
-  height: 70vh;
-  position: relative;
-  background: url("/static/img/afpro.png") no-repeat;
-  background-size: cover;
-}
-
-#intro .intro-content {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-#intro .intro-content h2 {
-  color: #0c2e8a;
-  margin-bottom: 30px;
-  font-size: 64px;
-  font-weight: 700;
-}
-
-#intro .intro-content h2 span {
-  color: #50d8af;
-  text-decoration: underline;
-}
-
-@media (max-width: 767px) {
-  #intro .intro-content h2 {
-    font-size: 34px;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url("/static/img/afpro.png") no-repeat;
+    background-size: cover;
   }
-}
+  
+  #intro .intro-content {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #intro .intro-content h2 {
+    color: #0c2e8a;
+    margin-bottom: 30px;
+    font-size: 64px;
+    font-weight: 700;
+  }
+  
+  #intro .intro-content h2 span {
+    color: #50d8af;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 767px) {
+    #intro .intro-content h2 {
+      font-size: 34px;
+    }
+  }
+  
+  #intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    color: #fff;
+  }
+  
+  #intro .intro-content .btn-get-started {
+    background: #0c2e8a;
+    border: 2px solid #0c2e8a;
+  }
+  
+  #intro .intro-content .btn-get-started:hover {
+    background: none;
+    color: #0c2e8a;
+  }
+  
+  #intro .intro-content .btn-projects {
+    background: #50d8af;
+    border: 2px solid #50d8af;
+  }
+  
+  #intro .intro-content .btn-projects:hover {
+    background: none;
+    color: #50d8af;
+  }
+  
+  #intro #intro-carousel {
+    z-index: 8;
+  }
+  
+  #intro #intro-carousel::before {
+    content: '';
+    background-color: rgba(3, 24, 49, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+  }
+  
+  #intro #intro-carousel .item {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .averia-libre-light {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .averia-libre-regular {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .averia-libre-bold {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .averia-libre-light-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .averia-libre-regular-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .averia-libre-bold-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .texturina {
+    font-family: "Texturina", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  a {
+    color: #0c2e8a;
+    text-decoration: none;
+  }
+    </style>
 
-#intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 32px;
-  border-radius: 2px;
-  transition: 0.5s;
-  margin: 10px;
-  color: #fff;
-}
-
-#intro .intro-content .btn-get-started {
-  background: #0c2e8a;
-  border: 2px solid #0c2e8a;
-}
-
-#intro .intro-content .btn-get-started:hover {
-  background: none;
-  color: #0c2e8a;
-}
-
-#intro .intro-content .btn-projects {
-  background: #50d8af;
-  border: 2px solid #50d8af;
-}
-
-#intro .intro-content .btn-projects:hover {
-  background: none;
-  color: #50d8af;
-}
-
-#intro #intro-carousel {
-  z-index: 8;
-}
-
-#intro #intro-carousel::before {
-  content: '';
-  background-color: rgba(72, 127, 189, 0.7);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 7;
-}
-
-#intro #intro-carousel .item {
-  width: 100%;
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-}
-</style>
 </head>
 
 <body>
@@ -153,9 +202,8 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0" style="text-decoration: none;">
-                <h1 class="m-0">CHAKRABARTY LAB</h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
+            <a href="{% url 'home' %}" class="navbar-brand p-0" style="text-decoration: none;">
+                <h1 class="m-0 lora">Chakrabarty Lab</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -191,11 +239,11 @@
                             <div class="text-center">
                                 <div class="sp-container">
                                     <div class="sp-content m-0 p-0">
-                                        <h1 class="display-1 header"
-                                            style="color:#ffffff; font-family: Barlow; letter-spacing: 4px;">
-                                            COMPUTATIONAL BIOPHYSICAL CHEMISTRY GROUP
+                                        <h1 class="display-1 header lora"
+                                            style="color:#ffffff; letter-spacing: 4px;">
+                                            Computational Biophysical Chemistry Group
                                         </h1>
-                                        <h3 class="display-5 header" style="color:#dac7c7;">S.N.B.N.C.B.S</h3>
+                                        <h3 class="display-5 header averia-libre-regular" style="color:#dac7c7;">S.N.B.N.C.B.S</h3>
 
                                     </div>
                                 </div>
@@ -217,7 +265,10 @@
         <div class="item" style="background-image: url('static/img/poster.jpeg');"></div>
     </div>
 
-</section><!-- #intro -->
+</section>
+
+
+<!-- #intro -->
         <!-- Carousel Start -->
         <!-- <div class="container-fluid bg-home">
             <div class="container h-100">
@@ -601,7 +652,9 @@
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
     <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
     <!-- Template Javascript -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
+
     <script>
         $(document).ready(function () {
             var a = document.getElementsByClassName('notibody');

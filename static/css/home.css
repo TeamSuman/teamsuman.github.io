@@ -1,0 +1,161 @@
+        .crimson-text-regular {
+            font-family: "Crimson Text", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .notification {
+            display: flex;
+            flex-direction: column;
+            isolation: isolate;
+            position: relative;
+            width: 100%;
+            height: 10rem;
+            min-height: 9rem;
+            max-height: 15rem;
+            overflow: hidden;
+            background: #29292c;
+            border-radius: 1rem;
+            overflow: hidden;
+            font-family: 'Crimson Text', sans-serif;
+            --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+            --color: #0a87e7;
+            border-color: #14141f;
+            box-shadow: 5px 5px 0 #000;
+        }
+
+        .notification:before {
+            position: absolute;
+            content: "";
+            inset: 0.0625rem;
+            border-radius: 0.9375rem;
+            background: #ffffff;
+            z-index: 2
+        }
+
+        .notification:after {
+            position: absolute;
+            content: "";
+            width: 0.25rem;
+            inset: 0.65rem auto 0.65rem 0.5rem;
+            border-radius: 0.125rem;
+            background: var(--gradient);
+            transition: transform 300ms ease;
+            z-index: 4;
+        }
+
+        .notification:hover:after {
+            transform: translateX(0.15rem)
+        }
+
+        .notititle {
+            color: var(--color);
+            padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+            font-weight: 500;
+            font-size: 1.5rem;
+            transition: transform 300ms ease;
+            z-index: 5;
+        }
+
+        .notification:hover .notititle {
+            transform: translateX(0.15rem)
+        }
+
+        .notibody {
+            color: #000000;
+            padding: 0 1.25rem;
+            transition: transform 300ms ease;
+            z-index: 5;
+        }
+
+        .notification:hover .notibody {
+            transform: translateX(0.25rem)
+        }
+
+        .notiglow,
+        .notiborderglow {
+            position: absolute;
+            width: 20rem;
+            height: 20rem;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle closest-side at center, white, transparent);
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+
+        .notiglow {
+            z-index: 3;
+        }
+
+        .notiborderglow {
+            z-index: 1;
+        }
+
+        .notification:hover .notiglow {
+            opacity: 0.1
+        }
+
+        .notification:hover .notiborderglow {
+            opacity: 0.1
+        }
+
+        .note {
+            color: var(--color);
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 0.9rem;
+            width: 75%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        a {
+            display: inline;
+            position: relative;
+            padding: 0.2em 0;
+        }
+
+
+        /* Scale from center */
+        a::after {
+            opacity: 1;
+            transform: scale(0);
+            transform-origin: center;
+        }
+
+        a:hover::after,
+        a:focus::after {
+            transform: scale(1);
+        }
+
+        .bg-home {
+            background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/home.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 50px 0 50px 0;
+            height: 70vh;
+        }
+
+        .header {
+            animation: animate 2s linear forwards;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        
