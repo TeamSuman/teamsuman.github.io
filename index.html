@@ -14,9 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -31,158 +31,162 @@
 
     <!-- Template Stylesheet -->
     <link href="/static/css/style.css" rel="stylesheet">
-
+    <link href="/static/css/home.css" rel="stylesheet">
     <style>
-        #myVideo {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            left: 0;
-            /* min-width: 100%; */
-            /* width: 100vw; */
-            height: 70vh;
-            justify-content: center;
-            justify-items: center;
-            object-fit: cover;
-        }
 
-        .crimson-text-regular {
-            font-family: "Crimson Text", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .notification {
-            display: flex;
-            flex-direction: column;
-            isolation: isolate;
-            position: relative;
-            width: 100%;
-            height: 10rem;
-            min-height: 9rem;
-            max-height: 15rem;
-            overflow: hidden;
-            background: #29292c;
-            border-radius: 1rem;
-            overflow: hidden;
-            font-family: 'Crimson Text', sans-serif;
-            --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
-            --color: #0a87e7;
-            border-color: #14141f;
-            box-shadow: 5px 5px 0 #000;
-        }
-
-        .notification:before {
-            position: absolute;
-            content: "";
-            inset: 0.0625rem;
-            border-radius: 0.9375rem;
-            background: #ffffff;
-            z-index: 2
-        }
-
-        .notification:after {
-            position: absolute;
-            content: "";
-            width: 0.25rem;
-            inset: 0.65rem auto 0.65rem 0.5rem;
-            border-radius: 0.125rem;
-            background: var(--gradient);
-            transition: transform 300ms ease;
-            z-index: 4;
-        }
-
-        .notification:hover:after {
-            transform: translateX(0.15rem)
-        }
-
-        .notititle {
-            color: var(--color);
-            padding: 0.65rem 0.25rem 0.4rem 1.25rem;
-            font-weight: 500;
-            font-size: 1.5rem;
-            transition: transform 300ms ease;
-            z-index: 5;
-        }
-
-        .notification:hover .notititle {
-            transform: translateX(0.15rem)
-        }
-
-        .notibody {
-            color: #000000;
-            padding: 0 1.25rem;
-            transition: transform 300ms ease;
-            z-index: 5;
-        }
-
-        .notification:hover .notibody {
-            transform: translateX(0.25rem)
-        }
-
-        .notiglow,
-        .notiborderglow {
-            position: absolute;
-            width: 20rem;
-            height: 20rem;
-            transform: translate(-50%, -50%);
-            background: radial-gradient(circle closest-side at center, white, transparent);
-            opacity: 0;
-            transition: opacity 300ms ease;
-        }
-
-        .notiglow {
-            z-index: 3;
-        }
-
-        .notiborderglow {
-            z-index: 1;
-        }
-
-        .notification:hover .notiglow {
-            opacity: 0.1
-        }
-
-        .notification:hover .notiborderglow {
-            opacity: 0.1
-        }
-
-        .note {
-            color: var(--color);
-            position: fixed;
-            top: 80%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 0.9rem;
-            width: 75%;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: underline;
-        }
-
-        a {
-            display: inline;
-            position: relative;
-            padding: 0.2em 0;
-        }
-
-
-/* Scale from center */
- a::after {
-  opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
-}
-
- a:hover::after,
-    a:focus::after{
-  transform: scale(1);
-}
+#intro {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url("/static/img/afpro.png") no-repeat;
+    background-size: cover;
+  }
+  
+  #intro .intro-content {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #intro .intro-content h2 {
+    color: #0c2e8a;
+    margin-bottom: 30px;
+    font-size: 64px;
+    font-weight: 700;
+  }
+  
+  #intro .intro-content h2 span {
+    color: #50d8af;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 767px) {
+    #intro .intro-content h2 {
+      font-size: 34px;
+    }
+  }
+  
+  #intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    color: #fff;
+  }
+  
+  #intro .intro-content .btn-get-started {
+    background: #0c2e8a;
+    border: 2px solid #0c2e8a;
+  }
+  
+  #intro .intro-content .btn-get-started:hover {
+    background: none;
+    color: #0c2e8a;
+  }
+  
+  #intro .intro-content .btn-projects {
+    background: #50d8af;
+    border: 2px solid #50d8af;
+  }
+  
+  #intro .intro-content .btn-projects:hover {
+    background: none;
+    color: #50d8af;
+  }
+  
+  #intro #intro-carousel {
+    z-index: 8;
+  }
+  
+  #intro #intro-carousel::before {
+    content: '';
+    background-color: rgba(3, 24, 49, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+  }
+  
+  #intro #intro-carousel .item {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .averia-libre-light {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .averia-libre-regular {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .averia-libre-bold {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .averia-libre-light-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .averia-libre-regular-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .averia-libre-bold-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .texturina {
+    font-family: "Texturina", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  a {
+    color: #0c2e8a;
+    text-decoration: none;
+  }
     </style>
+
 </head>
 
 <body>
@@ -198,9 +202,8 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0" style="text-decoration: none;">
-                <h1 class="m-0">Chakrabarty Lab</h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
+            <a href="/" class="navbar-brand p-0" style="text-decoration: none;">
+                <h1 class="m-0 lora">Chakrabarty Lab</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -208,40 +211,87 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/" class="nav-item nav-link active" style="text-decoration: none;">Home</a>
-                    <a href="/news" class="nav-item nav-link" style="text-decoration: none;" >News</a>
+                    <a href="/news" class="nav-item nav-link" style="text-decoration: none;">News</a>
                     <a href="/research" class="nav-item nav-link" style="text-decoration: none;">Research</a>
-                    <a href="/publication" class="nav-item nav-link" style="text-decoration: none;">Publications</a>
-                    <a href="/softwares" class="nav-item nav-link" style="text-decoration: none;">Softwares</a>
+                    <a href="/publication" class="nav-item nav-link"
+                        style="text-decoration: none;">Publications</a>
+                    <a href="/softwares" class="nav-item nav-link"
+                        style="text-decoration: none;">Softwares</a>
                     <a href="/team" class="nav-item nav-link" style="text-decoration: none;">Team</a>
-                    <a href="/positions" class="nav-item nav-link" style="text-decoration: none;" >Positions</a>
-                    <a href="/gallery" class="nav-item nav-link" style="text-decoration: none;" >Gallery</a>
+                    <a href="/positions" class="nav-item nav-link"
+                        style="text-decoration: none;">Positions</a>
+                    <a href="/gallery" class="nav-item nav-link" style="text-decoration: none;">Gallery</a>
                     <a href="/contacts" class="nav-item nav-link" style="text-decoration: none;">Contact</a>
                 </div>
             </div>
         </nav>
+<!--==========================
+    Intro Section
+  ============================-->
+<section id="intro">
 
-        <!-- Carousel Start -->
-        <div class="carousel-header">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="/static/img/poster.jpg" class="img-fluid" alt="Image">
-                        <div class="carousel-caption">
-                            <div class="p-3" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">
-                                    S.N.B.N.C.B.S</h4>
-                                <h1 class="display-2 text-capitalize text-white mb-4 filter-shadow">Computational
-                                    Biophysical
-                                    Chemistry Group</h1>
-                                <p class="mb-5 fs-5" style="font-family: 'Jost';">
-                                    Department of Chemical and Biological Sciences
-                                </p>
+    <div class="intro-content">
+        <div class="container-fluid">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-lg-12">
+                        <div class="h-100 justify-content-center">
+                            <div class="text-center">
+                                <div class="sp-container">
+                                    <div class="sp-content m-0 p-0">
+                                        <h1 class="display-1 header lora"
+                                            style="color:#ffffff; letter-spacing: 4px;">
+                                            Computational Biophysical Chemistry Group
+                                        </h1>
+                                        <h3 class="display-5 header averia-libre-regular" style="color:#dac7c7;">S.N.B.N.C.B.S</h3>
+
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+    </div>
+
+    <div id="intro-carousel" class="owl-carousel">
+        <div class="item" style="background-image: url('static/img/g_din.jpg'); bottom: 0; position: relative; background-position: top;"></div>
+        <div class="item" style="background-image: url('static/img/afpro.png');"></div>
+        <div class="item" style="background-image: url('static/img/home.jpg');"></div>
+        
+        <div class="item" style="background-image: url('static/img/poster.jpeg');"></div>
+    </div>
+
+</section>
+
+
+<!-- #intro -->
+        <!-- Carousel Start -->
+        <!-- <div class="container-fluid bg-home">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-lg-12">
+                        <div class="h-100 justify-content-center">
+                            <div class="text-center">
+                                <div class="sp-container">
+                                    <div class="sp-content m-0 p-0">
+                                        <h1 class="display-1 text-light header"
+                                            style="font-family: Barlow; letter-spacing: 4px;">
+                                            COMPUTATIONAL BIOPHYSICAL CHEMISTRY GROUP
+                                        </h1>
+        
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <!-- Carousel End -->
     </div>
     <!-- Navbar & Hero End -->
@@ -364,7 +414,8 @@
                                         <div class="national-info">
                                             <h4 class="text-white mb-2">(Bio)molecular recognition and
                                                 signalling</h4>
-                                            <a href="/research" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="/research" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -378,7 +429,8 @@
                                         <div class="national-info">
                                             <h4 class="text-white mb-2">Properties of interfacial and
                                                 confined water</h4>
-                                            <a href="/research" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="/research" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -392,7 +444,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">Nucleation and growth in phase
                                                 transition</h5>
-                                            <a href="/research" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="/research" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -406,7 +459,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">Protein misfolding and
                                                 aggregation</h5>
-                                            <a href="/research" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="/research" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More! <i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -420,7 +474,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2"> Machine Learning in molecular
                                                 dynamics</h5>
-                                            <a href="/research" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="/research" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -433,7 +488,8 @@
                                         <div class="national-info">
                                             <h5 class="text-white text-uppercase mb-2">De-NOVO Drug design and Property
                                                 prediction</h5>
-                                            <a href="/research" class="btn-hover text-white" style="text-decoration: none;">Know
+                                            <a href="/research" class="btn-hover text-white"
+                                                style="text-decoration: none;">Know
                                                 More!<i class="fa fa-arrow-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -444,8 +500,8 @@
                 </div>
 
                 <div class="d-flex align-items-center justify-content-center py-5">
-                    <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5"
-                        href="research.html" style="text-decoration: none;">Discover
+                    <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="research.html"
+                        style="text-decoration: none;">Discover
                         More</a>
                 </div>
             </div>
@@ -544,7 +600,7 @@
                     <div class="testimonial-comment rounded p-5">
                     </div>
                     <div class="testimonial-img p-1">
-                        <a href="https://people.bose.res.in/faculty/fac_new/rajib.html"><img src="/media/images/gbasu.jpg" class="img-fluid rounded-circle"
+                        <a href="http://www.jcbose.ac.in/faculty-details/gautam-basu"><img src="/media/images/gbasu.jpg" class="img-fluid rounded-circle"
                                 alt="Ruth Nussinov"></a>
                     </div>
                     <div style="margin-top: -35px;">
@@ -555,66 +611,6 @@
                     </div>
                 </div>
                 
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid booking py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <h5 class="section-booking-title pe-3">contact us</h5>
-                    <h1 class="text-white mb-4">Send us a message</h1>
-                    <p class="text-white mb-4">
-                        We are open to work with new collaborators. If you are interested in working with us, please
-
-                        <a href="contact.html" class="link"><span class="text-warning">contact us.</span></a>
-
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <div class="form">
-
-                        <form id="my-form" method="POST" role="form"
-                            class="contactForm" novalidate="novalidate">
-                            <input type="hidden" name="csrfmiddlewaretoken" value="47YTWtZlV7vGfpboGOrEgJba26kY4gCcD8Td3fs8E23So58jFAfDusZLgW8KdHUT">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                            <input type="text" name="name" class="form-control" placeholder="Your Name" name="name" id="name" required>
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" name="email" class="form-control" placeholder="Your Email" name="email" id="email" maxlength="320" required>
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject" name="subject" id="subject" required>
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <!-- <textarea class="form-control border-0" placeholder="Leave a message here"
-                                            name="message" id="message" style="height: 160px"></textarea> -->
-                                            <textarea name="message" cols="40" rows="10" class="form-control" placeholder="Message!" name="message" id="message" style="height: 160px;" required>
-</textarea>
-                                            <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                                <p class="text-center"
-                                    style="color: #00e27b;font-family: 'Spectral'; font-weight: bold;"
-                                    id="my-form-status"></p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -654,10 +650,10 @@
                         Follow us on social media platform provided by the link below to get notifications.
                     </p>
                     <div class="main__socials py-2">
-                        <a href="https://www.facebook.com/namusite">
+                        <!-- <a href="https://www.facebook.com/namusite">
                             <button class="Link__facebook">
                                 <i class="fab fa-facebook facebook" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
+                            </button></a> -->
                         <a href="https://www.linkedin.com/in/namusite/">
                             <button class="Link__linkedin">
                                 <i class="fab fa-linkedin linkedin" aria-hidden="true" style="font-size: 30px;"></i>
@@ -713,41 +709,10 @@
     <script src="/static/lib/waypoints/waypoints.min.js"></script>
     <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
-
-    <script>
-        var form = document.getElementById("my-form");
-
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var status = document.getElementById("my-form-status");
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    status.innerHTML = "We'll get back to you soon. Thank you!";
-                    form.reset()
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                        } else {
-                            status.innerHTML = "Oops! There was a problem submitting your form"
-                        }
-                    })
-                }
-            }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form"
-            });
-        }
-        form.addEventListener("submit", handleSubmit)
-    </script>
     <!-- Template Javascript -->
+    <script src="/static/js/wow.min.js"></script>
     <script src="/static/js/main.js"></script>
+
     <script>
         $(document).ready(function () {
             var a = document.getElementsByClassName('notibody');
@@ -755,6 +720,18 @@
                 a[i].innerHTML = a[i].innerHTML.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
             }
         });
+         // Intro background carousel
+            $("#intro-carousel").owlCarousel({
+                autoplay: true,
+                dots: false,
+                loop: true,
+                animateOut: 'fadeOut',
+                items: 1
+            });
+
+            // Initiate the wowjs animation library
+            new WOW().init();
+        
     </script>
 </body>
 
