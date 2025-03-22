@@ -158,4 +158,157 @@
             }
         }
 
+
+        #intro {
+            width: 100%;
+            height: 70vh;
+            position: relative;
+            background: url("/static/img/afpro.png") no-repeat;
+            background-size: cover;
+          }
+        
+          #intro .intro-content {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+          }
+        
+          #intro .intro-content h2 {
+            color: #0c2e8a;
+            margin-bottom: 30px;
+            font-size: 64px;
+            font-weight: 700;
+          }
+        
+          #intro .intro-content h2 span {
+            color: #50d8af;
+            text-decoration: underline;
+          }
+        
+          @media (max-width: 767px) {
+            #intro .intro-content h2 {
+              font-size: 34px;
+            }
+          }
+        
+          #intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
+            font-family: "Raleway", sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 32px;
+            border-radius: 2px;
+            transition: 0.5s;
+            margin: 10px;
+            color: #fff;
+          }
+        
+          #intro .intro-content .btn-get-started {
+            background: #0c2e8a;
+            border: 2px solid #0c2e8a;
+          }
+        
+          #intro .intro-content .btn-get-started:hover {
+            background: none;
+            color: #0c2e8a;
+          }
+        
+          #intro .intro-content .btn-projects {
+            background: #50d8af;
+            border: 2px solid #50d8af;
+          }
+        
+          #intro .intro-content .btn-projects:hover {
+            background: none;
+            color: #50d8af;
+          }
+        
+          #intro #intro-carousel {
+            z-index: 8;
+          }
+        
+          #intro #intro-carousel::before {
+            content: '';
+            background-color: rgba(3, 24, 49, 0.7);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 7;
+          }
+        
+          #intro #intro-carousel .item {
+            width: 100%;
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-transition-property: opacity;
+            transition-property: opacity;
+          }
+          .averia-libre-light {
+            font-family: "Averia Libre", system-ui;
+            font-weight: 300;
+            font-style: normal;
+          }
+        
+          .averia-libre-regular {
+            font-family: "Averia Libre", system-ui;
+            font-weight: 400;
+            font-style: normal;
+          }
+        
+          .averia-libre-bold {
+            font-family: "Averia Libre", system-ui;
+            font-weight: 700;
+            font-style: normal;
+          }
+        
+          .averia-libre-light-italic {
+            font-family: "Averia Libre", system-ui;
+            font-weight: 300;
+            font-style: italic;
+          }
+        
+          .averia-libre-regular-italic {
+            font-family: "Averia Libre", system-ui;
+            font-weight: 400;
+            font-style: italic;
+          }
+        
+          .averia-libre-bold-italic {
+            font-family: "Averia Libre", system-ui;
+            font-weight: 700;
+            font-style: italic;
+          }
+        
+          .texturina {
+            font-family: "Texturina", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+          }
+          .lora {
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+          }
+          a {
+            color: #0c2e8a;
+            text-decoration: none;
+          }
+
         

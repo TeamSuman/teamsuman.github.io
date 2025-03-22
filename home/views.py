@@ -1,14 +1,14 @@
 import os
-
+import pandas as pd
 from django.conf import settings  # type: ignore
 from django.core.mail import send_mail  # type: ignore
 from django.http import HttpResponse, HttpResponseRedirect  # type: ignore
 from django.shortcuts import reverse  # type: ignore
 from django.shortcuts import redirect, render  # type: ignore
-from django.template.loader import render_to_string
+from django.template.loader import render_to_string # type: ignore
 
 from .forms import ContactForm
-from .models import PHD, Alumni, Colab, Gallery, News, PostDoc, Project, Publication
+from .models import PHD, Alumni, Colab, Gallery, News, PostDoc, Project, Publication, Research, Publication_Research
 
 sync = False
 
@@ -36,10 +36,19 @@ def home(request):
     #         return HttpResponseRedirect(reverse("home"))
     # else:
     #     form = ContactForm()
+
+    research = Research.objects.all()
+    pr = Publication_Research.objects.all()
+    list_result = [entry for entry in pr.values()]
+    df = pd.DataFrame(list_result)
+    df.groupby('research_id').apply(lambda x: x['link'].tolist(), include_groups=False)
+    for i in range(len(research)):
+        research[i].publication = df[df['research_id'] == research[i].id]['link'].tolist()
+
     text = render(
         request,
         "home/home.html",
-        {"object": query, "news": news, "form": form, "result": result},
+        {"object": query, "news": news, "form": form, "result": result, "research": research},
     )
     if sync:
         with open("index.html", "wb") as f:
@@ -108,13 +117,23 @@ def formated_mail(form):
     return HttpResponseRedirect(reverse("home"))
 
 
-def research(request):
+def research2(request):
     text = render(request, "home/research.html")
     if sync:
         with open("research.html", "wb") as f:
             f.write(text.content)
     return text
 
+def research(request):
+    research = Research.objects.all()
+    pr = Publication_Research.objects.all()
+    list_result = [entry for entry in pr.values()]
+    df = pd.DataFrame(list_result)
+    df.groupby('research_id').apply(lambda x: x['link'].tolist(), include_groups=False)
+    for i in range(len(research)):
+        research[i].publication = df[df['research_id'] == research[i].id]['link'].tolist()
+    text = render(request,  "home/research2.html", {"research": research})
+    return text
 
 def news(request):
     news = News.objects.all().order_by("-date")
@@ -126,7 +145,8 @@ def news(request):
 
 
 def publication(request):
-    publication = Publication.objects.all()
+    #publication = Publication.objects.all()
+    publication = Publication.objects.all().order_by('created_at').reverse()
     text = render(request, "home/publication.html", {"publication": publication})
     if sync:
         with open("publication.html", "wb") as f:

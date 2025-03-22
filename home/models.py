@@ -1,7 +1,7 @@
 import datetime
 from django.core.validators import MaxValueValidator, MinValueValidator # type: ignore
 from django.db import models # type: ignore
-
+from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 class Colab(models.Model):
@@ -13,7 +13,7 @@ class Colab(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 class PHD(models.Model):
     name = models.TextField(max_length=100)
     image = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=100)
@@ -27,7 +27,7 @@ class PHD(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 class PostDoc(models.Model):
     name = models.TextField(max_length=100)
     image = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=100)
@@ -67,7 +67,7 @@ class Alumni(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 class News(models.Model):
     title = models.TextField(max_length=100)
     date = models.DateField()
@@ -92,10 +92,11 @@ class Publication(models.Model):
     authors = models.CharField(max_length=200)
     journal = models.TextField()
     link = models.URLField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
-    
+
 class Gallery(models.Model):
     image = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=100)
     short_desc = models.TextField(max_length=100)
@@ -104,3 +105,16 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.short_desc
+
+class Research(models.Model):
+
+    title = models.TextField(max_length=100)
+    image = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=100)
+    description = models.TextField(max_length=2000)
+    #publication =  models.CharField(verbose_name=_('Publications'), max_length=255)
+    def __str__(self):
+        return self.title
+
+class Publication_Research(models.Model):
+    link = models.CharField(verbose_name=_('Publications'), max_length=255)
+    research = models.ForeignKey(Research, verbose_name=_('Link to Research'), on_delete=models.CASCADE)
