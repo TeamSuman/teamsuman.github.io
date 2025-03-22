@@ -132,7 +132,12 @@ def research(request):
     df.groupby('research_id').apply(lambda x: x['link'].tolist(), include_groups=False)
     for i in range(len(research)):
         research[i].publication = df[df['research_id'] == research[i].id]['link'].tolist()
+    #text = render(request,  "home/research.html", {"research": research})
     text = render(request,  "home/research2.html", {"research": research})
+
+    if sync:
+        with open("research.html", "wb") as f:
+            f.write(text.content)
     return text
 
 def news(request):
