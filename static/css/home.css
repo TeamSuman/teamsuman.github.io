@@ -1,314 +1,313 @@
-        .crimson-text-regular {
-            font-family: "Crimson Text", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
+.crimson-text-regular {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
-        .notification {
-            display: flex;
-            flex-direction: column;
-            isolation: isolate;
-            position: relative;
-            width: 100%;
-            height: 10rem;
-            min-height: 9rem;
-            max-height: 15rem;
-            overflow: hidden;
-            background: #29292c;
-            border-radius: 1rem;
-            overflow: hidden;
-            font-family: 'Crimson Text', sans-serif;
-            --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
-            --color: #0a87e7;
-            border-color: #14141f;
-            box-shadow: 5px 5px 0 #000;
-        }
+.notification {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    min-height: 9rem;
+    max-height: 15rem;
+    overflow: hidden;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: 'Crimson Text', sans-serif;
+    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+    --color: #0a87e7;
+    border-color: #14141f;
+    box-shadow: 5px 5px 0 #000;
+}
 
-        .notification:before {
-            position: absolute;
-            content: "";
-            inset: 0.0625rem;
-            border-radius: 0.9375rem;
-            background: #ffffff;
-            z-index: 2
-        }
+.notification:before {
+    position: absolute;
+    content: "";
+    inset: 0.0625rem;
+    border-radius: 0.9375rem;
+    background: #ffffff;
+    z-index: 2
+}
 
-        .notification:after {
-            position: absolute;
-            content: "";
-            width: 0.25rem;
-            inset: 0.65rem auto 0.65rem 0.5rem;
-            border-radius: 0.125rem;
-            background: var(--gradient);
-            transition: transform 300ms ease;
-            z-index: 4;
-        }
+.notification:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: var(--gradient);
+    transition: transform 300ms ease;
+    z-index: 4;
+}
 
-        .notification:hover:after {
-            transform: translateX(0.15rem)
-        }
+.notification:hover:after {
+    transform: translateX(0.15rem)
+}
 
-        .notititle {
-            color: var(--color);
-            padding: 0.65rem 0.25rem 0.4rem 1.25rem;
-            font-weight: 500;
-            font-size: 1.5rem;
-            transition: transform 300ms ease;
-            z-index: 5;
-        }
+.notititle {
+    color: var(--color);
+    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
 
-        .notification:hover .notititle {
-            transform: translateX(0.15rem)
-        }
+.notification:hover .notititle {
+    transform: translateX(0.15rem)
+}
 
-        .notibody {
-            color: #000000;
-            padding: 0 1.25rem;
-            transition: transform 300ms ease;
-            z-index: 5;
-        }
+.notibody {
+    color: #000000;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+}
 
-        .notification:hover .notibody {
-            transform: translateX(0.25rem)
-        }
+.notification:hover .notibody {
+    transform: translateX(0.25rem)
+}
 
-        .notiglow,
-        .notiborderglow {
-            position: absolute;
-            width: 20rem;
-            height: 20rem;
-            transform: translate(-50%, -50%);
-            background: radial-gradient(circle closest-side at center, white, transparent);
-            opacity: 0;
-            transition: opacity 300ms ease;
-        }
+.notiglow,
+.notiborderglow {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle closest-side at center, white, transparent);
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
 
-        .notiglow {
-            z-index: 3;
-        }
+.notiglow {
+    z-index: 3;
+}
 
-        .notiborderglow {
-            z-index: 1;
-        }
+.notiborderglow {
+    z-index: 1;
+}
 
-        .notification:hover .notiglow {
-            opacity: 0.1
-        }
+.notification:hover .notiglow {
+    opacity: 0.1
+}
 
-        .notification:hover .notiborderglow {
-            opacity: 0.1
-        }
+.notification:hover .notiborderglow {
+    opacity: 0.1
+}
 
-        .note {
-            color: var(--color);
-            position: fixed;
-            top: 80%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            font-size: 0.9rem;
-            width: 75%;
-        }
+.note {
+    color: var(--color);
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 75%;
+}
 
-        a {
-            color: inherit;
-            text-decoration: underline;
-        }
+a {
+    color: inherit;
+    text-decoration: underline;
+}
 
-        a {
-            display: inline;
-            position: relative;
-            padding: 0.2em 0;
-        }
-
-
-        /* Scale from center */
-        a::after {
-            opacity: 1;
-            transform: scale(0);
-            transform-origin: center;
-        }
-
-        a:hover::after,
-        a:focus::after {
-            transform: scale(1);
-        }
-
-        .bg-home {
-            background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/home.jpg);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            padding: 50px 0 50px 0;
-            height: 70vh;
-        }
-
-        .header {
-            animation: animate 2s linear forwards;
-        }
-
-        @keyframes animate {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
+a {
+    display: inline;
+    position: relative;
+    padding: 0.2em 0;
+}
 
 
-        #intro {
-            width: 100%;
-            height: 70vh;
-            position: relative;
-            background: url("/static/img/afpro.png") no-repeat;
-            background-size: cover;
-          }
-        
-          #intro .intro-content {
-            position: absolute;
-            bottom: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 10;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-          }
-        
-          #intro .intro-content h2 {
-            color: #0c2e8a;
-            margin-bottom: 30px;
-            font-size: 64px;
-            font-weight: 700;
-          }
-        
-          #intro .intro-content h2 span {
-            color: #50d8af;
-            text-decoration: underline;
-          }
-        
-          @media (max-width: 767px) {
-            #intro .intro-content h2 {
-              font-size: 34px;
-            }
-          }
-        
-          #intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
-            font-family: "Raleway", sans-serif;
-            font-size: 15px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            display: inline-block;
-            padding: 10px 32px;
-            border-radius: 2px;
-            transition: 0.5s;
-            margin: 10px;
-            color: #fff;
-          }
-        
-          #intro .intro-content .btn-get-started {
-            background: #0c2e8a;
-            border: 2px solid #0c2e8a;
-          }
-        
-          #intro .intro-content .btn-get-started:hover {
-            background: none;
-            color: #0c2e8a;
-          }
-        
-          #intro .intro-content .btn-projects {
-            background: #50d8af;
-            border: 2px solid #50d8af;
-          }
-        
-          #intro .intro-content .btn-projects:hover {
-            background: none;
-            color: #50d8af;
-          }
-        
-          #intro #intro-carousel {
-            z-index: 8;
-          }
-        
-          #intro #intro-carousel::before {
-            content: '';
-            background-color: rgba(3, 24, 49, 0.7);
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 7;
-          }
-        
-          #intro #intro-carousel .item {
-            width: 100%;
-            height: 70vh;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            -webkit-transition-property: opacity;
-            transition-property: opacity;
-          }
-          .averia-libre-light {
-            font-family: "Averia Libre", system-ui;
-            font-weight: 300;
-            font-style: normal;
-          }
-        
-          .averia-libre-regular {
-            font-family: "Averia Libre", system-ui;
-            font-weight: 400;
-            font-style: normal;
-          }
-        
-          .averia-libre-bold {
-            font-family: "Averia Libre", system-ui;
-            font-weight: 700;
-            font-style: normal;
-          }
-        
-          .averia-libre-light-italic {
-            font-family: "Averia Libre", system-ui;
-            font-weight: 300;
-            font-style: italic;
-          }
-        
-          .averia-libre-regular-italic {
-            font-family: "Averia Libre", system-ui;
-            font-weight: 400;
-            font-style: italic;
-          }
-        
-          .averia-libre-bold-italic {
-            font-family: "Averia Libre", system-ui;
-            font-weight: 700;
-            font-style: italic;
-          }
-        
-          .texturina {
-            font-family: "Texturina", serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-          }
-          .lora {
-            font-family: "Lora", serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-          }
-          a {
-            color: #0c2e8a;
-            text-decoration: none;
-          }
+/* Scale from center */
+a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
 
-        
+a:hover::after,
+a:focus::after {
+    transform: scale(1);
+}
+
+.bg-home {
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/home.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0 50px 0;
+    height: 70vh;
+}
+
+.header {
+    animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+#intro {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background: url("/static/img/afpro.png") no-repeat;
+    background-size: cover;
+  }
+
+  #intro .intro-content {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #intro .intro-content h2 {
+    color: #0c2e8a;
+    margin-bottom: 30px;
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+  #intro .intro-content h2 span {
+    color: #50d8af;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 767px) {
+    #intro .intro-content h2 {
+      font-size: 34px;
+    }
+  }
+
+  #intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    color: #fff;
+  }
+
+  #intro .intro-content .btn-get-started {
+    background: #0c2e8a;
+    border: 2px solid #0c2e8a;
+  }
+
+  #intro .intro-content .btn-get-started:hover {
+    background: none;
+    color: #0c2e8a;
+  }
+
+  #intro .intro-content .btn-projects {
+    background: #50d8af;
+    border: 2px solid #50d8af;
+  }
+
+  #intro .intro-content .btn-projects:hover {
+    background: none;
+    color: #50d8af;
+  }
+
+  #intro #intro-carousel {
+    z-index: 8;
+  }
+
+  #intro #intro-carousel::before {
+    content: '';
+    background-color: rgba(3, 24, 49, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 7;
+  }
+
+  #intro #intro-carousel .item {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+  }
+  .averia-libre-light {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .averia-libre-regular {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .averia-libre-bold {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .averia-libre-light-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .averia-libre-regular-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .averia-libre-bold-italic {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .texturina {
+    font-family: "Texturina", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .lora {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  a {
+    color: #0c2e8a;
+    text-decoration: none;
+  }
+

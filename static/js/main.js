@@ -1,4 +1,4 @@
-(function ($) {
+(function (jQuery) {
     "use strict";
 
     // Spinner
@@ -13,11 +13,11 @@
 
 
     // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
-            $('.navbar').addClass('sticky-top shadow-sm');
+    jQuery(window).scroll(function () {
+        if (jQuery(this).scrollTop() > 45) {
+            jQuery('.navbar').addClass('sticky-top shadow-sm');
         } else {
-            $('.navbar').removeClass('sticky-top shadow-sm');
+            jQuery('.navbar').removeClass('sticky-top shadow-sm');
         }
     });
 
@@ -141,4 +141,3 @@
     });
 
 })(jQuery);
-
