@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>Team Suman | Research Detail</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap & Custom Styles -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="/" class="navbar-brand p-0" style="text-decoration: none">
+                <h1 class="m-0 lora">Chakrabarty Lab</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="/" class="nav-item nav-link">Home</a>
+                    <a href="/news" class="nav-item nav-link">News</a>
+                    <a href="/research" class="nav-item nav-link active">Research</a>
+                    <a href="/publication" class="nav-item nav-link">Publications</a>
+                    <a href="/softwares" class="nav-item nav-link">Software</a>
+                    <a href="/team" class="nav-item nav-link">Team</a>
+                    <a href="/positions" class="nav-item nav-link">Positions</a>
+                    <a href="/gallery" class="nav-item nav-link">Gallery</a>
+                    <a href="/contacts" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid" style="background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url('/media/images/signaling.webp');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 200px 0 50px 0;">
+        <div class="container text-center py-5" style="max-width: 900px; background-color: rgba(0,0,0,0.5);">
+            <h3 class="text-white display-3 mb-4">(Bio)molecular Recognition and Signaling</h3>
+            <!-- <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/research">Research</a></li>
+                <li class="breadcrumb-item active text-white">(Bio)molecular Recognition and Signaling</li>
+            </ol> -->
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Research Detail Section -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- <div class="col-12">
+                <img src="/media/images/signaling.webp" alt="(Bio)molecular Recognition and Signaling" class="img-fluid w-100 rounded mb-4"
+                    style="height: 40vh; object-fit: cover" />
+            </div> -->
+            <div class="container py-5"><div class="mx-auto text-center mb-5" style="max-width: 900px;"><p class="mb-0">(Bio)molecular recognition and signaling are essential processes where proteins interact with specific molecules to regulate cellular functions. Molecular dynamics (MD) simulations provide an atomic-level, time-resolved view of these interactions, revealing how proteins recognize and bind to their targets through complementary shape, charge, and hydrophobicity.<br>In signaling, MD simulations track how binding events trigger conformational changes that propagate through the protein, leading to a biological response. These simulations are invaluable for understanding the dynamics of protein function, aiding in drug design by revealing key interaction mechanisms and potential targets for modulation.</p>
+    </div>
+
+    <!-- PCSK9 Section -->
+    <div class="mb-5">
+        <h2>Allosteric Modulation of PCSK9-LDLR Interaction</h2>
+        <p>
+            The protein PCSK9 negatively regulates LDL receptor (LDLR) recycling, leading to elevated plasma LDL levels. Targeting the PCSK9-LDLR interaction is promising for managing hypercholesterolemia; however, the large interaction surface poses challenges for small-molecule inhibitors.</p>
+<div class="text-center mb-4">
+<img style="width: 50%;" src="/media/django-summernote/2025-10-14/da3936ed-240a-4ae0-b5e0-80959c484f08.png">
+</div>
+
+        <p>
+            Using microseconds-long molecular dynamics (MD) simulations, we observed significant conformational changes in a distal loop (residues 211−222) of PCSK9 upon LDLR binding. These conformational shifts correlate with binding affinity, revealing potential allosteric hotspots for inhibitor design. Stabilizing apo-specific conformations of the loop may effectively reduce LDLR binding, providing a general strategy for identifying allosteric sites in proteins.
+        </p>
+    </div>
+
+    <!-- RhoGDI Section -->
+    <div class="mb-5">
+        <h2>Phosphorylation Code in RhoGDI Regulation of Rho GTPases</h2>
+        <p align="center">
+            Rho-specific guanine nucleotide dissociation inhibitors (RhoGDIs) regulate Rho GTPases by maintaining them in an inactive GDP-bound state. Phosphorylation of specific residues in RhoGDI selectively releases its GTPase partners, constituting a “phosphorylation code.”
+        </p>
+<div class="text-center">
+<img style="width: 500px;" src="/media/django-summernote/2025-10-14/0e42dd22-c505-4f58-93b0-1a0c19e98bc5.png">
+</div>
+        <p>
+            Using atomistic MD simulations of wild-type and phosphorylated RhoA-RhoGDI complexes, we demonstrate that phosphorylation induces structural changes in the positively charged polybasic region (PBR) of RhoA and the N-terminal region of RhoGDI, leading to reduced binding affinity. Hydrogen bond occupancy and energetic perturbation analyses reveal long-range allosteric signaling through rearrangements of salt bridges and hydrogen bonds. These results highlight the critical role of electrostatic interactions in mediating the phosphorylation code.
+        </p>
+    </div>
+
+    <!-- AChE Section -->
+    <div class="mb-5">
+        <h2>Allosteric Inhibition of Acetylcholinesterase (AChE)</h2>
+        <p>
+            </p><p><img style="width: 374px; float: left;" src="/media/django-summernote/2025-10-14/c282ac20-5b87-47fd-8137-6e4fa9465a12.png" class="note-float-left"><br></p><p>Acetylcholinesterase (AChE) is a key drug target for neurodegenerative disorders such as Alzheimer’s disease. Recent studies suggest certain antidiabetic drugs, like chlorpropamide (CPM), may act as noncompetitive inhibitors, though their binding sites and mechanisms were unknown.
+        </p>
+        <p>
+            Through MD simulations, we identified a previously unknown allosteric site in addition to the peripheral anionic site (PAS). Ligand binding induces population shifts in the catalytic triad, particularly HIS447, leading to enzyme deactivation. Inter-residue interaction network analysis elucidates the allosteric signaling pathways. These insights provide a foundation for rational design of novel noncompetitive AChE inhibitors.</p><h4 class="fw-semibold text-dark mb-3">References:</h4>
+<p>Pandey et al.,<a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">&nbsp;</a><span class="cite-this"></span><span class="cit-title"><i><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">Biochemistry</a></i></span><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank"> </a><span class="cit-year-info"><span><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">2023</a></span></span><span class="cit-volume"><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">, 62</a></span><span class="cit-issue"><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">, 5</a></span><span class="cit-pageRange"><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">, 989–999</a></span></p><p>Das et al.,<a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">&nbsp;</a><a href="https://doi.org/10.1039/D4CP02921F" target="_blank">Phys. Chem. Chem. Phys., 2024,26, 28894-28903 </a><span class="cit-year-info"><span></span></span><span class="cit-volume"><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">, 62</a></span><span class="cit-issue"><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">, 5</a></span><span class="cit-pageRange"><a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">, 989–999</a></span></p><p>Sinha et al.,<a href="https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614" target="_blank">&nbsp;</a><a href="https://pubs.acs.org/doi/10.1021/acs.jcim.4c00294" target="_blank">J. Chem. Inf. Model. 2024, 64, 9, 3923–3932</a></p><p><br></p>
+    </div></div>
+            <div class="text-center mt-5">
+                <button onclick="history.back()" class="btn btn-outline-primary rounded-pill px-4">
+                    ← Back to Research Overview
+                </button>
+            </div>
+            <!-- <div class="col-12">
+                <h2 class="mb-4">(Bio)molecular Recognition and Signaling</h2>
+                <p class="mb-4">&lt;div class=&quot;container py-5&quot;&gt;&lt;div class=&quot;mx-auto text-center mb-5&quot; style=&quot;max-width: 900px;&quot;&gt;&lt;p class=&quot;mb-0&quot;&gt;(Bio)molecular recognition and signaling are essential processes where proteins interact with specific molecules to regulate cellular functions. Molecular dynamics (MD) simulations provide an atomic-level, time-resolved view of these interactions, revealing how proteins recognize and bind to their targets through complementary shape, charge, and hydrophobicity.&lt;br&gt;In signaling, MD simulations track how binding events trigger conformational changes that propagate through the protein, leading to a biological response. These simulations are invaluable for understanding the dynamics of protein function, aiding in drug design by revealing key interaction mechanisms and potential targets for modulation.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- PCSK9 Section --&gt;
+    &lt;div class=&quot;mb-5&quot;&gt;
+        &lt;h2&gt;Allosteric Modulation of PCSK9-LDLR Interaction&lt;/h2&gt;
+        &lt;p&gt;
+            The protein PCSK9 negatively regulates LDL receptor (LDLR) recycling, leading to elevated plasma LDL levels. Targeting the PCSK9-LDLR interaction is promising for managing hypercholesterolemia; however, the large interaction surface poses challenges for small-molecule inhibitors.&lt;/p&gt;
+&lt;div class=&quot;text-center mb-4&quot;&gt;
+&lt;img style=&quot;width: 50%;&quot; src=&quot;/media/django-summernote/2025-10-14/da3936ed-240a-4ae0-b5e0-80959c484f08.png&quot;&gt;
+&lt;/div&gt;
+
+        &lt;p&gt;
+            Using microseconds-long molecular dynamics (MD) simulations, we observed significant conformational changes in a distal loop (residues 211−222) of PCSK9 upon LDLR binding. These conformational shifts correlate with binding affinity, revealing potential allosteric hotspots for inhibitor design. Stabilizing apo-specific conformations of the loop may effectively reduce LDLR binding, providing a general strategy for identifying allosteric sites in proteins.
+        &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- RhoGDI Section --&gt;
+    &lt;div class=&quot;mb-5&quot;&gt;
+        &lt;h2&gt;Phosphorylation Code in RhoGDI Regulation of Rho GTPases&lt;/h2&gt;
+        &lt;p align=&quot;center&quot;&gt;
+            Rho-specific guanine nucleotide dissociation inhibitors (RhoGDIs) regulate Rho GTPases by maintaining them in an inactive GDP-bound state. Phosphorylation of specific residues in RhoGDI selectively releases its GTPase partners, constituting a “phosphorylation code.”
+        &lt;/p&gt;
+&lt;div class=&quot;text-center&quot;&gt;
+&lt;img style=&quot;width: 500px;&quot; src=&quot;/media/django-summernote/2025-10-14/0e42dd22-c505-4f58-93b0-1a0c19e98bc5.png&quot;&gt;
+&lt;/div&gt;
+        &lt;p&gt;
+            Using atomistic MD simulations of wild-type and phosphorylated RhoA-RhoGDI complexes, we demonstrate that phosphorylation induces structural changes in the positively charged polybasic region (PBR) of RhoA and the N-terminal region of RhoGDI, leading to reduced binding affinity. Hydrogen bond occupancy and energetic perturbation analyses reveal long-range allosteric signaling through rearrangements of salt bridges and hydrogen bonds. These results highlight the critical role of electrostatic interactions in mediating the phosphorylation code.
+        &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- AChE Section --&gt;
+    &lt;div class=&quot;mb-5&quot;&gt;
+        &lt;h2&gt;Allosteric Inhibition of Acetylcholinesterase (AChE)&lt;/h2&gt;
+        &lt;p&gt;
+            &lt;/p&gt;&lt;p&gt;&lt;img style=&quot;width: 374px; float: left;&quot; src=&quot;/media/django-summernote/2025-10-14/c282ac20-5b87-47fd-8137-6e4fa9465a12.png&quot; class=&quot;note-float-left&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Acetylcholinesterase (AChE) is a key drug target for neurodegenerative disorders such as Alzheimer’s disease. Recent studies suggest certain antidiabetic drugs, like chlorpropamide (CPM), may act as noncompetitive inhibitors, though their binding sites and mechanisms were unknown.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Through MD simulations, we identified a previously unknown allosteric site in addition to the peripheral anionic site (PAS). Ligand binding induces population shifts in the catalytic triad, particularly HIS447, leading to enzyme deactivation. Inter-residue interaction network analysis elucidates the allosteric signaling pathways. These insights provide a foundation for rational design of novel noncompetitive AChE inhibitors.&lt;/p&gt;&lt;h4 class=&quot;fw-semibold text-dark mb-3&quot;&gt;References:&lt;/h4&gt;
+&lt;p&gt;Pandey et al.,&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;span class=&quot;cite-this&quot;&gt;&lt;/span&gt;&lt;span class=&quot;cit-title&quot;&gt;&lt;i&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;Biochemistry&lt;/a&gt;&lt;/i&gt;&lt;/span&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt; &lt;/a&gt;&lt;span class=&quot;cit-year-info&quot;&gt;&lt;span&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;2023&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;cit-volume&quot;&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;, 62&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;cit-issue&quot;&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;, 5&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;cit-pageRange&quot;&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;, 989–999&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Das et al.,&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;a href=&quot;https://doi.org/10.1039/D4CP02921F&quot; target=&quot;_blank&quot;&gt;Phys. Chem. Chem. Phys., 2024,26, 28894-28903 &lt;/a&gt;&lt;span class=&quot;cit-year-info&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;cit-volume&quot;&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;, 62&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;cit-issue&quot;&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;, 5&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;cit-pageRange&quot;&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;, 989–999&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Sinha et al.,&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.biochem.2c00614&quot; target=&quot;_blank&quot;&gt;&amp;nbsp;&lt;/a&gt;&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.jcim.4c00294&quot; target=&quot;_blank&quot;&gt;J. Chem. Inf. Model. 2024, 64, 9, 3923–3932&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;&lt;/div&gt;</p>
+
+                <h4 class="mt-5">Recent Publications</h4>
+                <ul>
+                    
+                    <li>No publications available.</li>
+                    
+                </ul>
+
+
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Research Detail End -->
+
+    <!-- Footer -->
+    <div class="container-fluid copyright text-body py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-12 text-center mb-md-0">
+                    <i class="fas fa-copyright me-2"></i>
+                    <a class="text-white" href="#">teamsuman.org</a>, All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
