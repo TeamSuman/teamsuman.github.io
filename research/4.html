@@ -68,18 +68,18 @@
     <!-- Navbar End -->
 
     <!-- Header Start -->
-    <div class="container-fluid" style="background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url('/media/images/Gemini_Generated_Image_pdxw7cpdxw7cpdxw.png');
+    <div class="container-fluid" style="background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url('/media/images/Gemini_Generated_Image_f8yh3if8yh3if8yh.png');
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
             padding: 200px 0 50px 0;">
         <div class="container text-center py-5" style="max-width: 900px; background-color: rgba(0,0,0,0.5);">
-            <h3 class="text-white display-3 mb-4">Development of Machine-Learned Collective Variables for Complex Biomolecular Systems</h3>
+            <h3 class="text-white display-3 mb-4">Efficient Rare Event Sampling in Molecular Dynamics</h3>
             <!-- <ol class="breadcrumb justify-content-center mb-0">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item"><a href="/research">Research</a></li>
-                <li class="breadcrumb-item active text-white">Development of Machine-Learned Collective Variables for Complex Biomolecular Systems</li>
+                <li class="breadcrumb-item active text-white">Efficient Rare Event Sampling in Molecular Dynamics</li>
             </ol> -->
         </div>
     </div>
@@ -89,88 +89,93 @@
     <div class="container py-5">
         <div class="row g-4">
             <!-- <div class="col-12">
-                <img src="/media/images/Gemini_Generated_Image_pdxw7cpdxw7cpdxw.png" alt="Development of Machine-Learned Collective Variables for Complex Biomolecular Systems" class="img-fluid w-100 rounded mb-4"
+                <img src="/media/images/Gemini_Generated_Image_f8yh3if8yh3if8yh.png" alt="Efficient Rare Event Sampling in Molecular Dynamics" class="img-fluid w-100 rounded mb-4"
                     style="height: 40vh; object-fit: cover" />
             </div> -->
-            <!-- Machine-Learned Collective Variables Overview -->
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-10">
+            <div class="container my-5" style="max-width: 900px;">
 
-      <div class="card shadow-sm border-0">
-        <div class="card-body p-4 p-md-5">
+  <!-- Introduction -->
+  <p class="fs-6 text-justify">
+    Molecular dynamics (MD) simulations are a powerful tool for understanding molecular behavior, but simulating rare events—such as protein folding, ligand binding, or conformational transitions—remains computationally challenging due to long waiting times and high free-energy barriers. Recent advances in enhanced sampling methods have addressed these challenges by intelligently guiding simulations toward target states and efficiently estimating kinetic properties.
+  </p>
 
-          <h2 class="fw-bold mb-3 text-primary text-center">
-            Machine-Learned Collective Variables for Complex Biomolecular Systems
-          </h2>
+  <hr class="my-5">
 
-          <p class="lead text-muted text-center mb-4">
-            Leveraging machine learning to uncover low-dimensional, physically meaningful representations
-            of rare molecular events such as protein folding and ligand binding.
-          </p>
+  <!-- WeTICA Section -->
+  <section class="mb-5">
+    <h2 class="fw-semibold mb-3 text-dark">
+      WeTICA: A Directed Search Weighted Ensemble Based Enhanced Sampling Method
+    </h2>
 
-          <hr class="my-4">
+    <p class="fs-6 mb-4">
+      WeTICA is a <strong class="text-primary">binless Weighted Ensemble (WE) algorithm</strong> designed to efficiently estimate rare event kinetics without the need for complex binning schemes.
+    </p>
 
-          <section class="mb-5">
-            <h4 class="fw-semibold text-dark mb-3">Overview</h4>
-            <p class="text-justify">
-              Traditional molecular dynamics (MD) simulations of biomolecules are often constrained by the challenge 
-              of identifying an appropriate low-dimensional representation, or 
-              <strong>collective variable (CV)</strong>, that effectively captures rare events such as protein folding, 
-              ligand binding, or conformational switching. Recent advances in 
-              <strong>machine learning (ML)</strong> provide powerful data-driven frameworks to automatically discover 
-              nonlinear CVs from simulation data, reducing the need for manual intuition and enabling deeper mechanistic understanding.
-            </p>
-          </section>
-
-          <section class="mb-5">
-            <h4 class="fw-semibold text-dark mb-3">Key Concepts &amp; Advantages</h4>
-            <ul class="list-unstyled ms-2">
-              <li class="mb-3">
-                <span class="text-primary fw-bold">»</span>
-                <strong>Automated Discovery:</strong> ML architectures such as 
-                <em>autoencoders</em> and <em>variational autoencoders (VAEs)</em> systematically compress 
-                high-dimensional atomic coordinates into a few latent variables that retain essential dynamical information.
-              </li>
-              <li class="mb-3">
-                <span class="text-primary fw-bold">»</span>
-                <strong>Enhanced Sampling:</strong> These learned CVs can be combined with advanced sampling techniques 
-                — including <em>Metadynamics</em>, <em>Umbrella Sampling</em>, and <em>Weighted Ensemble</em> methods — 
-                to accelerate sampling of rare events and improve free energy estimations.
-              </li>
-              <li class="mb-3">
-                <span class="text-primary fw-bold">»</span>
-                <strong>Physical Insight:</strong> ML-derived CVs reveal the most influential degrees of freedom, 
-                providing intuitive insight into transition mechanisms and structural heterogeneity in biomolecular systems.
-              </li>
-            </ul>
-          </section>
-
-          <section class="mb-5">
-            <h4 class="fw-semibold text-dark mb-3">
-              Case Study: <span class="text-primary">IceCoder — Machine Learning Framework for Ice Phase Classification</span>
-            </h4>
-
-            <p class="text-justify">
-              Identifying and classifying different phases of ice in molecular simulations is notoriously difficult due to 
-              the subtle structural variations among crystalline and amorphous forms. 
-              We developed <strong>IceCoder</strong>, a machine learning framework that integrates 
-              <em>Smooth Overlap of Atomic Positions (SOAP)</em> descriptors with a 
-              <em>Variational Autoencoder (VAE)</em> to learn a compact, two-dimensional latent representation of structural diversity in ice.<br><img style="width: 100%;" src="/media/django-summernote/2025-10-12/4fe43b06-a8d8-4a92-997a-c1d4157c0e4a.jpg"><br></p>
-
-            <p class="text-justify">
-              Trained on extensive molecular dynamics data, IceCoder successfully distinguishes between multiple crystalline 
-              ice polymorphs and liquid water, even under thermal fluctuations. Beyond ice, this framework can be generalized 
-              to identify <strong>polymorphs in other molecular crystals</strong>, offering a scalable and interpretable approach 
-              to track <em>nucleation, growth, and phase transitions</em> with high fidelity and computational efficiency.<br></p><h4 class="fw-semibold text-dark mb-3">References:</h4>
-<p>
-Maity et al.,<a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c01298" target="_blank"> Chem. Theory Comput. 2025, 21, 4, 1916–1928</a></p>
-
-</section>
-        </div>
-      </div>
+    <div class="text-center mb-4">
+      <img src="/media/django-summernote/2025-10-12/20e3bced-ae40-4e4a-bb05-8b4b09030319.png" class="img-fluid rounded shadow-sm" style="max-width: 520px;" alt="WeTICA diagram">
+      <p class="text-muted small mt-2 fst-italic">Diagram illustrating the WeTICA enhanced sampling method</p>
     </div>
-  </div>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3">Key Features</h3>
+    <ul class="list-unstyled fs-6">
+      <li class="mb-2"><span class="text-primary fw-bold">»</span> Uses <strong class="text-primary">low-dimensional Time-lagged Independent Component Analysis (TICA) projections</strong> as collective variables (CVs).</li>
+      <li class="mb-2"><span class="text-primary fw-bold">»</span> Enables the <strong class="text-primary">direct calculation of kinetic rates</strong> from biased trajectories.</li>
+      <li class="mb-2"><span class="text-primary fw-bold">»</span> Applied to unfolding of TC5b and TC10b Trp-cage mutants, as well as Protein G, with high accuracy.</li>
+      <li class="mb-2"><span class="text-primary fw-bold">»</span> Achieves convergence using <strong class="text-primary">an order of magnitude less simulation time</strong> than conventional WE approaches.</li>
+      <li><span class="text-primary fw-bold">»</span> Can be extended to other linear or nonlinear CV spaces with improved walker selection criteria.</li>
+    </ul>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3">References</h3>
+    <ul class="list-unstyled fs-6 lh-lg"><li>Mitra&nbsp;<em>et al.</em>,&nbsp;<a href="http://scitation.aip.org/content/aip/journal/jcp/116/11/10.1063/1.1448491" target="_blank" class="link-primary text-decoration-none fw-medium"><em></em></a><em><a href="https://doi.org/10.1063/5.0239713" target="_blank">J. Chem. Phys.</a></em><a href="https://doi.org/10.1063/5.0239713" target="_blank"> 162, 034106 (2025)</a></li></ul>
+  </section>
+
+  <!-- CoWERA Section -->
+  <section class="mb-5">
+    <h2 class="fw-semibold mb-3 text-dark">CoWERA: Coherence-based Weighted Ensemble Resampling Algorithm</h2>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mb-3">Overview</h3>
+    <p class="fs-6">CoWERA introduces temporal coherence-based resampling to prioritize trajectories that consistently make forward progress toward the target state.</p><p class="fs-6"><img style="width: 100%;" src="/media/django-summernote/2025-10-12/9220287f-6cf0-43ef-b9e7-8b0c5243426d.png"><br></p><p class="fs-6"><br></p>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3">Key Features</h3>
+    <ul class="list-unstyled fs-6">
+      <li class="mb-2"><span class="text-success fw-bold">»</span> Focuses computational effort on physically meaningful and productive pathways.</li>
+      <li class="mb-2"><span class="text-success fw-bold">»</span> Reduces wasteful sampling in unproductive CV regions.</li>
+      <li class="mb-2"><span class="text-success fw-bold">»</span> Provides faster convergence, lower variance, and more reliable kinetic estimates.</li>
+      <li><span class="text-success fw-bold">»</span> Avoids misleading guidance from absolute CV positions, ensuring kinetic relevance.</li>
+    </ul>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3">Applications</h3>
+    <p class="fs-6">Protein folding, ligand unbinding, conformational switching, and other rare-event molecular processes where efficiency and kinetic accuracy are critical.</p>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3">References</h3>
+    <ul class="list-unstyled fs-6 lh-lg">
+      <li>Work in progress!</li>
+    </ul>
+  </section>
+
+  <!-- PathGennie Section -->
+  <section>
+    <h2 class="fw-semibold mb-3 text-dark">PathGennie: Rapid Generation of Rare Event Pathways</h2>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mb-3">Overview</h3>
+    <p class="fs-6">PathGennie uses a direction-guided adaptive sampling strategy with ultrashort monitored trajectories to quickly identify rare event pathways.</p><p class="fs-6" align="center"><img style="width: 50%;" src="/media/django-summernote/2025-10-12/921667fe-44dd-4e93-97d1-99a632d643ef.png"><br></p>
+
+    <h3 class="fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3">Key Features</h3>
+    <ul class="list-unstyled fs-6">
+      <li class="mb-2"><span class="text-danger fw-bold">»</span> Selectively propagates trajectories showing progress toward the target in a predefined CV space.</li>
+      <li class="mb-2"><span class="text-danger fw-bold">»</span> Handles ligand unbinding in T4 Lysozyme and Abl kinase, as well as protein folding (Trp-cage, Protein G).</li>
+      <li class="mb-2"><span class="text-danger fw-bold">»</span> Generates multiple competing pathways and estimates their relative populations.</li>
+      <li><span class="text-danger fw-bold">»</span> Produces viable transition pathways in a few hundred picoseconds, suitable for further analysis using WE or TPS simulations.<br><h3 class="fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3">References</h3>
+    </li><li>Work in progress!</li><li><br></li>
+    </ul>
+
+    <div class="mt-5 text-center bg-light p-4 border rounded">
+      <p class="mb-0 fs-6">
+        <strong>Open-source code:</strong>
+<a href="https://github.com/TeamSuman/PathGennie" target="_blank">PathGennie on GitHub</a></p>
+    </div>
+  </section>
+
 </div>
             <div class="text-center mt-5">
                 <a href="/research" class="btn btn-outline-primary rounded-pill px-4">
@@ -178,86 +183,91 @@ Maity et al.,<a href="https://pubs.acs.org/doi/10.1021/acs.jctc.4c01298" target=
                 </a>
             </div>
             <!-- <div class="col-12">
-                <h2 class="mb-4">Development of Machine-Learned Collective Variables for Complex Biomolecular Systems</h2>
-                <p class="mb-4">&lt;!-- Machine-Learned Collective Variables Overview --&gt;
-&lt;div class=&quot;container my-5&quot;&gt;
-  &lt;div class=&quot;row justify-content-center&quot;&gt;
-    &lt;div class=&quot;col-lg-10&quot;&gt;
+                <h2 class="mb-4">Efficient Rare Event Sampling in Molecular Dynamics</h2>
+                <p class="mb-4">&lt;div class=&quot;container my-5&quot; style=&quot;max-width: 900px;&quot;&gt;
 
-      &lt;div class=&quot;card shadow-sm border-0&quot;&gt;
-        &lt;div class=&quot;card-body p-4 p-md-5&quot;&gt;
+  &lt;!-- Introduction --&gt;
+  &lt;p class=&quot;fs-6 text-justify&quot;&gt;
+    Molecular dynamics (MD) simulations are a powerful tool for understanding molecular behavior, but simulating rare events—such as protein folding, ligand binding, or conformational transitions—remains computationally challenging due to long waiting times and high free-energy barriers. Recent advances in enhanced sampling methods have addressed these challenges by intelligently guiding simulations toward target states and efficiently estimating kinetic properties.
+  &lt;/p&gt;
 
-          &lt;h2 class=&quot;fw-bold mb-3 text-primary text-center&quot;&gt;
-            Machine-Learned Collective Variables for Complex Biomolecular Systems
-          &lt;/h2&gt;
+  &lt;hr class=&quot;my-5&quot;&gt;
 
-          &lt;p class=&quot;lead text-muted text-center mb-4&quot;&gt;
-            Leveraging machine learning to uncover low-dimensional, physically meaningful representations
-            of rare molecular events such as protein folding and ligand binding.
-          &lt;/p&gt;
+  &lt;!-- WeTICA Section --&gt;
+  &lt;section class=&quot;mb-5&quot;&gt;
+    &lt;h2 class=&quot;fw-semibold mb-3 text-dark&quot;&gt;
+      WeTICA: A Directed Search Weighted Ensemble Based Enhanced Sampling Method
+    &lt;/h2&gt;
 
-          &lt;hr class=&quot;my-4&quot;&gt;
+    &lt;p class=&quot;fs-6 mb-4&quot;&gt;
+      WeTICA is a &lt;strong class=&quot;text-primary&quot;&gt;binless Weighted Ensemble (WE) algorithm&lt;/strong&gt; designed to efficiently estimate rare event kinetics without the need for complex binning schemes.
+    &lt;/p&gt;
 
-          &lt;section class=&quot;mb-5&quot;&gt;
-            &lt;h4 class=&quot;fw-semibold text-dark mb-3&quot;&gt;Overview&lt;/h4&gt;
-            &lt;p class=&quot;text-justify&quot;&gt;
-              Traditional molecular dynamics (MD) simulations of biomolecules are often constrained by the challenge 
-              of identifying an appropriate low-dimensional representation, or 
-              &lt;strong&gt;collective variable (CV)&lt;/strong&gt;, that effectively captures rare events such as protein folding, 
-              ligand binding, or conformational switching. Recent advances in 
-              &lt;strong&gt;machine learning (ML)&lt;/strong&gt; provide powerful data-driven frameworks to automatically discover 
-              nonlinear CVs from simulation data, reducing the need for manual intuition and enabling deeper mechanistic understanding.
-            &lt;/p&gt;
-          &lt;/section&gt;
-
-          &lt;section class=&quot;mb-5&quot;&gt;
-            &lt;h4 class=&quot;fw-semibold text-dark mb-3&quot;&gt;Key Concepts &amp;amp; Advantages&lt;/h4&gt;
-            &lt;ul class=&quot;list-unstyled ms-2&quot;&gt;
-              &lt;li class=&quot;mb-3&quot;&gt;
-                &lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt;
-                &lt;strong&gt;Automated Discovery:&lt;/strong&gt; ML architectures such as 
-                &lt;em&gt;autoencoders&lt;/em&gt; and &lt;em&gt;variational autoencoders (VAEs)&lt;/em&gt; systematically compress 
-                high-dimensional atomic coordinates into a few latent variables that retain essential dynamical information.
-              &lt;/li&gt;
-              &lt;li class=&quot;mb-3&quot;&gt;
-                &lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt;
-                &lt;strong&gt;Enhanced Sampling:&lt;/strong&gt; These learned CVs can be combined with advanced sampling techniques 
-                — including &lt;em&gt;Metadynamics&lt;/em&gt;, &lt;em&gt;Umbrella Sampling&lt;/em&gt;, and &lt;em&gt;Weighted Ensemble&lt;/em&gt; methods — 
-                to accelerate sampling of rare events and improve free energy estimations.
-              &lt;/li&gt;
-              &lt;li class=&quot;mb-3&quot;&gt;
-                &lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt;
-                &lt;strong&gt;Physical Insight:&lt;/strong&gt; ML-derived CVs reveal the most influential degrees of freedom, 
-                providing intuitive insight into transition mechanisms and structural heterogeneity in biomolecular systems.
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/section&gt;
-
-          &lt;section class=&quot;mb-5&quot;&gt;
-            &lt;h4 class=&quot;fw-semibold text-dark mb-3&quot;&gt;
-              Case Study: &lt;span class=&quot;text-primary&quot;&gt;IceCoder — Machine Learning Framework for Ice Phase Classification&lt;/span&gt;
-            &lt;/h4&gt;
-
-            &lt;p class=&quot;text-justify&quot;&gt;
-              Identifying and classifying different phases of ice in molecular simulations is notoriously difficult due to 
-              the subtle structural variations among crystalline and amorphous forms. 
-              We developed &lt;strong&gt;IceCoder&lt;/strong&gt;, a machine learning framework that integrates 
-              &lt;em&gt;Smooth Overlap of Atomic Positions (SOAP)&lt;/em&gt; descriptors with a 
-              &lt;em&gt;Variational Autoencoder (VAE)&lt;/em&gt; to learn a compact, two-dimensional latent representation of structural diversity in ice.&lt;br&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;/media/django-summernote/2025-10-12/4fe43b06-a8d8-4a92-997a-c1d4157c0e4a.jpg&quot;&gt;&lt;br&gt;&lt;/p&gt;
-
-            &lt;p class=&quot;text-justify&quot;&gt;
-              Trained on extensive molecular dynamics data, IceCoder successfully distinguishes between multiple crystalline 
-              ice polymorphs and liquid water, even under thermal fluctuations. Beyond ice, this framework can be generalized 
-              to identify &lt;strong&gt;polymorphs in other molecular crystals&lt;/strong&gt;, offering a scalable and interpretable approach 
-              to track &lt;em&gt;nucleation, growth, and phase transitions&lt;/em&gt; with high fidelity and computational efficiency.&lt;br&gt;&lt;/p&gt;&lt;h4 class=&quot;fw-semibold text-dark mb-3&quot;&gt;References:&lt;/h4&gt;
-&lt;p&gt;
-Maity et al.,&lt;a href=&quot;https://pubs.acs.org/doi/10.1021/acs.jctc.4c01298&quot; target=&quot;_blank&quot;&gt; Chem. Theory Comput. 2025, 21, 4, 1916–1928&lt;/a&gt;&lt;/p&gt;
-
-&lt;/section&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+    &lt;div class=&quot;text-center mb-4&quot;&gt;
+      &lt;img src=&quot;/media/django-summernote/2025-10-12/20e3bced-ae40-4e4a-bb05-8b4b09030319.png&quot; class=&quot;img-fluid rounded shadow-sm&quot; style=&quot;max-width: 520px;&quot; alt=&quot;WeTICA diagram&quot;&gt;
+      &lt;p class=&quot;text-muted small mt-2 fst-italic&quot;&gt;Diagram illustrating the WeTICA enhanced sampling method&lt;/p&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3&quot;&gt;Key Features&lt;/h3&gt;
+    &lt;ul class=&quot;list-unstyled fs-6&quot;&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt; Uses &lt;strong class=&quot;text-primary&quot;&gt;low-dimensional Time-lagged Independent Component Analysis (TICA) projections&lt;/strong&gt; as collective variables (CVs).&lt;/li&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt; Enables the &lt;strong class=&quot;text-primary&quot;&gt;direct calculation of kinetic rates&lt;/strong&gt; from biased trajectories.&lt;/li&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt; Applied to unfolding of TC5b and TC10b Trp-cage mutants, as well as Protein G, with high accuracy.&lt;/li&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt; Achieves convergence using &lt;strong class=&quot;text-primary&quot;&gt;an order of magnitude less simulation time&lt;/strong&gt; than conventional WE approaches.&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;text-primary fw-bold&quot;&gt;»&lt;/span&gt; Can be extended to other linear or nonlinear CV spaces with improved walker selection criteria.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3&quot;&gt;References&lt;/h3&gt;
+    &lt;ul class=&quot;list-unstyled fs-6 lh-lg&quot;&gt;&lt;li&gt;Mitra&amp;nbsp;&lt;em&gt;et al.&lt;/em&gt;,&amp;nbsp;&lt;a href=&quot;http://scitation.aip.org/content/aip/journal/jcp/116/11/10.1063/1.1448491&quot; target=&quot;_blank&quot; class=&quot;link-primary text-decoration-none fw-medium&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;em&gt;&lt;a href=&quot;https://doi.org/10.1063/5.0239713&quot; target=&quot;_blank&quot;&gt;J. Chem. Phys.&lt;/a&gt;&lt;/em&gt;&lt;a href=&quot;https://doi.org/10.1063/5.0239713&quot; target=&quot;_blank&quot;&gt; 162, 034106 (2025)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+  &lt;/section&gt;
+
+  &lt;!-- CoWERA Section --&gt;
+  &lt;section class=&quot;mb-5&quot;&gt;
+    &lt;h2 class=&quot;fw-semibold mb-3 text-dark&quot;&gt;CoWERA: Coherence-based Weighted Ensemble Resampling Algorithm&lt;/h2&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mb-3&quot;&gt;Overview&lt;/h3&gt;
+    &lt;p class=&quot;fs-6&quot;&gt;CoWERA introduces temporal coherence-based resampling to prioritize trajectories that consistently make forward progress toward the target state.&lt;/p&gt;&lt;p class=&quot;fs-6&quot;&gt;&lt;img style=&quot;width: 100%;&quot; src=&quot;/media/django-summernote/2025-10-12/9220287f-6cf0-43ef-b9e7-8b0c5243426d.png&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;fs-6&quot;&gt;&lt;br&gt;&lt;/p&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3&quot;&gt;Key Features&lt;/h3&gt;
+    &lt;ul class=&quot;list-unstyled fs-6&quot;&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-success fw-bold&quot;&gt;»&lt;/span&gt; Focuses computational effort on physically meaningful and productive pathways.&lt;/li&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-success fw-bold&quot;&gt;»&lt;/span&gt; Reduces wasteful sampling in unproductive CV regions.&lt;/li&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-success fw-bold&quot;&gt;»&lt;/span&gt; Provides faster convergence, lower variance, and more reliable kinetic estimates.&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;text-success fw-bold&quot;&gt;»&lt;/span&gt; Avoids misleading guidance from absolute CV positions, ensuring kinetic relevance.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3&quot;&gt;Applications&lt;/h3&gt;
+    &lt;p class=&quot;fs-6&quot;&gt;Protein folding, ligand unbinding, conformational switching, and other rare-event molecular processes where efficiency and kinetic accuracy are critical.&lt;/p&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3&quot;&gt;References&lt;/h3&gt;
+    &lt;ul class=&quot;list-unstyled fs-6 lh-lg&quot;&gt;
+      &lt;li&gt;Work in progress!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+
+  &lt;!-- PathGennie Section --&gt;
+  &lt;section&gt;
+    &lt;h2 class=&quot;fw-semibold mb-3 text-dark&quot;&gt;PathGennie: Rapid Generation of Rare Event Pathways&lt;/h2&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mb-3&quot;&gt;Overview&lt;/h3&gt;
+    &lt;p class=&quot;fs-6&quot;&gt;PathGennie uses a direction-guided adaptive sampling strategy with ultrashort monitored trajectories to quickly identify rare event pathways.&lt;/p&gt;&lt;p class=&quot;fs-6&quot; align=&quot;center&quot;&gt;&lt;img style=&quot;width: 50%;&quot; src=&quot;/media/django-summernote/2025-10-12/921667fe-44dd-4e93-97d1-99a632d643ef.png&quot;&gt;&lt;br&gt;&lt;/p&gt;
+
+    &lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3&quot;&gt;Key Features&lt;/h3&gt;
+    &lt;ul class=&quot;list-unstyled fs-6&quot;&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-danger fw-bold&quot;&gt;»&lt;/span&gt; Selectively propagates trajectories showing progress toward the target in a predefined CV space.&lt;/li&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-danger fw-bold&quot;&gt;»&lt;/span&gt; Handles ligand unbinding in T4 Lysozyme and Abl kinase, as well as protein folding (Trp-cage, Protein G).&lt;/li&gt;
+      &lt;li class=&quot;mb-2&quot;&gt;&lt;span class=&quot;text-danger fw-bold&quot;&gt;»&lt;/span&gt; Generates multiple competing pathways and estimates their relative populations.&lt;/li&gt;
+      &lt;li&gt;&lt;span class=&quot;text-danger fw-bold&quot;&gt;»&lt;/span&gt; Produces viable transition pathways in a few hundred picoseconds, suitable for further analysis using WE or TPS simulations.&lt;br&gt;&lt;h3 class=&quot;fs-5 fw-semibold border-bottom pb-2 mt-5 mb-3&quot;&gt;References&lt;/h3&gt;
+    &lt;/li&gt;&lt;li&gt;Work in progress!&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;mt-5 text-center bg-light p-4 border rounded&quot;&gt;
+      &lt;p class=&quot;mb-0 fs-6&quot;&gt;
+        &lt;strong&gt;Open-source code:&lt;/strong&gt;
+&lt;a href=&quot;https://github.com/TeamSuman/PathGennie&quot; target=&quot;_blank&quot;&gt;PathGennie on GitHub&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
 &lt;/div&gt;</p>
 
                 <h4 class="mt-5">Recent Publications</h4>
