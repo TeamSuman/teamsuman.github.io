@@ -151,7 +151,7 @@ rsync -avzhe ssh ./* teamsuman@ssh.pythonanywhere.com:/home/teamsuman/website/ -
 Dynamic content on the site can be modified via the Django admin interface. Changes made through the admin are **permanent**.
 
 * **Locally:** Access the admin at [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
-* **On the live site:** Access at [http://teamsuman.org/admin](http://teamsuman.org/admin)
+* **On the live site:** Access at [https://www.teamsuman.org/admin](https://www.teamsuman.org/admin)
 
 Log in with your admin credentials and make the necessary updates. All changes will be reflected immediately on the site.
 
