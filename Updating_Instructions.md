@@ -109,14 +109,10 @@ This will copy the project files to your local machine after authentication.
 
 ### Installing Dependencies
 
-Install the required Python packages using `pip`:
+Install the required Python packages using `conda`:
 
 ```bash
-pip install django
-pip install django-admin-sortable2
-pip install django-summernote
-pip install joblib
-pip install jsonfield
+conda env create -f environment.yml
 ```
 ---
 
