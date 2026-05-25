@@ -6,9 +6,17 @@
     <meta charset="utf-8">
     <title>Team Suman | News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+
+    <!-- Include  meta tags -->
+    <!-- Meta tags -->
+    <meta name="description" content="Stay updated with the latest news, research announcements, and achievements from the Chakrabarty Lab (Team Suman).">
+    <meta name="keywords" content="Chakrabarty Lab news, Team Suman updates, research announcements, computational biology news, scientific achievements, Kolkata">
+    <meta name="author" content="Suman Chakrabarty">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -17,56 +25,170 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS Libraries -->
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Bootstrap & Custom CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
+
+    <style>
+        /* HTML: <div class="loader"></div> */
+.loader {
+  height: 60px;
+  aspect-ratio: 1;
+  border: 3px solid #524656;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CF4647;
+  animation:
+    l8-0 .57s infinite alternate linear -.13s,
+    l8-1 .35s infinite alternate linear -.23s;
+}
+.loader:after {
+  background: #45ADA8;
+  animation:
+    l8-0 .29s infinite alternate linear -.11s,
+    l8-1 .51s infinite alternate linear -.34s;
+}
+@keyframes l8-0 {
+  0%,5%  {bottom: 0%}
+  95%,to {bottom: 80%}
+}
+@keyframes l8-1 {
+  0%,5%  {left: 0%}
+  95%,to {left: 80%}
+}
+    </style>
     
-<link href="/static/css/software_style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="static/css/software_style.css" rel="stylesheet" />
 <style>
-    .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
+  :root {
+    --news-accent: #14b8a6; /* Premium Teal */
+    --bs-secondary: #0f172a; /* Slate 900 */
+    --font-heading: 'Lora', serif;
+    --font-body: 'Outfit', sans-serif;
+  }
 
-    .lora {
-        font-family: "Lora", serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-    }
+  /* Structural wrapper to push footer down */
+  .news-content-wrapper {
+    background-color: #f8fafc; /* subtle slate-light background */
+    min-height: 60vh;
+  }
+
+  /* Section headers */
+  .section-subtitle {
+    font-family: var(--font-body);
+    color: var(--news-accent);
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    color: var(--bs-secondary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Card hover effect */
+  .news-card {
+    border-radius: 12px;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+  }
+
+  .news-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    transform: translateY(-4px);
+    border-left: 4px solid var(--news-accent);
+  }
+
+  /* News item text */
+  .news_elem {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 0;
+  }
+
+  .news_elem i {
+    margin-right: 0.75rem;
+    color: var(--news-accent);
+    font-size: 1.1rem;
+    align-self: flex-start;
+    margin-top: 0.3rem;
+  }
+
+  .news_elem strong {
+    color: var(--bs-secondary);
+    font-weight: 600;
+  }
+
+  .empty-state {
+    font-family: var(--font-body);
+    color: #64748b;
+    font-size: 1.1rem;
+    padding: 3rem 0;
+  }
 </style>
 
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="loader"></div>
+    </div>
+    <!-- Spinner End -->
     
+
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="/" class="navbar-brand p-0" style="text-decoration: none;">
+    <a href="index.html" class="navbar-brand p-0" style="text-decoration: none">
         <h1 class="m-0 lora">Chakrabarty Lab</h1>
     </a>
+
+    <!-- Hamburger -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
+
+    <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="/" class="nav-item nav-link">Home</a>
-            <a href="/news"
-                class="nav-item nav-link active">News</a>
-            <a href="/research"
+            <a href="index.html"
+                class="nav-item nav-link ">Home</a>
+            <a href="news.html"
+                class="nav-item nav-link active">Announcements</a>
+            <a href="research.html"
                 class="nav-item nav-link ">Research</a>
-            <a href="/publication"
+            <a href="publication.html"
                 class="nav-item nav-link ">Publications</a>
-            <a href="/softwares"
+            <a href="softwares.html"
                 class="nav-item nav-link ">Software</a>
-            <a href=" /team"
+            <a href="team.html"
                 class="nav-item nav-link ">Team</a>
-            <a href="/positions"
+            <a href="positions.html"
                 class="nav-item nav-link ">Positions</a>
-            <a href="/gallery"
+            <a href="gallery.html"
                 class="nav-item nav-link ">Gallery</a>
-            <a href="/contacts"
+            <a href="contacts.html"
                 class="nav-item nav-link ">Contact</a>
         </div>
     </div>
@@ -74,185 +196,247 @@
 
 
     
-
 <!-- Header Section -->
 <div class="container-fluid bg-news">
-    <div class="container text-center py-5" style="max-width: 900px;">
-        <h3 class="text-white display-3 mb-4">Announcements</h3>
-        <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active text-white">News</li>
-        </ol>
-    </div>
+  <div class="container text-center py-5" style="max-width: 900px">
+    <h3 class="text-white display-3 mb-4">Announcements</h3>
+    <ol class="breadcrumb justify-content-center mb-0">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active text-white">News</li>
+    </ol>
+  </div>
 </div>
 
 <!-- News Section -->
-<section class="container light-background py-5">
-
-    <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-        <h5 class="section-title px-3">News</h5>
-        <h1 class="mb-0">What's New?</h1>
-        <p class="mb-4">
-            See what we've been up to recently. Don't miss out! Visit our official page or follow us for the latest
-            news and updates.
+<section class="news-content-wrapper py-5">
+    <div class="container py-4">
+      <div class="mx-auto text-center mb-5" style="max-width: 900px">
+        <h5 class="section-subtitle">News & Updates</h5>
+        <h2 class="section-title h1">What's New?</h2>
+        <p class="mb-4 text-muted" style="font-family: var(--font-body); font-size: 1.1rem;">
+          See what we've been up to recently. Don't miss out! Visit our official
+          page or follow us for the latest updates.
         </p>
-    </div>
+      </div>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            
-            <div class="col-lg-12 mb-2 mt-2" data-aos="fade-up" data-aos-delay="100">
-                <div class="card p-4" style="border: 1px solid rgba(240,46,170,0.4);
-                            border-radius: 0%;
-                            box-shadow: rgba(240,46,170,0.4) 5px 5px,
-                                        rgba(240,46,170,0.3) 10px 10px,
-                                        rgba(240,46,170,0.2) 15px 15px,
-                                        rgba(240,46,170,0.1) 20px 20px,
-                                        rgba(240,46,170,0.05) 25px 25px;">
-                    <div class="body">
-                        <p class="mb-0 text-primary news_elem">
-                            <span>
-                                <i class="fas fa-hand-o-right" style="color: blue;" aria-hidden="true"></i>
-                                <strong>New paper :</strong> K. Sinha published a paper in Chemical Physics Impact titled &lt;a href=&quot;https://scholar.google.co.in/citations?view_op=view_citation&amp;hl=en&amp;user=dcj-bnsAAAAJ&amp;sortby=pubdate&amp;citation_for_view=dcj-bnsAAAAJ:2_BaaiyHPJIC&quot; &gt;&lt;b&gt;Elucidating the microscopic origin of observed anti-correlation between the protein-protein and protein-water interaction energies&lt;/b&gt;&lt;/a&gt;.
-                            </span>
-                        </p>
-                    </div>
-                </div>
+      <div class="row justify-content-center">
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-bullhorn" aria-hidden="true"></i>
+              <p class="news_elem w-100">
+                <strong>Publication:</strong> Dibyendu Maity published his rapid path generation method work &#x27;PathGennie&#x27; in JCTC. &lt;b&gt;&lt;a href=&quot;https://doi.org/10.1021/acs.jctc.5c01244&quot;&gt; Read Here!&lt;/a&gt;&lt;/b&gt; The software is freely available &lt;b&gt;&lt;a href=&quot;https://github.com/TeamSuman/PathGennie&quot;&gt; here &lt;/a&gt;&lt;/b&gt;
+              </p>
             </div>
-            
-            <div class="col-lg-12 mb-2 mt-2" data-aos="fade-up" data-aos-delay="100">
-                <div class="card p-4" style="border: 1px solid rgba(240,46,170,0.4);
-                            border-radius: 0%;
-                            box-shadow: rgba(240,46,170,0.4) 5px 5px,
-                                        rgba(240,46,170,0.3) 10px 10px,
-                                        rgba(240,46,170,0.2) 15px 15px,
-                                        rgba(240,46,170,0.1) 20px 20px,
-                                        rgba(240,46,170,0.05) 25px 25px;">
-                    <div class="body">
-                        <p class="mb-0 text-primary news_elem">
-                            <span>
-                                <i class="fas fa-hand-o-right" style="color: blue;" aria-hidden="true"></i>
-                                <strong>New paper :</strong> A. Das authored the paper &quot;Molecular Insights into the Conformational and Binding Behaviors of Human Serum Albumin Induced by Surface-Active Ionic Liquids&quot; published in &lt;a href=&quot;https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.4c01915&quot;&gt;The Journal of Physical Chemistry B&lt;/a&gt;.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-12 mb-2 mt-2" data-aos="fade-up" data-aos-delay="100">
-                <div class="card p-4" style="border: 1px solid rgba(240,46,170,0.4);
-                            border-radius: 0%;
-                            box-shadow: rgba(240,46,170,0.4) 5px 5px,
-                                        rgba(240,46,170,0.3) 10px 10px,
-                                        rgba(240,46,170,0.2) 15px 15px,
-                                        rgba(240,46,170,0.1) 20px 20px,
-                                        rgba(240,46,170,0.05) 25px 25px;">
-                    <div class="body">
-                        <p class="mb-0 text-primary news_elem">
-                            <span>
-                                <i class="fas fa-hand-o-right" style="color: blue;" aria-hidden="true"></i>
-                                <strong>New paper :</strong> K.Sinha et.el, published a paper in JCIM titled as &lt;b&gt;&lt;a href=&quot;https://pubs.acs.org/doi/abs/10.1021/acs.jcim.4c00294&quot;&gt;Leveraging Bidirectional Nature of Allostery To Inhibit Protein–Protein Interactions (PPIs): A Case Study of PCSK9–LDLR Interaction&lt;/a&gt;&lt;/b&gt;.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-12 mb-2 mt-2" data-aos="fade-up" data-aos-delay="100">
-                <div class="card p-4" style="border: 1px solid rgba(240,46,170,0.4);
-                            border-radius: 0%;
-                            box-shadow: rgba(240,46,170,0.4) 5px 5px,
-                                        rgba(240,46,170,0.3) 10px 10px,
-                                        rgba(240,46,170,0.2) 15px 15px,
-                                        rgba(240,46,170,0.1) 20px 20px,
-                                        rgba(240,46,170,0.05) 25px 25px;">
-                    <div class="body">
-                        <p class="mb-0 text-primary news_elem">
-                            <span>
-                                <i class="fas fa-hand-o-right" style="color: blue;" aria-hidden="true"></i>
-                                <strong>Award :</strong> Dr. Suman Chakrabarty received the  Chemical Research Society of India (CRSI) Bronze medal 2025.  &lt;b&gt;&lt;a href=&quot;https://x.com/ChemResSocIndia/status/1809264682374738052&quot;&gt; Know more!&lt;/a&gt;&lt;/b&gt;
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-12 mb-2 mt-2" data-aos="fade-up" data-aos-delay="100">
-                <div class="card p-4" style="border: 1px solid rgba(240,46,170,0.4);
-                            border-radius: 0%;
-                            box-shadow: rgba(240,46,170,0.4) 5px 5px,
-                                        rgba(240,46,170,0.3) 10px 10px,
-                                        rgba(240,46,170,0.2) 15px 15px,
-                                        rgba(240,46,170,0.1) 20px 20px,
-                                        rgba(240,46,170,0.05) 25px 25px;">
-                    <div class="body">
-                        <p class="mb-0 text-primary news_elem">
-                            <span>
-                                <i class="fas fa-hand-o-right" style="color: blue;" aria-hidden="true"></i>
-                                <strong>Positions :</strong> We have a position available for TRC project and Scientist-D under the Technical Research Centre(TRC) scheme of SNBNCBS. &lt;b&gt;&lt;a href=&quot;https://www.bose.res.in/departments/TRC/&quot;&gt;Know More!&lt;/a&gt;&lt;/b&gt;
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
+          </div>
         </div>
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-bullhorn" aria-hidden="true"></i>
+              <p class="news_elem w-100">
+                <strong>Award:</strong> Dr. Suman Chakrabarty received the  Chemical Research Society of India (CRSI) Bronze medal 2025.  &lt;b&gt;&lt;a href=&quot;https://x.com/ChemResSocIndia/status/1809264682374738052&quot;&gt; Know more!&lt;/a&gt;&lt;/b&gt;
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-bullhorn" aria-hidden="true"></i>
+              <p class="news_elem w-100">
+                <strong>Positions:</strong> We have a position available for TRC project and Scientist-D under the Technical Research Centre(TRC) scheme of SNBNCBS. &lt;b&gt;&lt;a href=&quot;https://www.bose.res.in/departments/TRC/&quot;&gt;Know More!&lt;/a&gt;&lt;/b&gt;
+              </p>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Latest Publications -->
+        
+        <div class="col-12 text-center mt-4 mb-3">
+          <h5 class="section-subtitle" style="font-size: 0.8rem; color: #64748b;">Recent Publications</h5>
+        </div>
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-book-open" aria-hidden="true" style="margin-right: 0.75rem; color: var(--news-accent); font-size: 1.1rem; margin-top: 0.3rem;"></i>
+              <div class="w-100">
+                <p class="news_elem mb-1">
+                  <strong>New Publication:</strong> Mapping Protein–Protein Interaction Hotspots and Unveiling a Cryptic Allosteric Pocket in PLK1 PBD via Mixed-Solvent Molecular Dynamics
+                </p>
+                <p class="mb-1 text-muted" style="font-size: 0.95rem; font-family: var(--font-body);">
+                  By <span class="fw-bold" style="color: var(--bs-secondary);">Sutanu Mukhopadhyay</span> et al. published in <em class="fw-semibold" style="color: var(--news-accent);">ChemPhysChem, 2026</em>
+                </p>
+                <a href="https://doi.org/10.1002/cphc.202500907" target="_blank" class="text-decoration-none fw-semibold" style="font-size: 0.9rem; color: var(--news-accent); font-family: var(--font-body);">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-book-open" aria-hidden="true" style="margin-right: 0.75rem; color: var(--news-accent); font-size: 1.1rem; margin-top: 0.3rem;"></i>
+              <div class="w-100">
+                <p class="news_elem mb-1">
+                  <strong>New Publication:</strong> CoWERA: A temporal coherence guided binless resampling algorithm for weighted-ensemble based estimation of rare-event kinetics
+                </p>
+                <p class="mb-1 text-muted" style="font-size: 0.95rem; font-family: var(--font-body);">
+                  By <span class="fw-bold" style="color: var(--bs-secondary);">Shaheerah Shahid</span> et al. published in <em class="fw-semibold" style="color: var(--news-accent);">The Journal of Chemical Physics, 2026</em>
+                </p>
+                <a href="https://pubs.aip.org/aip/jcp/article/164/13/134111/3386194" target="_blank" class="text-decoration-none fw-semibold" style="font-size: 0.9rem; color: var(--news-accent); font-family: var(--font-body);">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-book-open" aria-hidden="true" style="margin-right: 0.75rem; color: var(--news-accent); font-size: 1.1rem; margin-top: 0.3rem;"></i>
+              <div class="w-100">
+                <p class="news_elem mb-1">
+                  <strong>New Publication:</strong> Transgenic Tobacco Plants Expressing Synthetic Peptides: A Functional and Structural Analysis for Pathogen Resistance
+                </p>
+                <p class="mb-1 text-muted" style="font-size: 0.95rem; font-family: var(--font-body);">
+                  By <span class="fw-bold" style="color: var(--bs-secondary);">Karishma Biswas</span> et al. published in <em class="fw-semibold" style="color: var(--news-accent);">Plant Biotechnology Journal, 2026</em>
+                </p>
+                <a href="https://doi.org/10.1111/pbi.70287" target="_blank" class="text-decoration-none fw-semibold" style="font-size: 0.9rem; color: var(--news-accent); font-family: var(--font-body);">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-book-open" aria-hidden="true" style="margin-right: 0.75rem; color: var(--news-accent); font-size: 1.1rem; margin-top: 0.3rem;"></i>
+              <div class="w-100">
+                <p class="news_elem mb-1">
+                  <strong>New Publication:</strong> Phosphorylation induces altered protonation states and allosterically regulates Rac1–RhoGDI complex
+                </p>
+                <p class="mb-1 text-muted" style="font-size: 0.95rem; font-family: var(--font-body);">
+                  By <span class="fw-bold" style="color: var(--bs-secondary);">Krishnendu Sinha</span> et al. published in <em class="fw-semibold" style="color: var(--news-accent);">Protein Science, 2026</em>
+                </p>
+                <a href="https://doi.org/10.1002/pro.70413" target="_blank" class="text-decoration-none fw-semibold" style="font-size: 0.9rem; color: var(--news-accent); font-family: var(--font-body);">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card news-card p-4">
+            <div class="d-flex align-items-start">
+              <i class="fas fa-book-open" aria-hidden="true" style="margin-right: 0.75rem; color: var(--news-accent); font-size: 1.1rem; margin-top: 0.3rem;"></i>
+              <div class="w-100">
+                <p class="news_elem mb-1">
+                  <strong>New Publication:</strong> PPIscout: Protein–protein interaction site hotspot mapping using mixed amino acid–water molecular dynamics simulation
+                </p>
+                <p class="mb-1 text-muted" style="font-size: 0.95rem; font-family: var(--font-body);">
+                  By <span class="fw-bold" style="color: var(--bs-secondary);">Sutanu Mukhopadhyay</span> et al. published in <em class="fw-semibold" style="color: var(--news-accent);">Journal of Chemical Sciences, 2025</em>
+                </p>
+                <a href="https://doi.org/10.1007/s12039-025-02449-9" target="_blank" class="text-decoration-none fw-semibold" style="font-size: 0.9rem; color: var(--news-accent); font-family: var(--font-body);">Read Article &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
     </div>
-
-</section>
-
-<div id="watermark">
-    <h1 style="color:red">Under active development</h1>
-</div>
-
+  </section>
 
 
     
-<div class="container-fluid copyright text-body py-4">
-    <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-md-12 text-center mb-md-0">
-                <i class="fas fa-copyright me-2"></i>
-                <a class="text-white" href="#">teamsuman.org</a>, All rights reserved.
+        
+<footer class="footer-compact">
+    <div class="container h-100">
+        <div class="row align-items-center h-100 m-0">
+            <div class="col-md-6 text-center text-md-start p-0">
+                <p class="mb-0 text-white-50" style="letter-spacing: 0.5px; line-height: 1; white-space: nowrap;">
+                    &copy; <span id="current-year">2024</span> <a href="index.html" class="fw-semibold text-white text-decoration-none px-1" style="font-family: 'Lora', serif; font-size: 0.95rem; letter-spacing: 1px;">Chakrabarty Lab</a> <span class="mx-1 opacity-50">|</span> <span style="font-size: 0.70rem; text-transform: uppercase; letter-spacing: 1px;">All rights reserved.</span>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end p-0 mt-2 mt-md-0">
+                <div class="footer-compact-socials d-inline-flex gap-3 align-items-center mb-0">
+                    <a href="https://www.linkedin.com/in/namusite/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/namussite" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/teamsuman" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/user/sumanc" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
-    <i class="fa fa-arrow-up"></i>
-</a>
+<style>
+    .footer-compact {
+        background: #0f172a; /* Slate 900 */
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        color: #94a3b8;
+    }
+    
+    .footer-compact a {
+        transition: color 0.3s ease;
+        color: #94a3b8;
+    }
 
-<!-- JS Libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/static/lib/easing/easing.min.js"></script>
-<script src="/static/lib/waypoints/waypoints.min.js"></script>
-<script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    .footer-compact a:hover {
+        color: #ffffff;
+    }
 
-<!-- Template JS -->
-<script src="/static/js/main.js"></script>
+    .footer-compact-socials a i {
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
 
+    .footer-compact-socials a:hover i {
+        transform: translateY(-2px);
+        color: #14b8a6; /* Premium Teal accent */
+    }
+</style>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/lib/easing/easing.min.js"></script>
-    <script src="/static/lib/waypoints/waypoints.min.js"></script>
-    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+
+    <!-- Template JS -->
+    <script src="static/js/main.js" defer></script>
 
     
 <script>
-    $(document).ready(function () {
-        var a = document.getElementsByClassName('news_elem');
-        for (var i = 0; i < a.length; i++) {
-            a[i].innerHTML = a[i].innerHTML.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-        }
+  $(document).ready(function () {
+    const newsElems = document.getElementsByClassName("news_elem");
+    Array.from(newsElems).forEach(el => {
+      // Decode entities for the content safely
+      el.innerHTML = el.innerHTML.replace(/&lt;/g, "<").replace(/&gt;/g, ">");
     });
+  });
 </script>
 
 </body>

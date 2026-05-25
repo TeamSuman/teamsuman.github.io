@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <title>PharmoCast | Home</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'pharmocast/logo.png' %}" rel="icon">
+  <link href="{% static 'pharmocast/logo.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans|Sofia|Spectral|Merriweather|Playfair Display:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700&effect=neon|outline|emboss|shadow-multiple|anaglyph"
+    rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'pharmocast/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <script src="{% static 'pharmocast/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'pharmocast/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'pharmocast/lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'pharmocast/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'pharmocast/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'pharmocast/lib/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+  <link href="{% static 'pharmocast/lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'pharmocast/css/style.css' %}" rel="stylesheet">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" language="javascript" src="{% static 'pharmocast/jsme/jsme.nocache.js' %}"></script>
+  <script>
+    function jsmeOnLoad() {
+      jsmeApplet = new JSApplet.JSME("jsme_container", '100%', '540px', {
+        //optional parameters
+        "options": "fullScreenIcon",
+      });
+      // jsmeEditor.setMolecularAreaScale(1.5);
+      // jsmeEditor.setAtomMolecularAreaFontSize(11);
+    }
+  </script>
+
+
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  /* ===== Text Outlines ===== */
+  .outlined-white {
+    color: #000;
+    text-shadow:
+      -1px -1px 0 #fff,
+      0 -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 0 0 #fff,
+      1px 1px 0 #fff,
+      0 1px 0 #fff,
+      -1px 1px 0 #fff,
+      -1px 0 0 #fff;
+  }
+
+  .outlined-black {
+    color: #fff;
+    text-shadow:
+      -1px -1px 0 #000,
+      0 -1px 0 #000,
+      1px -1px 0 #000,
+      1px 0 0 #000,
+      1px 1px 0 #000,
+      0 1px 0 #000,
+      -1px 1px 0 #000,
+      -1px 0 0 #000;
+  }
+
+  /* ===== Background Layers ===== */
+  .demo-wrap {
+    position: relative;
+  }
+
+  .demo-wrap:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: url('/static/pharmocast/phar.png') no-repeat 50% 0 / cover;
+  }
+
+  .border-dark {
+    border: 1px solid black;
+  }
+
+  #intro {
+    background-color: transparent;
+  }
+
+  #intro .intro-nav {
+    position: absolute;
+    z-index: 20;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(71, 44, 44));
+  }
+
+  /* ===== Buttons ===== */
+  .btn-primary,
+  .btn-default,
+  .btn-info,
+  .btn-success,
+  .btn-warning,
+  .btn-danger {
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 500;
+    box-shadow: 0 9px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-primary {
+    background-image: linear-gradient(122deg, #633991, #c1156c);
+  }
+
+  .btn-default {
+    background-image: linear-gradient(122deg, #969696, #dcdcdc);
+  }
+
+  .btn-info {
+    background-image: linear-gradient(122deg, #00c0ef, #9fecff);
+  }
+
+  .btn-success {
+    background-image: linear-gradient(122deg, #28c7c0, #00ff8b);
+  }
+
+  .btn-warning {
+    background-image: linear-gradient(122deg, #f49220, #ffbe56);
+  }
+
+  .btn-danger {
+    background-image: linear-gradient(122deg, #d64635, #ff604d);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-default:active,
+  .btn-info:hover,
+  .btn-info:focus,
+  .btn-info:active,
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-success:active,
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-warning:active,
+  .btn-danger:hover,
+  .btn-danger:focus,
+  .btn-danger:active,
+  .btn-primary:not([disabled]):not(.disabled).active,
+  .btn-default:not([disabled]):not(.disabled).active,
+  .btn-info:not([disabled]):not(.disabled).active,
+  .btn-success:not([disabled]):not(.disabled).active,
+  .btn-warning:not([disabled]):not(.disabled).active,
+  .btn-danger:not([disabled]):not(.disabled).active,
+  .show>.btn-primary.dropdown-toggle,
+  .show>.btn-default.dropdown-toggle,
+  .show>.btn-info.dropdown-toggle,
+  .show>.btn-success.dropdown-toggle,
+  .show>.btn-warning.dropdown-toggle,
+  .show>.btn-danger.dropdown-toggle {
+    box-shadow: 0 9px 32px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background-image: linear-gradient(122deg, #4e2a75, #a01059);
+  }
+
+  .btn-default:hover {
+    background-image: linear-gradient(122deg, #828282, #d4d4d4);
+  }
+
+  .btn-info:hover {
+    background-image: linear-gradient(122deg, #00acd6, #65ddfb);
+  }
+
+  .btn-success:hover {
+    background-image: linear-gradient(122deg, #24b3ad, #00e27b);
+  }
+
+  .btn-warning:hover {
+    background-image: linear-gradient(122deg, #e07f1b, #fbaa33);
+  }
+
+  .btn-danger:hover {
+    background-image: linear-gradient(122deg, #ce4333, #f55c4a);
+  }
+
+  /* ===== Table Styling ===== */
+  table,
+  td,
+  th {
+    font-family: 'Spectral';
+    color: #000;
+  }
+
+  .table {
+    table-layout: fixed;
+  }
+
+  .table td {
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: ellipsis;
+  }
+
+  .row_head {
+    text-align: center;
+    color: #0c2e8a;
+  }
+
+  .table_head {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .number_cell {
+    text-align: center;
+    font-weight: normal;
+  }
+
+  @media (max-width: 768px) {
+    .row_head {
+      font-size: 12px;
+    }
+
+    .table_head {
+      font-size: 20px;
+    }
+
+    .number_cell {
+      font-size: 15px;
+    }
+  }
+
+  /* ===== Preloader ===== */
+  #preloader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #302d2d;
+    z-index: 11000;
+    display: block;
+  }
+
+  #main-ld {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: calc(50% - 17px);
+    left: calc(50% - 35px);
+    overflow: hidden;
+  }
+
+  #loader {
+    width: 70px;
+    height: 70px;
+    border: solid;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotate 3s ease-in-out infinite;
+    transform: rotate(-200deg);
+  }
+
+  @keyframes rotate {
+    0%, 100% { border-width: 10px; }
+    25%, 75% { border-width: 3px; }
+    50% {
+      transform: rotate(115deg);
+      border-width: 10px;
+    }
+  }
+
+  /* ===== About Section ===== */
+  #about {
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("/static/pharmocast/phar.png") no-repeat center/cover;
+    font-family: 'Spectral';
+  }
+
+  /* ===== Invalid Section ===== */
+  #invalid {
+    padding: 60px 0 30px;
+  }
+
+  #invalid .invalid-img {
+    overflow: hidden;
+  }
+
+  #invalid .invalid-img img {
+    margin-left: -15px;
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    #invalid .invalid-img {
+      height: auto;
+    }
+
+    #invalid .invalid-img img {
+      margin-left: 0;
+      padding-bottom: 30px;
+    }
+  }
+
+  #invalid .content h2 {
+    font-family: "Raleway", sans-serif;
+    color: #0c2e8a;
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  #invalid .content h3 {
+    color: #555;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    font-style: italic;
+  }
+
+  #invalid .content p {
+    line-height: 26px;
+  }
+
+  #invalid .content p:last-child {
+    margin-bottom: 0;
+  }
+
+  #invalid .content i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #50d8af;
+  }
+
+  #invalid .content ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #invalid .content ul li {
+    padding-bottom: 10px;
+  }
+
+  /* ===== Predict Button ===== */
+  .predict_button {
+    font-family: 'Spectral';
+    font-weight: bold;
+    color: #000;
+    border-radius: 50px;
+    background-image: linear-gradient(122deg, #28c7c0, #00ff8b);
+    box-shadow: 0 9px 32px rgba(0, 0, 0, 0.2);
+    border: 0;
+  }
+
+  .predict_button:hover,
+  .predict_button:focus,
+  .predict_button:active,
+  .predict_button:not([disabled]):not(.disabled).active,
+  .show>.predict_button.dropdown-toggle {
+    background-image: linear-gradient(122deg, #24b3ad, #00e27b);
+    box-shadow: 0 9px 32px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .predict_button {
+      font-size: 15px;
+      border: 1px solid #000;
+    }
+  }
+
+  /* ===== Text & Hover Styling ===== */
+  #quotes_auth {
+    color: #a01059;
+  }
+
+  #table_title {
+    font-family: 'Spectral';
+    color: #004409;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    #table_title {
+      font-size: 20px;
+    }
+  }
+
+  #pop1,
+  #pop2 {
+    font-family: 'Spectral';
+    color: #000;
+  }
+
+  .fa-envelope:hover {
+    color: #dd3652;
+  }
+
+  .fa-linkedin:hover {
+    color: #0a66c2;
+  }
+
+  .fa-facebook:hover {
+    color: #0866ff;
+  }
+
+  .fa-twitter:hover {
+    color: #000305;
+  }
+
+  /* ===== Spinner ===== */
+  #spinner {
+    visibility: hidden;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 2px solid #f3f3f3;
+    border-top: 10px solid #f25a41;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+
+  #spinner.show {
+    visibility: visible;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  #test_img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+</head>
+
+<body id="body" onload="javascript:render1();" style="background-color: rgba(255, 255, 255, 0);">
+  <!--==========================
+    Intro Section
+  ============================-->
+
+  <!-- LOADER -->
+  <div id="preloader">
+    <div id="main-ld">
+      <div id="loader"></div>
+    </div>
+  </div><!-- end loader -->
+  <!-- END LOADER -->
+  <section id="intro">
+    <div class="container-fluid intro-nav">
+      <nav class="navbar navbar-expand-lg" style="height: 50%;">
+        <a class="navbar-brand" style="font-family: 'Sofia';font-weight: 800;"><strong><span class="display-5"
+              style="color:#fdb147;">Pharmo</span><span style="color:#50d8af;">Cast</span></strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse text-dark" id="navbarSupportedContent" style="float: right;">
+          <ul class="navbar-nav ml-auto navbar-right">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://teamsuman.org">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"> Contact Us!</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="intro-content">
+      <br><br><br>
+      <h2 class="font-effect-outline" style="font-family:'Playfair Display'; color:#fdb147;">Predict pharma<span
+          style="text-decoration:none;">cophore
+          properties</span><br> of drug-like molecules!
+      </h2>
+      <br><br>
+      <form method="post" style="width:60%" id="contact-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+          <input type="text" class="form-control form-control-lg btn-outline-white" autofocus id="id_name" name="name"
+            placeholder="Type your SMILES or Draw using the button!!" required value="c1ccccc1">
+        </div>
+
+        <div class="container text-center" style="width: 100%; margin: 0 0 0 0;">
+          <a class="btn-get-started scrollto" data-toggle="modal" data-target="#exampleModal" id="draw"
+            onload="jsmeOnLoad();" style="border: #ffffff 2px solid;">
+            <span class="display-5" style="font-family: 'Spectral';">Draw Molecule</span>
+          </a>
+        </div>
+        <br>
+        <div class="container text-center" style="width: 100%; margin: 0 0 0 0;">
+          <div style="width: 60%;margin: auto;">
+            <input class="btn btn-lg btn-block predict_button btn-success" id="button-predict"
+              onclick="smoothScroll(document.getElementById('scrollpad'))" type="submit" value="Predict Properties">
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="intro-carousel" class="owl-carousel" style="background-color: #000;">
+      <div class="item" style="background-image: url('/static/pharmocast/metaphar10.jpg');"></div>
+      <div class="item" style="background-image: url('/static/pharmocast/metaphar3.jpg');"></div>
+      <div class="item" style="background-image: url('/static/pharmocast/metaphar5.jpg');"></div>
+      <div class="item" style="background-image: url('/static/pharmocast/metaphar1.jpg');"></div>
+      <div class="item" style="background-image: url('/static/pharmocast/metaphar9.jpg');"></div>
+      <div class="item" style="background-image: url('/static/pharmocast/metaphar8.jpg');"></div>
+      <div class="item" style="background-image: url('/static/pharmocast/metaphar7.jpg');"></div>
+    </div>
+
+  </section><!-- #intro -->
+
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body" id="editor">
+          <div id="jsme_container"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal"
+            style="color:#4e2a75; border:#004409 2px solid; border-radius: 5px;" onclick="jsme2form()">Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal"
+            style="border: #a01059 2px solid;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- <form action="" method="get"> -->
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="xgb" id="xgb" name="xgb">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    XGBoost
+                  </label>
+                </div>
+              </div>
+              <!-- Properties-->
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="delg" id="delg" name="delg" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Free energy of solvation
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Nodel -->
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="rfr" id="rfr" name="rfr">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    RFR
+                  </label>
+                </div>
+              </div>
+              <!-- Properties-->
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="solu" id="solu" name="solu">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Solubility
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Properties-->
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="svr" id="svr" name="svr">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    SVR
+                  </label>
+                </div>
+              </div>
+              <!-- Model-->
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="pka" id="pka" name="pka">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    pKa
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Properties-->
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="krr" id="krr" name="krr">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    KRR
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Model-->
+              <div class="col-6 col-md-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="gpr" id="gpr" name="gpr">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    GPR
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <div code="JME.class" archive="JME.jar" width="80%" height=60%>
+    <param name="options" value="depict,useopenchemlib">
+    <param name="smiles"
+      value="CC1=C2[C@@]([C@]([C@H]([C@@H]3[C@]4([C@H](OC4)C[C@@H]([C@]3(C(=O)[C@@H]2OC(=O)C)C)O)OC(=O)C)OC(=O)c5ccccc5)(C[C@@H]1OC(=O)[C@H](O)[C@@H](NC(=O)c6ccccc6)c7ccccc7)O)(C)C">
+
+  </div> -->
+  <main id="main">
+    <!--==========================
+      About Section
+    ============================-->
+    <!-- this will show our spinner -->
+    <div id="scrollpad">
+      <div id="spinner" style="display: none;">
+
+      </div>
+      <section id="about" style="display:none;"></section>
+      <section class="wow fadeInUp demo-wrap" id="invalid" style="display:none;">
+        <div class="container-fluid" style="position: relative;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 invalid-img text-center">
+                <img id="invalid_image" src="/static/pharmocast/invalid.jpg">
+              </div>
+              <div class="col-lg-6 content">
+                <h4 id="quotes" class="display-4 text-center"
+                  style="color:#0c2e8a; font-weight:bold; font-family:'Spectral';"></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title" style="font-family: 'Merriweather';">Call To Action</h3>
+            <p class="cta-text" style="font-family: 'Spectral';">The purpose of the proposed web application is to
+              provide rapid and accurate
+              predictions of physicochemical properties, such as solvation energy, solubility, and pKa, for drug-like
+              organic molecules. Traditional physics-based methods like molecular dynamics simulations, though accurate,
+              are slow due to their high computational demands. This project aims to develop a faster, data-driven
+              approach using Graph Neural Networks (GNN) and GPU-based deep learning algorithms. The resulting
+              predictive models will be validated against experimental data and made accessible through a web server,
+              facilitating the pharmaceutical industry's ability to predict properties of new or unknown molecules
+              efficiently. This research has been funded by Science and Engineering Research Board (SERB), Govt.
+of India (project number: MTR/2021/000859).
+            </p>
+
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" data-trigger="hover" data-toggle="popover" data-original-title="" title=""
+              data-html="true"
+              data-content='<h4 id="pop1">Declaration<h4><h5 id="pop2">This is beta version. The models are derived from scikit-learn and trainned on publically available dataset(FreeSolv, Minnesotta, CombiSolv for Free Energy of Solvation, AqSolDB for Solubility and the monoprotic pKa dataset was derived from the raw data of ChEMBL25 and DataWarrior)</h5>'>Reference!</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- #call-to-action -->
+    <!--==========================
+      Our Team Section
+    ============================-->
+    <!-- <section id="team" class="wow fadeInUp parallax-one" style="background-image: url('/static/pharmocast/harmacast8.png');background-size: cover;background-repeat: no-repeat;"> -->
+    <section id="team" class="fadeInUp"
+      style="background-image: url('/static/pharmocast/res_pharma8.png');background-size: cover; background-repeat: no-repeat;">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Team</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="{% static 'pharmocast/ToonMe_Suman2.jpg' %}" alt=""></div>
+              <div class="details">
+                <h4>Dr. Suman Chakrabarty</h4>
+                <span>Professor</span>
+                <div class="social">
+                  <a href="https://twitter.com/namusite"><i class="fa fa-twitter"></i></a>
+                  <!-- <a href="https://www.facebook.com/namusite"><i class="fa fa-facebook"></i></a> -->
+                  <a href="mailto:sumanc@bose.res.in"><i class="fa fa-envelope"></i></a>
+                  <a href="https://www.linkedin.com/in/namusite/"><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="{% static 'pharmocast/ToonMe_Dibyendu.jpg' %}" alt=""></div>
+              <div class="details">
+                <h4>Dibyendu Maity</h4>
+                <span>SRF</span>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="{% static 'pharmocast/ToonMe_Sutanu.jpg' %}" alt=""></div>
+              <div class="details">
+                <h4>Sutanu Mukhopadhayay</h4>
+                <span>SRF</span>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="{% static 'pharmocast/ToonMe_sayari.jpg' %}" alt=""></div>
+              <div class="details">
+                <h4>Sayari Bhattacharya</h4>
+                <span>JRF</span>
+                <div class="social">
+                  <a href=""><i class="fa fa-twitter"></i></a>
+                  <a href=""><i class="fa fa-facebook"></i></a>
+                  <a href=""><i class="fa fa-google-plus"></i></a>
+                  <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #team -->
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="wow fadeInUp"
+      style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(223, 200, 200));background-size: cover;background-repeat: no-repeat;">
+      <div class="container">
+        <div class="section-header">
+          <h2 style="font-family: 'Merriweather';">Contact Us</h2>
+          <p style="font-family: 'Spectral';">At the Department of Chemical and Biological Sciences at SNBNCBS, we are a
+            diverse group of individuals
+            with backgrounds in physics, chemistry, and biology. Our team is dedicated to exploring the complex world of
+            molecular interactions through the use of both artificial intelligence and classical methodologies</p>
+        </div>
+        <div class="row contact-info">
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address style="font-family: 'Spectral';">Satyendra Nath Bose National Centre for Basic Sciences
+                Block-JD, Sector-III, Salt Lake, Kolkata-700 106</address>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p style="font-family: 'Spectral'; overflow: hidden;"><a>+91-33-2335 1313/0312/3057/3061/5705/6/7/8</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:sumanc@bose.res.in">sumanc@bose.res.in</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container">
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="https://formspree.io/f/xwkzeonq" id="my-form" method="POST" role="form" class="contactForm"
+            novalidate="novalidate">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                  data-rule="minlen:1" data-msg="Please enter at least 1 chars" />
+                <div class="validation"></div>
+
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                  data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Subject" data-rule="minlen:0"
+                data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" name="message" rows="5" data-rule="required"
+                data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button id="my-form-button" type="submit">Send Message</button></div>
+            <p class="text-center" style="color: #00e27b;font-family: 'Spectral'; font-weight: bold;"
+              id="my-form-status"></p>
+          </form>
+        </div>
+      </div> -->
+    </section>
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" style="background-color: #5bd9f8;">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>PharmoCast</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
+        -->
+        <!-- <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade -->
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <script type="text/javascript">
+
+    function htmlDecode(input) {
+      var doc = new DOMParser().parseFromString(input, "text/html");
+      return doc.documentElement.textContent;
+    }
+    function render1() {
+      var elem = document.getElementById("test_img");
+      if (elem != null) {
+
+        var s = elem.innerHTML;
+        var a = htmlDecode(s);
+        const parser = new DOMParser();
+        var b = parser.parseFromString(a, "text/html");
+        console.log(b.body.innerText);
+        elem.innerHTML = b.body.innerHTML;
+      };
+      //location.reload();
+    }
+    //const btn = document.querySelector('.btn-projects');
+    //var elem = document.getElementById('about');
+    //btn.addEventListener('click', () => {
+    //  elem.style.display = 'flex';
+    //  render1();
+    //  btn.style.boxShadow = '0 0 40px #ffac09';
+    //  btn.style.transition = '.5s ease';
+    // });
+
+    function myFunction() {
+      var x = document.getElementById("about");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function jsme2form() {
+      document.JME = jsmeApplet;
+      var data = document.JME.smiles();
+      document.getElementById("id_name").value = data;
+    }
+    //function enable_pop() {
+    //  var inp_val = document.getElementById("your_name").value;
+    // console.log(inp_val);
+    //   if (inp_val.length > 0) {
+    //     document.getElementById("predictor").disabled = false;
+    //   } else {
+    //     document.getElementById("predictor").disabled = true;
+    //   }
+    // }
+  </script>
+  <!-- <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Your message has been sent. Thank you!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script> -->
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'pharmocast/lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/magnific-popup/magnific-popup.min.js' %}"></script>
+  <script src="{% static 'pharmocast/lib/sticky/sticky.js' %}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{% static 'pharmocast/contactform/contactform.js' %}"></script>
+  <script src="{% static 'pharmocast/js/custom.js' %}"></script>
+  <!-- Template Main Javascript File -->
+  <script src="{% static 'pharmocast/js/main.js' %}"></script>
+  <script>
+    Array.prototype.random = function () {
+      return this[Math.floor((Math.random() * this.length))];
+    }
+
+    var quotes = ['"If you want to save your child from polio, you can pray or you can inoculate... choose science.<br><span id="quotes_auth" style="float:right">- Carl Sagan</span>',
+      '"If you want to be happy, take up something you really love, and do it with love.<br><span id="quotes_auth" style="float:right;">- Louis Armstrong</span>',
+      '"The greatest accomplishment is not in never falling, but in rising every time we fall.<br><span  id="quotes_auth" style="float:right;">- Steve Jobs</span>',
+      '"The most difficult thing in life is the decision to act, the rest is merely tenacity.<br><span id="quotes_auth" style="float:right;">- Aristotle</span>',
+      '"I have not failed. I\'ve just found 10,000 ways that won\'t work.<br><span id="quotes_auth" style="float:right;">- Milton Friedman</span>',
+      '"Success is not final, failure is not fatal: It is the courage to continue that counts.<br><span id="quotes_auth" style="float:right;">- Winston Churchill</span>',
+      '"The only way to do great work is to love what you do.<br><span id="quotes_auth">- Harvey C. Dickinson</span>',
+      '"The greatest glory in living lies not in never falling, but in rising every time we fall.<br><span id="quotes_auth" style="float:right">- Charles Dickens</span>',
+      'It has not escaped our notice that the specific pairing we have postulated immediately suggests a possible copying mechanism for the genetic material.<br><span id="quotes_auth" style="float:right">- Watson & Crick</span>'];
+    var randomElement = quotes.random();
+    var b = document.getElementById('quotes');
+    b.innerHTML = randomElement;
+  </script>
+  <script>
+    const spinner = document.getElementById("spinner");
+
+    function showSpinner() {
+      spinner.className = "show";
+      setTimeout(() => {
+        spinner.className = spinner.className.replace("show", "");
+      }, 10000);
+    }
+
+    $(function () {
+      $('#contact-form').on('submit', function (event) {
+
+        $('#invalid').hide()
+        $('#about').hide()
+        $('#spinner').show()
+
+        showSpinner();
+        event.preventDefault();
+        $.ajax({
+          url: '{% url "contact" %}',
+          type: 'POST',
+          data: $(this).serialize(),
+          dataType: 'json',
+          success: function (response) {
+            if (response.status) {
+              $('#spinner').hide()
+              //$('#contact-form').hide();
+              if (response.valid == "Valid") {
+                $('#invalid').hide();
+                $('#about').html('<div class="container-fluid" style="position: relative;"> <div class="container-fluid"> <div class="row"> \
+        <div id="test_img" class="col-lg-4 about-img text-center" >' + response.img +
+                  '</div>\
+        <div class="col-lg-8 content"> \
+            <h4 class="display-5 text-center" id="table_title">Predicted properties and extracted relevant features of the molecule provided</h4> \
+              <table class="table table-bordered" style="border-color: rgb(0, 0, 3);border-radius: 10px;border-width: 2px;"> \
+                <tbody class="border border-dark"> \
+                  <tr class="table-primary border border-dark"> \
+                    <th scope="row" class="border border-dark" colspan="1"> SMILES </th>\
+                    <td scope="row" class="border border-dark" colspan="3"> \
+                      <div class="overflow-hidden"> \
+                        <span>' + response.smiles + '</span>\
+                      </div>\
+                    </td>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border-dark">\
+                  <tr class="border-dark" style="border-bottom: 2px solid black;">\
+                    <th class="border-dark text-center" scope="col" colspan="4"><span class="table_head">Retrieved and Predicted Properties!</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border border-dark">\
+                  <tr class="btn-secondary border border-dark text-center" style="border-top: 2px solid black;">\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head" style="color:black;">Models</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head" style="color:black;"  title="Free energy of solvation" data-toggle="popover" data-trigger="hover" data-content="Some content"> &#916;G<sub>solv</sub> (kcal/mol)</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head" style="color:black;"> Solubility</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head" style="color:black;"> pKa</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border border-dark">\
+                  <tr class="table-secondary text-center">\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head" style="font-size:15px;color:black;">Experimental</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.dgsolv + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.solu + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.pka + '</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border border-dark">\
+                  <tr class="btn-success text-center">\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head"  title="Gradient Boosting Regressor" data-toggle="popover" data-trigger="hover" data-content="Some content">GBR</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.gbr_delg + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.gbr_solu + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.gbr_pka + '</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border border-dark">\
+                  <tr class="table-warning text-center">\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head"  title="Random Forest Regressor" data-toggle="popover" data-trigger="hover" data-content="Some content">RFR</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.rfr_delg + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.rfr_solu + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.rfr_pka + '</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border border-dark">\
+                  <tr class="btn-info text-center">\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head" title="Kernel Ridge Regressor" data-toggle="popover" data-original-titie="" data-trigger="hover" data-html="true" data-content="Some content">KRR</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.krr_delg + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.krr_solu + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.krr_pka + '</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border border-dark">\
+                  <tr class="table-success text-center" >\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="row_head" title="Gaussian Proccess Regressor" data-toggle="popover" data-trigger="hover" data-content="Some content">GPR</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.gpr_delg + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.gpr_solu + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.gpr_pka + '</span></th>\
+                  </tr>\
+                </tbody>\
+                 <tbody class="border border-dark">\
+                  <tr class="btn-warning text-center" >\
+                    <th scope="row" class="border border-dark" colspan="1"> <span class="row_head"  title="Support Vector Regressor" data-toggle="popover" data-trigger="hover" data-content="Some content">SVR</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.svr_delg + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.svr_solu + '</span></th>\
+                    <th scope="row" class="border border-dark" colspan="1"><span class="number_cell">'+ response.svr_pka + '</span></th>\
+                  </tr>\
+                </tbody>\
+              <tbody class="border-dark">\
+                  <tr class="border-dark">\
+                    <th class="border-dark text-center" scope="col" colspan="4"><span class="table_head">Calculated Relevant Features</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="">\
+                  <tr class="table-success border-dark text-center" style="border-top: 2px solid black;">\
+                    <th class="border-dark" scope="row"><span class="row_head"  title="Exact Molecular Weight" data-toggle="popover" data-trigger="hover" data-content="">Exact MW</span></th>\
+                    <td class="border-dark"><span class="number_cell">'+ response.exactmw + '</span></th>\
+                    <th class="border-dark" scope="row"><span class="row_head" title="Balaban`s J value" data-toggle="popover" data-trigger="hover" data-content="">BalabanJ</span></th>\
+                    <td class="border-dark"><span class="number_cell">'+ response.num_o + '</span></th>\
+                  </tr>\
+                </tbody>\
+                <tbody class="border border-dark text-center">\
+                  <tr class="table-info border border-dark text-center">\
+                    <th scope="row" class="border border-dark"><span class="row_head"  title="Total Polar Surface Area" data-toggle="popover" data-trigger="hover" data-content="">TPSA</span></th>\
+                    <td class="border border-dark"><span class="number_cell">'+ response.tpsa + '</span></td>\
+                    <th class="border border-dark"><span class="row_head"  title="Wildman-Crippen logp" data-toggle="popover" data-trigger="hover" data-content="Some content">MolLogP</span></td>\
+                    <td class="border border-dark"><span class="number_cell">'+ response.crplog + '</span></td>\
+                  </tr>\
+                  <tr class="table-danger text-center">\
+                    <th class="border border-dark" scope="row"><span class="row_head" title="Fraction of C atoms that are SP3 hybridized" data-toggle="popover" data-trigger="hover" data-content="Some content">FractionCSP3</span></th>\
+                    <td class="border border-dark"><span class="number_cell">'+ response.frcsp3 + '</span></td>\
+                    <th class="border border-dark"><span class="row_head" title="Quantitative estimation of drug-likeness" data-toggle="popover" data-trigger="hover" data-content="Some content">qed</span></td>\
+                    <td class="border border-dark">'+ response.lipinskihbd + '</td>\
+                  </tr>\
+                  <tr class="table-warning text-center">\
+                    <th scope="row" class="border border-dark"><span class="row_head" title="Number of amide bonds" data-toggle="popover" data-trigger="hover" data-content="Some content">NumAmideBonds</span></th>\
+                    <td scope="row" class="border border-dark"><span class="number_cell">'+ response.num_amide + '</span></td>\
+                    <th class="border border-dark"><span class="row_head" title="Number of rotatable bonds" data-toggle="popover" data-trigger="hover" data-content="Some content">NumRotatableBonds</span></td>\
+                    <td class="border border-dark"><span class="number_cell">'+ response.num_rings + '</span></td>\
+                  </tr>\
+                </tbody>\
+              </table> \
+              </div> \
+</div></div></div>').show();
+              }
+              else if (response.valid = "False") {
+                $('#about').hide();
+                $('#invalid').show();
+              }
+
+            } else {
+              $('#alert').html('<div class="alert alert-danger"> {{ form }}</div>').show();
+            }
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Scrooll to Main section after click -->
+<script>
+  window.smoothScroll = function (target) {
+    if (!target) return;
+
+    let scrollContainer = target;
+    while (scrollContainer) {
+      scrollContainer = scrollContainer.parentNode;
+      if (!scrollContainer) return;
+      scrollContainer.scrollTop += 1;
+      if (scrollContainer.scrollTop !== 0) break;
+    }
+
+    let targetY = 0;
+    let currentTarget = target;
+
+    while (currentTarget && currentTarget !== scrollContainer) {
+      targetY += currentTarget.offsetTop;
+      currentTarget = currentTarget.offsetParent;
+    }
+
+    function scroll(c, a, b, i) {
+      i++;
+      if (i > 30) return;
+      c.scrollTop = a + ((b - a) / 30) * i;
+      setTimeout(function () {
+        scroll(c, a, b, i);
+      }, 20);
+    }
+
+    // Only scroll if #scrollpad is visible
+    if ($("#scrollpad").innerHeight() > 0) {
+      scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+    } else {
+      console.log("Target not visible");
+    }
+  };
+</script>
+
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="popover"]').popover({
+        sanitize: false,
+      });
+    });
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
+  </script>
+</body>
+
+</html>

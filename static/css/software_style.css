@@ -390,7 +390,7 @@
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/breadcrumb-bg.jpg);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/breadcrumb-bg.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -399,45 +399,16 @@
 }
 
 .bg-breadcrumb .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+    /* color: var(--bs-secondary) !important; */
+    color: #54b3d6 !important;
 }
 
 /*** Single Page Hero Header End ***/
 
-/*** Gallery Hero Header Start ***/
-.bg-gallery {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/gallery_bg.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 200px 0 50px 0;
-}
-
-.bg-gallery .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
-}
-
-/*** Gallery Hero Header End ***/
-/*** News Hero Header Start ***/
-.bg-news {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/anounce.webp);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 200px 0 50px 0;
-}
-
-.bg-news .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
-}
-
-/*** News Hero Header End ***/
 
 /*** Softwares Hero Header Start ***/
 .bg-software {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/softwares3.jpg);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/softwares3.webp);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -446,14 +417,15 @@
 }
 
 .bg-software .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+    /* color: var(--bs-secondary) !important; */
+    color: #54b3d6 !important;
 }
 
 /*** Softwares Hero Header End ***/
 
 /*** Positions Hero Header Start ***/
 .bg-positions {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/positions.jpeg);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/positions.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -462,7 +434,8 @@
 }
 
 .bg-positions .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+    /* color: var(--bs-secondary) !important; */
+    color: #54b3d6 !important;
 }
 
 /*** Positions Hero Header End ***/
@@ -478,14 +451,15 @@
 }
 
 .bg-research .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+    /* color: var(--bs-secondary) !important; */
+    color: #54b3d6 !important;
 }
 
 /*** Research Hero Header End ***/
 
 /*** Publication page Hero Header Start ***/
 .bg-publication {
-    background: linear-gradient(rgba(19, 53, 123, 0.7), rgba(19, 53, 123, 0.7)), url(../img/wordcloud.jpeg);
+    background: linear-gradient(rgba(19, 53, 123, 0.7), rgba(19, 53, 123, 0.7)), url(../img/wordcloud.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -494,14 +468,30 @@
 }
 
 .bg-publication .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+     /* color: var(--bs-secondary) !important; */
+    color: #54b3d6 !important;
+}
+
+/*** News Hero Header Start ***/
+.bg-news {
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/anounce.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px 0 50px 0;
+}
+
+.bg-news .breadcrumb-item a {
+    color: #54b3d6 !important;
+    /* color: var(--bs-secondary) !important; */
 }
 
 /*** Publication Page Hero Header End ***/
 
 /*** Contact us page Start ***/
 .bg-contact {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/snbncbs3.jpeg);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/snbncbs3.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -510,14 +500,15 @@
 }
 
 .bg-contact .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+    color: #54b3d6 !important;
+    /* color: var(--bs-secondary) !important; */
 }
 
 /*** Contact us page End ***/
 
 /*** Members page Start ***/
 .bg-members {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/afpro.png);
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/afpro.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -526,7 +517,8 @@
 }
 
 .bg-members .breadcrumb-item a {
-    color: var(--bs-secondary) !important;
+    color: #54b3d6 !important;
+    /* color: var(--bs-secondary) !important; */
 }
 
 /*** Members page End ***/
@@ -1014,7 +1006,7 @@
 
 /*** Tour Booking Start ***/
 .booking {
-    background: linear-gradient(rgba(19, 53, 123, 0.8), rgba(19, 53, 123, 0.8)), url(../img/tour-booking-bg.jpg);
+    background: linear-gradient(rgba(19, 53, 123, 0.8), rgba(19, 53, 123, 0.8)), url(../img/tour-booking-bg.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1315,7 +1307,7 @@
 
 /*** Subscribe Start ***/
 .subscribe {
-    background: linear-gradient(rgba(19, 53, 123, 0.6), rgba(19, 53, 123, 0.6)), url(../img/subscribe-img.jpg);
+    background: linear-gradient(rgba(19, 53, 123, 0.6), rgba(19, 53, 123, 0.6)), url(../img/subscribe-img.webp);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1385,7 +1377,7 @@
     color: white;
     background: #14141f;
     font-size: 14px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     position: relative;
 }
 
@@ -1846,7 +1838,7 @@
     width: 100%;
     height: 70vh;
     position: relative;
-    background: url("/static/img/afpro.png") no-repeat;
+    background: url("/static/img/afpro.webp") no-repeat;
     background-size: cover;
 }
 

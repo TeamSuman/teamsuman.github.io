@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
 .section {
     padding: 100px 0;
     position: relative;
@@ -204,7 +206,7 @@ mark {
 
 
 .redressed {
-    font-family: "Redressed", cursive;
+    font-family: "Cedarville Cursive", cursive;
     font-weight: 400;
     font-style: normal;
 }

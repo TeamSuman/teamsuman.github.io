@@ -1,493 +1,358 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "home/base.html" %}
 {% load static %}
 
-<head>
-    <meta charset="utf-8">
-    <title>Research Group Website of Dr. Suman Chakrabarty @ SNBNCBS, Kolkata</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="Group website of Dr. Suman Chakrabarty, Associate Professor, Department of Chemical and Biological Sciences,
-    S. N. Bose National Centre for Basic Sciences, Kolkata, India. Our research spans the area of computational molecular (bio)physics using molecular simulations and statistical mechanics." name="description">
+{% block title %}Research Group Website of Dr. Suman Chakrabarty @ SNBNCBS, Kolkata{% endblock %}
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+{% block meta_description %}
+Group website of Dr. Suman Chakrabarty, Associate Professor, Department of Chemical and Biological Sciences, S. N. Bose National Centre for Basic Sciences, Kolkata, India. Our research spans the area of computational molecular (bio)physics using molecular simulations and statistical mechanics.
+{% endblock %}
 
-    <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+{% block meta_keywords %}
+computational chemistry, molecular dynamics, biomolecular simulations, free-energy landscapes, machine learning
+{% endblock %}
 
+{% block extra_css %}
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link rel="preload" href="{% static 'css/home.css' %}?v=2" as="style" onload="this.rel='stylesheet'" />
 
-    <!-- Template Stylesheet -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  });
+</script>
 
-</head>
+{% endblock %}
 
-<body>
-
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-    <!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="{% url 'home' %}" class="navbar-brand p-0" style="text-decoration: none;">
-                <h1 class="m-0 lora">Chakrabarty Lab</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="{% url 'home' %}" class="nav-item nav-link active" style="text-decoration: none;">Home</a>
-                    <a href="{% url 'news' %}" class="nav-item nav-link" style="text-decoration: none;">News</a>
-                    <a href="{% url 'research' %}" class="nav-item nav-link" style="text-decoration: none;">Research</a>
-                    <a href="{% url 'publication' %}" class="nav-item nav-link"
-                        style="text-decoration: none;">Publications</a>
-                    <a href="{% url 'softwares' %}" class="nav-item nav-link"
-                        style="text-decoration: none;">Software</a>
-                    <a href="{% url 'team' %}" class="nav-item nav-link" style="text-decoration: none;">Team</a>
-                    <a href="{% url 'positions' %}" class="nav-item nav-link"
-                        style="text-decoration: none;">Positions</a>
-                    <a href="{% url 'gallery' %}" class="nav-item nav-link" style="text-decoration: none;">Gallery</a>
-                    <a href="{% url 'contacts' %}" class="nav-item nav-link" style="text-decoration: none;">Contact</a>
-                </div>
-            </div>
-        </nav>
+{% block content %}
 <!--==========================
-    Intro Section
-  ============================-->
-<section id="intro">
+Hero / Intro Section
+============================-->
+<section id="hero" class="position-relative">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000"
+    data-bs-pause="hover">
 
-    <div class="intro-content">
-        <div class="container-fluid">
-            <div class="container h-100">
-                <div class="row align-items-center h-100">
-                    <div class="col-lg-12">
-                        <div class="h-100 justify-content-center">
-                            <div class="text-center">
-                                <div class="sp-container">
-                                    <div class="sp-content m-0 p-0">
-                                        <h1 class="display-1 header lora"
-                                            style="color:#ffffff; letter-spacing: 4px;">
-                                            Computational (Bio)Physical Chemistry Group @ SNBNCBS, Kolkata
-                                        </h1>
-                                        <h3 class="display-5 header averia-libre-regular" style="color:#dac7c7;">Team Leader: Suman Chakrabarty</h3>
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      {% for slide in slides %}
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="{{ forloop.counter0 }}"
+        class="{% if forloop.first %}active{% endif %}" aria-label="Slide {{ forloop.counter }}"></button>
+      {% endfor %}
+    </div>
 
-                                    </div>
-                                </div>
-                            </div>
+    <!-- Slides -->
+    <div class="carousel-inner">
+      {% for slide in slides %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}" style="height: 65vh; position: relative; {% if not slide.video and slide.image %}background-image: url('{{ slide.image.url }}'); background-size: cover; background-position: center top;{% endif %}">
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Cinematic Overlay for flawless contrast -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(19, 53, 123, 0.7) 100%); z-index: 1;"></div>
+
+        {% if slide.video %}
+        <video autoplay muted loop playsinline
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+          <source src="{{ slide.video.url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        {% endif %}
+
+        {% if slide.caption_title or slide.caption_subtitle %}
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center" style="z-index: 2; top: 0; bottom: 0; right: 15%; left: 15%;">
+          {% if slide.caption_title %}
+          <h1 class="display-3 text-white fw-bold mb-3" style="font-family: 'Poppins', sans-serif; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">{{ slide.caption_title }}</h1>
+          {% endif %}
+          {% if slide.caption_subtitle %}
+          <h3 class="text-light" style="font-family: 'Crimson Text', serif; font-size: 1.5rem; letter-spacing: 1px; opacity: 0.9;">{{ slide.caption_subtitle }}</h3>
+          {% endif %}
         </div>
-
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
 
-    <div id="intro-carousel" class="owl-carousel">
-        <div class="item" style="background-image: url('static/img/g_din.jpg'); bottom: 0; position: relative; background-position: top;"></div>
-        <div class="item" style="background-image: url('static/img/afpro.png');"></div>
-        <div class="item" style="background-image: url('static/img/home.jpg');"></div>
+    <!-- Controls -->
+    <button class="carousel-control-prev custom-control" type="button" data-bs-target="#heroCarousel"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next custom-control" type="button" data-bs-target="#heroCarousel"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
 
-        <div class="item" style="background-image: url('static/img/poster.jpeg');"></div>
-    </div>
-
+  </div>
 </section>
 
-
-<!-- #intro -->
-        <!-- Carousel Start -->
-        <!-- <div class="container-fluid bg-home">
-            <div class="container h-100">
-                <div class="row align-items-center h-100">
-                    <div class="col-lg-12">
-                        <div class="h-100 justify-content-center">
-                            <div class="text-center">
-                                <div class="sp-container">
-                                    <div class="sp-content m-0 p-0">
-                                        <h1 class="display-1 text-light header"
-                                            style="font-family: Barlow; letter-spacing: 4px;">
-                                            COMPUTATIONAL BIOPHYSICAL CHEMISTRY GROUP
-                                        </h1>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Carousel End -->
-    <!-- Navbar & Hero End -->
-    <!-- Announcement Start
-    <div class="container-fluid packages">
-        <div class="container py-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">Announcements</h5>
-            </div>
-            <div class="packages-carousel owl-carousel">
-                {%for x in news %}
-                <div class="notification mb-2">
-                    <div class="notiglow"></div>
-                    <div class="notiborderglow"></div>
-                    <div class="notibody m-2"><strong>{{ x.title }}:</strong> {{ x.content }}</div>
-                </div>
-                {% endfor %}
-            </div>
+<!--==========================
+  About Section
+============================-->
+<div class="container-fluid about py-5">
+  <div class="container py-4">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <div class="h-100 pe-lg-4">
+          {% if home_config.about_image %}
+          <img src="{{ home_config.about_image.url }}" class="img-fluid w-100 rounded shadow-sm" alt="Group Image"
+            loading="lazy" style="object-fit: cover; max-height: 550px;" />
+          {% endif %}
         </div>
-    </div> -->
-    <!-- Announcement End -->
-    <div id="watermark">
-        <h1 style="color:red">Under active development</h1>
-    </div>
-    <!-- About Start -->
-    <div class="container-fluid about py-5">
-        <div class="container py-2">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5">
-                    <div class="h-100"> <img src="{% static 'img/g_din.jpg' %}" class="img-fluid w-100 h-100" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-7"
-                    style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8));">
-                    <h5 class="section-about-title pe-3">About Us</h5>
-                    <!-- <h1 class="mb-4">Welcome to <span class="text-primary">SCLab</span></h1> -->
-                    <p class="mb-4" style="font-family: 'Crimson Text', serif;color: #14141f; font-size: 1.25rem;">
-                        The broad area of our research is computational molecular biophysics and theoretical physical
-                        chemistry. The primary
-                        goal is to employ state of the art computational methodologies primarily based on statistical
-                        mechanics to solve
-                        realistic problems in the interdisciplinary areas of chemistry, physics and biology.
-                    </p>
-                    <p class="mb-4" style="font-family: 'Crimson Text', serif;color: #14141f; font-size: 1.25rem;">
-                        Overall, we
-                        take an approach of
-                        molecular thermodynamics to connect molecular interactions and dynamics to their function and
-                        properties. We work on a
-                        wide range of problems starting from small molecules (as small as water!) to large biomolecular
-                        assemblies and
-                        self-assembly of amphiphilic molecules.
-                    </p>
-                </div>
-            </div>
+      </div>
+      <div class="col-lg-7 align-self-center mt-4 mt-lg-0">
+        <div class="mb-5">
+          <h5 class="text-primary text-uppercase fw-bold mb-3" style="letter-spacing: 1.5px;">{{ home_config.about_title }}</h5>
         </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Research Start -->
-    <div class="container-fluid ExploreTour">
-        <div class="container py-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">Research</h5>
-                <h1 class="mb-4">Major Research Interests</h1>
-                <p class="mb-0">The broad area of our research is computational molecular biophysics and theoretical
-                    physical chemistry. The primary
-                    goal is to employ state of the art computational methodologies primarily based on statistical
-                    mechanics to solve
-                    realistic problems in the interdisciplinary areas of chemistry, physics and biology. Overall, we
-                    take an approach of
-                    molecular thermodynamics to connect molecular interactions and dynamics to their function and
-                    properties. We work on a
-                    wide range of problems starting from small molecules (as small as water!) to large biomolecular
-                    assemblies and
-                    self-assembly of amphiphilic molecules.
-                </p>
-            </div>
-            <div class="tab-class text-center">
-
-                <div class="tab-content">
-                    <div id="NationalTab-1" class="tab-pane fade show p-0 active">
-                        <div class="row g-4">
-                            {% for x in research %}
-                            
-                                <div class="col-md-6 col-lg-4">
-                                    <a class="fill-div" href="#" data-bs-toggle="modal" data-bs-target="{{ '#research' }}{{ x.id }}" style="text-decoration: none;">
-                                    <div class="national-item">
-                                        <img src="{{ x.image.url }}" class="img-fluid w-100 rounded" alt="Image" style='height: 100%; width: 100%; object-fit: cover'>
-                                        <div class="national-content w-100">
-                                            <div class="national-info">
-                                                <h4 class="text-white mb-2">{{ x.title }}</h4>
-                                                <a href="#" class="btn-hover" data-bs-toggle="modal"
-                                                    data-bs-target="{{ '#research' }}{{ x.id }}" style="text-decoration: none;">Know More!<i
-                                                        class="fa fa-arrow-right ms-2"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="mb-0 text-muted" style="font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.8;">
+          {{ home_config.about_content|safe }}
         </div>
+      </div>
     </div>
-    <!-- Research end -->
-    <!--Modal start-->
+  </div>
+</div>
+<!--==========================
+  Research Section
+============================-->
 
-    <!-- Modal -->
-    {% for x in research %}
-    <div class="modal fade" id="{{ 'research' }}{{ x.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-xl modal-md modal-fullscreen-md-down" role="document">
-            <div class="modal-content rounded-0">
-                <div class="modal-body py-0">
+<div class="container-fluid ExploreTour py-5">
+  <div class="container py-4">
+    <style>
+      .premium-research-card {
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+      .premium-research-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(11, 25, 44, 0.2) !important;
+      }
+      .premium-research-img-wrapper {
+        height: 320px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+      }
+      .premium-research-img {
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .premium-research-card:hover .premium-research-img {
+        transform: scale(1.08); /* slight cinematic zoom */
+      }
+      .premium-research-overlay {
+        background: linear-gradient(to top, rgba(11, 25, 44, 0.95) 0%, rgba(11, 25, 44, 0.4) 50%, transparent 100%);
+        position: absolute;
+        bottom: 0; left: 0; right: 0; top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
+        z-index: 2;
+      }
+      .premium-research-title {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+        transform: translateY(15px);
+        transition: transform 0.4s ease;
+        text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      }
+      .premium-research-card:hover .premium-research-title {
+        transform: translateY(0);
+      }
+      .premium-read-more {
+        color: #ffc107; /* high-visibility yellow/gold */
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.4s ease;
+        letter-spacing: 0.5px;
+      }
+      .premium-research-card:hover .premium-read-more {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .sticky-research-sidebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 120px;
+        z-index: 10;
+      }
+    </style>
 
-
-                    <div class="d-block main-content">
-                        <div class="p-2" style="display: flex; justify-content: end;">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <img src="{{ x.image.url }}" alt="Image" class="img-fluid"
-                            style="background-color: #b2fcff;width: 100%; height: 30vh; object-fit: cover;">
-                        <div class="content-text p-4">
-
-                            <h3 class="mb-4">{{ x.title }}</h3>
-                            <p class="mb-4">{{ x.description }}
-                            </p>
-                            <br>
-                            Recent Publications:
-                            {% for y in x.publication %}
-                            <ul>
-                                <li><a
-                                        href="{{ y }}"> {{ y }}</a>
-                                </li>
-                            </ul>
-                            {% endfor %}
-                            <div class="d-flex" style="display: flex; justify-content: center;">
-                                <div class="ml-auto">
-                                    <a href="#" class="btn btn-primary" data-bs-dismiss="modal" style="text-decoration: none;" >Close!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    <div class="row g-5">
+      <!-- Left Split: Sticky Description -->
+      <div class="col-lg-5">
+        <div class="sticky-research-sidebar pe-lg-4 mb-5 mb-lg-0 text-start">
+          <h5 class="text-primary text-uppercase fw-bold mb-3" style="letter-spacing: 1.5px;">{{ home_config.research_title }}</h5>
+          <!-- <h1 class="display-5 text-dark mb-4 fw-bold">{{ home_config.research_heading }}</h1> -->
+          <div class="mb-5 text-muted" style="font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.8;">
+            {{ home_config.research_description|safe }}
+          </div>
+          <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5 fw-bold shadow-sm" style="font-family: 'Poppins', sans-serif; letter-spacing: 1px;" href="{% url 'research' %}">Explore More!</a>
         </div>
-    </div>
-    {% endfor %}
+      </div>
 
-    <!-- Positions Start -->
-    <div class="container-fluid booking py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <h5 class="section-booking-title pe-3">Open positions</h5>
-                    <h1 class="text-white mb-2">Join Us!</h1>
-                    <p class="text-white mb-2">
-                        We are looking for bright and motivated students who are curious to unravel the mysteries of
-                        nature from a molecular
-                        point of view! Interest in physical chemistry, chemical physics, biophysics, statistical
-                        mechanics and programming are
-                        desirable.
-                    </p>
+      <!-- Right Split: Immersive Cards Grid -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          {% for x in research %}
+          <div class="col-md-6 d-flex">
+            <a class="text-decoration-none w-100" href="{% url 'research_detail' x.id %}">
+              <div class="card premium-research-card border-0 shadow-sm w-100 h-100">
+                <div class="premium-research-img-wrapper">
+                  <img src="{{ x.image.url }}" class="img-fluid w-100 h-100 premium-research-img" alt="{{ x.title }}" loading="lazy" style="object-fit: cover;" />
+                  <div class="premium-research-overlay text-start">
+                    <h4 class="premium-research-title">{{ x.title }}</h4>
+                    <span class="premium-read-more">Explore Project <i class="fa fa-arrow-right ms-2"></i></span>
+                  </div>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="text-white mb-2">PhD. positions</h1>
-                    <p class="text-white">
-                        For the admission process in our centre, please consult the <a class="link"
-                            href="http://newweb.bose.res.in/AcademicProgrammes/Admission.jsp"><span
-                                class="text-warning">official
-                                admission page.</span></a>
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="text-white mb-2">Postdoctoral positions</h1>
-                    <p class="text-white">
-                        If you are looking for a postdoctoral researcher position, please visit:<a class="link"
-                            href="https://www.bose.res.in/LinkageProgrammes/APMP/">
-                            <span class="text-warning">Advanced Postdoctoral
-                                Research Programme (APRP)</span></a>
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <h1 class="text-white mb-2">Project Students</h1>
-                    <p class="text-white">
-                        Short term project position or postdoctoral research positions might open up from time to time.
-                        Please feel free to
-                        directly contact us
-                        <a href="mailto:sumanc@bose.res.in" class="link">
-                            <span class="text-warning">(sumanc@bose.res.in)</span></a> if you are interested.
-                    </p>
-                </div>
-            </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
-    <!-- Positions End -->
+  </div>
+</div>
 
-    <!-- Collaborator Start -->
-    <div class="container-fluid testimonial py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">Collaborators</h5>
-                <h1 class="mb-0">National/international collaborators</h1>
+<!--==========================
+  Positions Section
+============================-->
+<style>
+/* Premium Positions Section Enhancements */
+.positions-premium-bg {
+    background: linear-gradient(135deg, #0b192c 0%, #1a365d 100%) !important;
+    position: relative;
+    color: #fff;
+}
+.positions-premium-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 0;
+}
+.positions-premium-bg .container {
+    position: relative;
+    z-index: 1;
+}
+.premium-position-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border-top: 5px solid transparent !important;
+}
+.premium-position-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2) !important;
+    border-top: 5px solid #ffc107 !important;
+}
+.premium-position-card .icon-bubble {
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+.premium-position-card:hover .icon-bubble {
+    background-color: #0c2e8a !important;
+    color: #fff !important;
+    transform: scale(1.1);
+}
+</style>
+<div class="container-fluid py-5 positions-premium-bg">
+  <div class="container py-4">
+    <div class="text-center mb-5 mx-auto" style="max-width: 800px;">
+      <h5 class="text-white text-uppercase fw-bold mb-3" style="letter-spacing: 1.5px; opacity: 0.9;">Open Positions</h5>
+      <h1 class="display-5 text-white mb-4 fw-bold">Join the Group</h1>
+      <p class="mb-0 text-light" style="font-size: 1.15rem; font-family: 'Crimson Text', serif; line-height: 1.8;">
+        We are looking for bright and motivated students curious to unravel the mysteries of nature from a molecular point of view! Interests in physical chemistry, biophysics, statistical mechanics, and programming are highly desirable.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- PhD -->
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="card premium-position-card h-100 w-100 border-0 shadow-lg rounded-4 overflow-hidden">
+          <div class="card-body p-5 text-center d-flex flex-column position-relative">
+            <div class="icon-bubble mx-auto mb-4 bg-light text-primary d-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
+              <i class="fa fa-graduation-cap fa-2x"></i>
             </div>
-            <div class="testimonial-carousel owl-carousel">
-                {% for obj in object %}
-                <div class="testimonial-item text-center rounded pb-4">
-                    <div class="testimonial-comment rounded p-5">
-                    </div>
-                    <div class="testimonial-img p-1">
-                        <a href="{{ obj.link }}"><img src="{{ obj.image.url }}" class="img-fluid rounded-circle"
-                                alt="Ruth Nussinov"></a>
-                    </div>
-                    <div style="margin-top: -35px;">
-                        <h5 class="mb-0">{{ obj.name }}</h5>
-                        <p class="mb-0">{{ obj.desig }}
-                            <br> {{ obj.univ }}
-                        </p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
+            <h4 class="card-title fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif;">PhD Positions</h4>
+            <p class="card-text text-muted flex-grow-1 mb-4" style="font-family: 'Crimson Text', serif; font-size: 1.1rem; line-height: 1.6;">
+              For the admission process in our centre, please consult the official admission page.
+            </p>
+            <a href="http://newweb.bose.res.in/AcademicProgrammes/Admission.jsp" class="btn btn-primary rounded-pill px-4 py-2 mt-auto fw-bold" style="font-family: 'Poppins', sans-serif; letter-spacing: 0.5px;">Admission Details</a>
+          </div>
         </div>
-    </div>
-    <!-- Footer Start -->
-    <footer id="footer" class="footer" style="background-color: #14141f; color: #f5f5f5;">
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="d-flex align-items-center">
-                        <span class="sitename">Chakrabarty Lab</span>
-                    </a>
-                    <div class="footer-contact pt-3">
-                        <p>SNBNCBS, Kolkata-106</p>
-                        <p>CBS Department</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+91-33-2335 1313/</span></p>
-                        <p><strong>Email:</strong> <span>sumanc@bose.res.in</span></p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-3 footer-links">
-                    <h4 class="text-light">Useful Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="bose.res.in">SNBNCBS</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="https://github.com/namus">Github</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a
-                                href="https://scholar.google.co.in/citations?hl=en&user=dcj-bnsAAAAJ&view_op=list_works&sortby=pubdate">Google
-                                Scholar</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a
-                                href="http://newweb.bose.res.in/AcademicProgrammes/Admission.jsp">Admission page</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-12">
-                    <h4 class="text-light">Follow Us</h4>
-                    <p>
-                        Follow us on social media platform provided by the link below to get notifications.
-                    </p>
-                    <div class="main__socials py-2">
-                        <!-- <a href="https://www.facebook.com/namusite">
-                            <button class="Link__facebook">
-                                <i class="fab fa-facebook facebook" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a> -->
-                        <a href="https://www.linkedin.com/in/namusite/">
-                            <button class="Link__linkedin">
-                                <i class="fab fa-linkedin linkedin" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <a href="https://www.instagram.com/namusite/">
-                            <button class="Link__instagram">
-                                <i class="fab fa-instagram instagram" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <a href="https://twitter.com/namusite">
-                            <button class="Link__twitter">
-                                <i class="fab fa-twitter twitter" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <a href="https://github.com/namus">
-                            <button class="Link__github">
-                                <i class="fab fa-github github" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <a href="https://www.youtube.com/user/sumanc">
-                            <button class="Link__youtube">
-                                <i class="fab fa-youtube" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                    </div>
-                </div>
-
+      </div>
+      <!-- Postdoc -->
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="card premium-position-card h-100 w-100 border-0 shadow-lg rounded-4 overflow-hidden">
+          <div class="card-body p-5 text-center d-flex flex-column position-relative">
+            <div class="icon-bubble mx-auto mb-4 bg-light text-primary d-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
+              <i class="fa fa-microscope fa-2x"></i>
             </div>
+            <h4 class="card-title fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif;">Postdoctoral</h4>
+            <p class="card-text text-muted flex-grow-1 mb-4" style="font-family: 'Crimson Text', serif; font-size: 1.1rem; line-height: 1.6;">
+              If you are looking for a postdoctoral researcher position, please explore the Advanced Postdoctoral Research Programme.
+            </p>
+            <a href="https://www.bose.res.in/LinkageProgrammes/APMP/" class="btn btn-primary rounded-pill px-4 py-2 mt-auto fw-bold" style="font-family: 'Poppins', sans-serif; letter-spacing: 0.5px;">APRP Info</a>
+          </div>
         </div>
-
-    </footer>
-    <!-- Footer End -->
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright text-body py-4">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-12 text-center mb-md-0">
-                    <i class="fas fa-copyright me-2"></i><a class="link text-white" href="#">namusite.com</a>, All right
-                    reserved.
-                </div>
+      </div>
+      <!-- Project Students -->
+      <div class="col-lg-4 col-md-6 d-flex">
+        <div class="card premium-position-card h-100 w-100 border-0 shadow-lg rounded-4 overflow-hidden">
+          <div class="card-body p-5 text-center d-flex flex-column position-relative">
+            <div class="icon-bubble mx-auto mb-4 bg-light text-primary d-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px;">
+              <i class="fa fa-flask fa-2x"></i>
             </div>
+            <h4 class="card-title fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif;">Project Students</h4>
+            <p class="card-text text-muted flex-grow-1 mb-4" style="font-family: 'Crimson Text', serif; font-size: 1.1rem; line-height: 1.6;">
+              Short-term project or postdoctoral research positions might open up from time to time.
+            </p>
+            <a href="mailto:sumanc@bose.res.in" class="btn btn-outline-primary rounded-pill px-4 py-2 mt-auto fw-bold" style="font-family: 'Poppins', sans-serif; letter-spacing: 0.5px;">Contact Us</a>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<!--==========================
+  Collaborator Section
+============================-->
+
+<div class="container-fluid testimonial py-5">
+  <div class="container py-4">
+    <div class="mx-auto text-center mb-5" style="max-width: 900px">
+      <h5 class="text-primary text-uppercase fw-bold mb-3" style="letter-spacing: 1.5px;">Collaborators</h5>
+      <h1 class="display-5 text-dark mb-4 fw-bold">National / International Collaborators</h1>
     </div>
-    <!-- Copyright End -->
+    <div class="testimonial-carousel owl-carousel px-lg-4">
+      {% for obj in object %}
+      <div class="collab-item text-center mt-3 mb-4">
+        <div class="collab-img mx-auto mb-4" style="width: 140px; height: 140px;">
+          <a href="{{ obj.link }}"><img src="{{ obj.image.url }}" class="img-fluid rounded-circle shadow-sm" loading="lazy" alt="{{ obj.name }}" style="width: 100%; height: 100%; object-fit: cover; border: 3px solid #fff;" /></a>
+        </div>
+        <div>
+          <h5 class="mb-2 fw-bold text-dark" style="font-family: 'Poppins', sans-serif;">{{ obj.name }}</h5>
+          <p class="mb-0 text-muted" style="font-size: 0.95rem; font-family: 'Crimson Text', serif; line-height: 1.5;">
+            {{ obj.desig }} <br />
+            <span class="text-primary">{{ obj.univ }}</span>
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
-            class="fa fa-arrow-up"></i></a>
 
-
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-    <!-- Template Javascript -->
-    <script src="{% static 'js/wow.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-
-    <script>
-        $(document).ready(function () {
-            var a = document.getElementsByClassName('notibody');
-            for (var i = 0; i < a.length; i++) {
-                a[i].innerHTML = a[i].innerHTML.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-            }
-        });
-         // Intro background carousel
-            $("#intro-carousel").owlCarousel({
-                autoplay: true,
-                dots: false,
-                loop: true,
-                animateOut: 'fadeOut',
-                items: 1
-            });
-
-            // Initiate the wowjs animation library
-            new WOW().init();
-
-    </script>
-</body>
-
-</html>
+{% endblock %}

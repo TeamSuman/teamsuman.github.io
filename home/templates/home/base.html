@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}SCLab{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+
+    <!-- Include  meta tags -->
+    <!-- Meta tags -->
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <meta name="author" content="Suman Chakrabarty">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap & Custom CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+
+    <style>
+        /* HTML: <div class="loader"></div> */
+.loader {
+  height: 60px;
+  aspect-ratio: 1;
+  border: 3px solid #524656;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CF4647;
+  animation:
+    l8-0 .57s infinite alternate linear -.13s,
+    l8-1 .35s infinite alternate linear -.23s;
+}
+.loader:after {
+  background: #45ADA8;
+  animation:
+    l8-0 .29s infinite alternate linear -.11s,
+    l8-1 .51s infinite alternate linear -.34s;
+}
+@keyframes l8-0 {
+  0%,5%  {bottom: 0%}
+  95%,to {bottom: 80%}
+}
+@keyframes l8-1 {
+  0%,5%  {left: 0%}
+  95%,to {left: 80%}
+}
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="loader"></div>
+    </div>
+    <!-- Spinner End -->
+    {% include "home/header.html" %}
+
+    {% block content %}{% endblock %}
+
+    {% if request.resolver_match.url_name == 'home' or request.resolver_match.url_name == 'contact' %}
+        {% include "home/footer.html" %}
+    {% else %}
+        {% include "home/footer_compact.html" %}
+    {% endif %}
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <!-- JS Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <!-- Template JS -->
+    <script src="{% static 'js/main.js' %}" defer></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

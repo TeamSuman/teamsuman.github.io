@@ -6,9 +6,17 @@
     <meta charset="utf-8">
     <title>Team Suman | Research</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+
+    <!-- Include  meta tags -->
+    <!-- Meta tags -->
+    <meta name="description" content="Explore the research interests of the Chakrabarty Lab (Team Suman): Computational molecular biophysics, theoretical physical chemistry, and AI-driven molecular simulations.">
+    <meta name="keywords" content="molecular simulations, computational biophysics, theoretical chemistry, statistical mechanics, machine learning in chemistry, protein folding, rare event sampling, Chakrabarty Lab research">
+    <meta name="author" content="Suman Chakrabarty">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -17,85 +25,133 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS Libraries -->
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Bootstrap & Custom CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
+
+    <style>
+        /* HTML: <div class="loader"></div> */
+.loader {
+  height: 60px;
+  aspect-ratio: 1;
+  border: 3px solid #524656;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CF4647;
+  animation:
+    l8-0 .57s infinite alternate linear -.13s,
+    l8-1 .35s infinite alternate linear -.23s;
+}
+.loader:after {
+  background: #45ADA8;
+  animation:
+    l8-0 .29s infinite alternate linear -.11s,
+    l8-1 .51s infinite alternate linear -.34s;
+}
+@keyframes l8-0 {
+  0%,5%  {bottom: 0%}
+  95%,to {bottom: 80%}
+}
+@keyframes l8-1 {
+  0%,5%  {left: 0%}
+  95%,to {left: 80%}
+}
+    </style>
     
-<link href="/static/css/style.css" rel="stylesheet">
+<!-- Ultra-Professional Academic Layout Styles -->
 <style>
-    a.fill-div {
-        display: block;
-        margin: auto;
-        display: grid;
+    .research-topic-row {
+        margin-bottom: 6rem;
     }
-
-    #watermark {
-        text-align: center;
-        margin: 20px 0;
-        color: red;
-        font-weight: bold;
+    .research-img-wrapper {
+        overflow: hidden;
+        border-radius: 4px;
     }
-.btn-hover {
-    display: inline-flex;
-    align-items: center;
-    font-family: 'Poppins', sans-serif; /* Matches your page font */
-    font-weight: 600; /* Semi-bold */
-    font-size: 1rem; /* Slightly larger for readability */
-    color: #ffffff; /* White text */
-    text-transform: uppercase; /* Optional: makes it stand out */
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-hover i {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.btn-hover:hover {
-    color: #0d6efd; /* Optional: change color on hover for emphasis */
-}
-
-.btn-hover:hover i {
-    transform: translateX(4px); /* Subtle arrow movement */
-}
-
-    /* minor CSS tweak */
+    .research-img-wrapper img {
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 350px;
+    }
+    .research-topic-row:hover .research-img-wrapper img {
+        transform: scale(1.04);
+    }
+    .read-more-link {
+        font-family: var(--bs-body-font-family);
+        font-weight: 500;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--bs-primary);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    .read-more-link i {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+    .read-more-link:hover {
+        color: var(--bs-secondary);
+    }
+    .read-more-link:hover i {
+        transform: translateX(5px);
+    }
 </style>
 
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="loader"></div>
+    </div>
+    <!-- Spinner End -->
     
+
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="/" class="navbar-brand p-0" style="text-decoration: none;">
+    <a href="index.html" class="navbar-brand p-0" style="text-decoration: none">
         <h1 class="m-0 lora">Chakrabarty Lab</h1>
     </a>
+
+    <!-- Hamburger -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
+
+    <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="/" class="nav-item nav-link">Home</a>
-            <a href="/news"
-                class="nav-item nav-link ">News</a>
-            <a href="/research"
+            <a href="index.html"
+                class="nav-item nav-link ">Home</a>
+            <a href="news.html"
+                class="nav-item nav-link ">Announcements</a>
+            <a href="research.html"
                 class="nav-item nav-link active">Research</a>
-            <a href="/publication"
+            <a href="publication.html"
                 class="nav-item nav-link ">Publications</a>
-            <a href="/softwares"
+            <a href="softwares.html"
                 class="nav-item nav-link ">Software</a>
-            <a href=" /team"
+            <a href="team.html"
                 class="nav-item nav-link ">Team</a>
-            <a href="/positions"
+            <a href="positions.html"
                 class="nav-item nav-link ">Positions</a>
-            <a href="/gallery"
+            <a href="gallery.html"
                 class="nav-item nav-link ">Gallery</a>
-            <a href="/contacts"
+            <a href="contacts.html"
                 class="nav-item nav-link ">Contact</a>
         </div>
     </div>
@@ -103,153 +159,296 @@
 
 
     
-<div class="container-fluid bg-research">
-    <div class="container text-center py-5" style="max-width: 900px;">
-        <h3 class="text-white display-3 mb-4">Research</h3>
-        <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active text-white">Research</li>
-        </ol>
+    <!-- Header Start -->
+    <div class="container-fluid bg-research">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h1 class="text-white display-3 mb-4">Research</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-white">Research</li>
+                </ol>
+        </div>
     </div>
-</div>
+    <!-- Header End -->
 
-<div id="watermark">Under active development</div>
-
-<div class="container-fluid ExploreTour">
-    <div class="container py-5">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-            <h5 class="section-title px-3">Research</h5>
-            <h1 class="mb-4">Major Research Interests</h1>
-                                <p class="mb-0"
-                        style="font-family: 'Crimson Text', serif; color: #14141f; font-size: 1.25rem; text-align: justify;">
-                        Our research focuses on the intersection of computational molecular biophysics and theoretical
-                        physical chemistry. We design and apply advanced computational approaches grounded in
-                        statistical mechanics and molecular thermodynamics to tackle challenging, interdisciplinary
-                        problems across chemistry, physics, and biology. The overarching aim is to gain a
-                        molecular-level understanding of how interactions and dynamics drive emergent functions and
-                        material properties. We employ <span class="fw-bold text-danger">molecular simulations</span>, <span class="fw-bold text-primary">enhanced-sampling strategies</span>, and
-                        <span class="fw-bold text-success">machine-learning-based</span> methods to investigate complex biomolecular and soft-matter systems —
-                        spanning small molecules, interfacial water, large proteins and enzymes, to self-assembled
-                        proteins. Our current research themes include <b>(bio)molecular recognition and allostery</b>,
-                        <b>machine-learned discovery of collective variables for rare-event sampling</b>, <b>mechanistic studies of phase transitions</b>, <b>protein folding and aggregation</b>, and <b>AI-driven exploration of free-energy
-                        landscapes</b>.
-                    </p>
+<div class="container-fluid py-5" style="background-color: #ffffff;">
+    <div class="container py-4 mt-4">
+        <!-- Introduction -->
+        <div class="mx-auto" style="max-width: 900px;">
+            <div class="text-center mb-5">
+                <span class="text-primary text-uppercase fw-bold mb-3" style="letter-spacing: 1.5px; display: block;">Chakrabarty Lab</span>
+                <h2 class="display-5 text-dark fw-bold mb-4">Major Research Interests</h2>
+            </div>
+            <p class="mb-5 text-muted" style="font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.8; text-align: justify;">
+                Our research focuses on the intersection of computational molecular
+                biophysics and theoretical physical chemistry. We design and apply
+                advanced computational approaches grounded in statistical mechanics and
+                molecular thermodynamics to tackle challenging, interdisciplinary
+                problems across chemistry, physics, and biology. The overarching aim is
+                to gain a molecular-level understanding of how interactions and dynamics
+                drive emergent functions and material properties. We employ
+                <span class="fw-bold" style="color: var(--bs-primary);">molecular simulations</span>,
+                <span class="fw-bold" style="color: var(--bs-secondary);">enhanced-sampling strategies</span>,
+                and
+                <span class="fw-bold text-dark">machine-learning-based</span> methods
+                to investigate complex biomolecular and soft-matter systems — spanning
+                small molecules, interfacial water, large proteins and enzymes, to
+                self-assembled proteins. Our current research themes include
+                <b>(bio)molecular recognition and allostery</b>,
+                <b>machine-learned discovery of collective variables for rare-event sampling</b>,
+                <b>mechanistic studies of phase transitions</b>,
+                <b>protein folding and aggregation</b>, and
+                <b>AI-driven exploration of free-energy landscapes</b>.
+            </p>
         </div>
 
-        <div class="tab-class text-center">
-            <div class="tab-content">
-                <div id="NationalTab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-4">
+        <!-- Ultra-Professional Research List Layout (Manual/Alternating) -->
+        <style>
+            .publication-list-item { font-size: 0.95rem; line-height: 1.5; color: #64748b; margin-bottom: 0.75rem; display: flex; align-items: flex-start; text-align: justify; }
+            .publication-list-item i { font-size: 0.65rem; color: var(--bs-secondary); margin-top: 0.4rem; margin-right: 0.75rem; }
+        </style>
+
+        <div class="mt-5 pt-5">
+
+            
+            <div class="row align-items-center research-topic-row">
+
+                
+                <!-- Image Left -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="research-img-wrapper shadow-sm rounded-4">
                         
-                        <div class="col-md-6 col-lg-4">
-                            <a class="fill-div" href="./research/1.html">
-                                <div class="national-item">
-                                    <img src="/media/images/signaling.webp" class="img-fluid w-100 rounded" alt="Image"
-                                        style="height: 100%; width: 100%; object-fit: cover">
-                                    <div class="national-content w-100">
-                                        <div class="national-info">
-                                            <h4 class="text-white mb-2">(Bio)molecular Recognition and Signaling</h4>
-                                            <span class="text-white btn-hover">Know More!<i
-                                                    class="fa fa-arrow-right ms-2"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4">
-                            <a class="fill-div" href="./research/2.html">
-                                <div class="national-item">
-                                    <img src="/media/images/water.webp" class="img-fluid w-100 rounded" alt="Image"
-                                        style="height: 100%; width: 100%; object-fit: cover">
-                                    <div class="national-content w-100">
-                                        <div class="national-info">
-                                            <h4 class="text-white mb-2">The Hidden World of Interfacial and Confined Water</h4>
-                                            <span class="text-white btn-hover">Know More!<i
-                                                    class="fa fa-arrow-right ms-2"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4">
-                            <a class="fill-div" href="./research/3.html">
-                                <div class="national-item">
-                                    <img src="/media/images/mlcv.webp" class="img-fluid w-100 rounded" alt="Image"
-                                        style="height: 100%; width: 100%; object-fit: cover">
-                                    <div class="national-content w-100">
-                                        <div class="national-info">
-                                            <h4 class="text-white mb-2">Development of Machine-Learned Collective Variables for Complex Biomolecular Systems</h4>
-                                            <span class="text-white btn-hover">Know More!<i
-                                                    class="fa fa-arrow-right ms-2"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4">
-                            <a class="fill-div" href="./research/4.html">
-                                <div class="national-item">
-                                    <img src="/media/images/enhanced_sampling.webp" class="img-fluid w-100 rounded" alt="Image"
-                                        style="height: 100%; width: 100%; object-fit: cover">
-                                    <div class="national-content w-100">
-                                        <div class="national-info">
-                                            <h4 class="text-white mb-2">Efficient Rare Event Sampling in Molecular Dynamics</h4>
-                                            <span class="text-white btn-hover">Know More!<i
-                                                    class="fa fa-arrow-right ms-2"></i></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <img src="media/images/research_detail_allostery_3w6yiYZ.png" alt="Protein Allostery &amp; Interactions">
                         
                     </div>
                 </div>
+                <div class="col-lg-7 ps-lg-5">
+                
+
+                    <h3 class="fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif;">1. Protein Allostery &amp; Interactions</h3>
+                    <p class="mb-3 text-muted" style="font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.8; text-align: justify;">
+                        Our lab investigates the intricate mechanisms of protein allostery and protein-protein interactions (PPIs). We employ advanced molecular dynamics simulations to understand how distant site perturbations, such as phosphorylation or ligand binding, dynamically regulate protein function. A key focus is uncovering druggable cryptic pockets and designing allosteric modulators for therapeutic intervention in complex systems like the PCSK9-LDLR complex and Rho GTPases.
+                    </p>
+
+                    <h5 class="text-primary text-uppercase fw-bold mt-4 mb-3" style="letter-spacing: 1.5px; font-size: 0.95rem;">Selected Publications</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li class="publication-list-item">
+                            <i class="fa fa-chevron-right"></i>
+                            <span>
+                                
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=dcj-bnsAAAAJ&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=dcj-bnsAAAAJ:0Kh4an1R61UC" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" class="pub-link-hover">Molecular mechanism of regulation of RhoA GTPase by phosphorylation of RhoGDI</a>
+                                
+                            </span>
+                        </li>
+                        
+                        <li class="publication-list-item">
+                            <i class="fa fa-chevron-right"></i>
+                            <span>
+                                
+                                <a href="https://doi.org/10.1002/pro.70413" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" class="pub-link-hover">Phosphorylation induces altered protonation states and allosterically regulates Rac1–RhoGDI complex</a>
+                                
+                            </span>
+                        </li>
+                        
+                    </ul>
+
+                    <a href="/research/16/" class="read-more-link mt-3 d-inline-block">
+                        Show more! <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
+            
+            <div class="row align-items-center research-topic-row">
+
+                
+                <!-- Image Right -->
+                <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2">
+                    <div class="research-img-wrapper shadow-sm rounded-4">
+                        
+                        <img src="media/images/research_detail_ml_RlKstFp.png" alt="Machine Learning &amp; Enhanced Sampling">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-7 pe-lg-5 order-lg-1">
+                
+
+                    <h3 class="fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif;">2. Machine Learning &amp; Enhanced Sampling</h3>
+                    <p class="mb-3 text-muted" style="font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.8; text-align: justify;">
+                        We develop and apply cutting-edge machine learning and enhanced sampling techniques to overcome timescale limitations in classical molecular simulations. By integrating deep neural networks, variational autoencoders, and adaptive sampling strategies like PathGennie and WeTICA, we efficiently explore complex free energy landscapes. Our tools accurately predict rare event kinetics, ADMET properties, and phase transitions with remarkable computational efficiency.
+                    </p>
+
+                    <h5 class="text-primary text-uppercase fw-bold mt-4 mb-3" style="letter-spacing: 1.5px; font-size: 0.95rem;">Selected Publications</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li class="publication-list-item">
+                            <i class="fa fa-chevron-right"></i>
+                            <span>
+                                
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=dcj-bnsAAAAJ&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=dcj-bnsAAAAJ:ibZ2AwG9z6wC" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" class="pub-link-hover">IceCoder: Identification of Ice phases in molecular simulation using variational autoencoder</a>
+                                
+                            </span>
+                        </li>
+                        
+                    </ul>
+
+                    <a href="/research/17/" class="read-more-link mt-3 d-inline-block">
+                        Show more! <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="row align-items-center research-topic-row">
+
+                
+                <!-- Image Left -->
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="research-img-wrapper shadow-sm rounded-4">
+                        
+                        <img src="media/images/research_detail_dynamics_0c8kmWs.png" alt="Biophysics &amp; Conformational Dynamics">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-7 ps-lg-5">
+                
+
+                    <h3 class="fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif;">3. Biophysics &amp; Conformational Dynamics</h3>
+                    <p class="mb-3 text-muted" style="font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.8; text-align: justify;">
+                        Understanding the fundamental biophysics of conformational dynamics is central to our research. We explore complex folding pathways, dimensionality reduction of conformational landscapes, and the mechanical stability of biomolecules. Through rigorous mixed-solvent simulations and structural analyses, we map interaction hotspots and elucidate how conformational diversity dictates molecular function and recognition.
+                    </p>
+
+                    <h5 class="text-primary text-uppercase fw-bold mt-4 mb-3" style="letter-spacing: 1.5px; font-size: 0.95rem;">Selected Publications</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li class="publication-list-item">
+                            <i class="fa fa-chevron-right"></i>
+                            <span>
+                                
+                                <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=dcj-bnsAAAAJ&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=dcj-bnsAAAAJ:d6JCS5z0ckYC" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" class="pub-link-hover">Conformational Effects on the Absorption Spectra of Phytochromes</a>
+                                
+                            </span>
+                        </li>
+                        
+                    </ul>
+
+                    <a href="/research/18/" class="read-more-link mt-3 d-inline-block">
+                        Show more! <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="row align-items-center research-topic-row">
+
+                
+                <!-- Image Right -->
+                <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2">
+                    <div class="research-img-wrapper shadow-sm rounded-4">
+                        
+                        <img src="media/images/research_detail_solvation_ASwCzb5.png" alt="Solvation, Ionic Liquids &amp; Phase Behavior">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-7 pe-lg-5 order-lg-1">
+                
+
+                    <h3 class="fw-bold text-dark mb-3" style="font-family: 'Poppins', sans-serif;">4. Solvation, Ionic Liquids &amp; Phase Behavior</h3>
+                    <p class="mb-3 text-muted" style="font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.8; text-align: justify;">
+                        We investigate the microscopic origins of solvation thermodynamics and phase behaviors induced by complex solvent environments, including specialized ionic liquids and guanidinium salts. Our quantum chemical and molecular dynamics investigations reveal how specific ion-pairing propensities and surface-active molecules modulate protein (de)stabilization, hydrophobicity, and the delicate balance between protein-water and protein-protein interactions.
+                    </p>
+
+                    <h5 class="text-primary text-uppercase fw-bold mt-4 mb-3" style="letter-spacing: 1.5px; font-size: 0.95rem;">Selected Publications</h5>
+                    <ul class="list-unstyled">
+                        
+                    </ul>
+
+                    <a href="/research/19/" class="read-more-link mt-3 d-inline-block">
+                        Show more! <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+
         </div>
+
     </div>
 </div>
 
 
     
-<div class="container-fluid copyright text-body py-4">
-    <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-md-12 text-center mb-md-0">
-                <i class="fas fa-copyright me-2"></i>
-                <a class="text-white" href="#">teamsuman.org</a>, All rights reserved.
+        
+<footer class="footer-compact">
+    <div class="container h-100">
+        <div class="row align-items-center h-100 m-0">
+            <div class="col-md-6 text-center text-md-start p-0">
+                <p class="mb-0 text-white-50" style="letter-spacing: 0.5px; line-height: 1; white-space: nowrap;">
+                    &copy; <span id="current-year">2024</span> <a href="index.html" class="fw-semibold text-white text-decoration-none px-1" style="font-family: 'Lora', serif; font-size: 0.95rem; letter-spacing: 1px;">Chakrabarty Lab</a> <span class="mx-1 opacity-50">|</span> <span style="font-size: 0.70rem; text-transform: uppercase; letter-spacing: 1px;">All rights reserved.</span>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end p-0 mt-2 mt-md-0">
+                <div class="footer-compact-socials d-inline-flex gap-3 align-items-center mb-0">
+                    <a href="https://www.linkedin.com/in/namusite/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/namussite" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/teamsuman" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/user/sumanc" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
-    <i class="fa fa-arrow-up"></i>
-</a>
+<style>
+    .footer-compact {
+        background: #0f172a; /* Slate 900 */
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        color: #94a3b8;
+    }
+    
+    .footer-compact a {
+        transition: color 0.3s ease;
+        color: #94a3b8;
+    }
 
-<!-- JS Libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/static/lib/easing/easing.min.js"></script>
-<script src="/static/lib/waypoints/waypoints.min.js"></script>
-<script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    .footer-compact a:hover {
+        color: #ffffff;
+    }
 
-<!-- Template JS -->
-<script src="/static/js/main.js"></script>
+    .footer-compact-socials a i {
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
 
+    .footer-compact-socials a:hover i {
+        transform: translateY(-2px);
+        color: #14b8a6; /* Premium Teal accent */
+    }
+</style>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/lib/easing/easing.min.js"></script>
-    <script src="/static/lib/waypoints/waypoints.min.js"></script>
-    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+
+    <!-- Template JS -->
+    <script src="static/js/main.js" defer></script>
 
     
 </body>

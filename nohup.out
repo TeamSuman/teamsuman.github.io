@@ -1,10 +1,9 @@
-<frozen importlib._bootstrap>:488: RuntimeWarning: The global interpreter lock (GIL) has been enabled to load module 'pandas._libs.pandas_parser', which has not declared that it can run safely without the GIL. To override this behavior and keep the GIL disabled (at your own risk), run with PYTHON_GIL=0 or -Xgil=0.
-[22/Mar/2025 14:35:57] "GET / HTTP/1.1" 200 41637
-[22/Mar/2025 14:36:00] "GET /research HTTP/1.1" 200 21445
-[22/Mar/2025 14:36:03] "GET /news HTTP/1.1" 200 12008
-[22/Mar/2025 14:36:06] "GET /positions HTTP/1.1" 200 7557
-[22/Mar/2025 14:36:09] "GET /publication HTTP/1.1" 200 150215
-[22/Mar/2025 14:36:12] "GET /gallery HTTP/1.1" 200 9177
-[22/Mar/2025 14:36:15] "GET /contacts HTTP/1.1" 200 12589
-[22/Mar/2025 14:36:18] "GET /team HTTP/1.1" 200 34167
-[22/Mar/2025 14:36:21] "GET /softwares HTTP/1.1" 200 5921
+[25/May/2026 16:05:16] "GET / HTTP/1.1" 200 38247
+[25/May/2026 16:05:19] "GET /research HTTP/1.1" 200 21675
+[25/May/2026 16:05:22] "GET /news HTTP/1.1" 200 18890
+[25/May/2026 16:05:25] "GET /positions HTTP/1.1" 200 11086
+[25/May/2026 16:05:28] "GET /publication HTTP/1.1" 200 98633
+[25/May/2026 16:05:31] "GET /gallery HTTP/1.1" 200 20804
+[25/May/2026 16:05:34] "GET /contacts HTTP/1.1" 200 11347
+[25/May/2026 16:05:37] "GET /team HTTP/1.1" 200 45644
+[25/May/2026 16:05:40] "GET /softwares HTTP/1.1" 200 16459

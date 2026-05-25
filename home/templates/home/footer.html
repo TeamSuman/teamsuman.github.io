@@ -1,0 +1,210 @@
+{% load static %}
+<footer class="footer-full">
+    <div class="container footer-top py-5">
+        <div class="row gy-4">
+            <!-- Column 1: About -->
+            <div class="col-lg-5 col-md-12 footer-about pe-lg-5">
+                <a href="{% url 'home' %}" class="d-flex align-items-center text-decoration-none mb-3">
+                    <span class="sitename">Chakrabarty Lab</span>
+                </a>
+                <p class="mb-4">
+                    Theoretical and Computational (Bio)physical Chemistry Group. 
+                    Exploring the molecular basis of biological phenomena through statistical mechanics 
+                    and advanced molecular dynamics simulations.
+                </p>
+                <div class="footer-socials d-flex gap-3">
+                    <a href="https://www.linkedin.com/in/namusite/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/namussite" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/teamsuman" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/user/sumanc" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4 class="mb-4">Resource Hub</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://www.bose.res.in" target="_blank"><i class="fas fa-chevron-right me-2"></i>SNBNCBS Official</a></li>
+                    <li class="mb-2"><a href="{% url 'research' %}"><i class="fas fa-chevron-right me-2"></i>Research Portfolio</a></li>
+                    <li class="mb-2"><a href="{% url 'publication' %}"><i class="fas fa-chevron-right me-2"></i>Publications</a></li>
+                    <li class="mb-2"><a href="http://newweb.bose.res.in/AcademicProgrammes/Admission.jsp" target="_blank"><i class="fas fa-chevron-right me-2"></i>Lab Admissions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact -->
+            <div class="col-lg-4 col-md-6 footer-contact">
+                <h4 class="mb-4">Get In Touch</h4>
+                <div class="d-flex mb-3">
+                    <i class="fas fa-map-marker-alt text-accent mt-1 me-3"></i>
+                    <p class="mb-0">
+                        <strong>Address:</strong><br>
+                        S. N. Bose National Centre for Basic Sciences<br>
+                        JD Block, Sector III, Salt Lake City<br>
+                        Kolkata - 700 106, India
+                    </p>
+                </div>
+                <div class="d-flex mb-3">
+                    <i class="fas fa-envelope text-accent mt-1 me-3"></i>
+                    <p class="mb-0">
+                        <strong>Email:</strong> <br>sumanc@bose.res.in
+                    </p>
+                </div>
+                <div class="d-flex">
+                    <i class="fas fa-phone-alt text-accent mt-1 me-3"></i>
+                    <p class="mb-0">
+                        <strong>Phone:</strong> <br>+91-33-2335 1313
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="copyright-bar mt-4">
+        <div class="container text-center text-md-between d-md-flex align-items-center justify-content-between">
+            <p class="mb-0">
+                &copy; <span id="full-current-year">2024</span> 
+                <a href="{% url 'home' %}" class="fw-semibold text-white text-decoration-none">Chakrabarty Lab</a>. All rights reserved.
+            </p>
+            <p class="mb-0 mt-2 mt-md-0 created-by">
+                Designed for purely research & academic purposes.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Premium Full Footer Styles */
+    .footer-full {
+        background-color: #0f172a; /* Slate 900 */
+        font-family: 'Outfit', sans-serif;
+        color: #94a3b8; /* Slate 400 */
+        font-size: 0.95rem;
+    }
+
+    .footer-full .sitename {
+        font-family: 'Lora', serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-full .sitename:hover {
+        color: #14b8a6; /* Premium Teal */
+    }
+
+    .footer-full h4 {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #ffffff;
+        position: relative;
+        padding-bottom: 12px;
+    }
+
+    .footer-full h4::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: #14b8a6; /* Premium Teal accent */
+        bottom: 0;
+        left: 0;
+    }
+
+    .footer-full p {
+        line-height: 1.7;
+    }
+
+    /* Links styling */
+    .footer-links ul li {
+        transition: transform 0.3s ease;
+    }
+
+    .footer-links ul li:hover {
+        transform: translateX(5px);
+    }
+
+    .footer-links a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-links a i {
+        font-size: 0.75rem;
+        color: #14b8a6;
+    }
+
+    .footer-links a:hover {
+        color: #ffffff;
+    }
+
+    /* Socials */
+    .footer-socials a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .footer-socials a:hover {
+        background-color: #14b8a6;
+        color: #0f172a; /* Dark text on hover for contrast */
+        transform: translateY(-3px);
+    }
+
+    /* Contact Block */
+    .text-accent {
+        color: #14b8a6;
+        font-size: 1.1rem;
+    }
+    
+    .footer-contact strong {
+        color: #e2e8f0; /* Lighter slate for emphasis */
+        font-weight: 500;
+    }
+
+    /* Copyright Bar */
+    .copyright-bar {
+        background-color: #0b1120; /* Darker Slate for contrast */
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.9rem;
+    }
+
+    .copyright-bar a {
+        color: #e2e8f0;
+        transition: color 0.3s ease;
+    }
+
+    .copyright-bar a:hover {
+        color: #14b8a6;
+    }
+
+    .created-by {
+        font-size: 0.85rem;
+        color: #64748b;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const yearElem = document.getElementById('full-current-year');
+        if(yearElem) {
+            yearElem.textContent = new Date().getFullYear();
+        }
+    });
+</script>

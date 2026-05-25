@@ -1,0 +1,64 @@
+/* invalid Section
+--------------------------------*/
+#invalid {
+    padding: 60px 0 30px 0;
+  }
+  
+  #invalid .invalid-img {
+    overflow: hidden;
+  }
+  
+  #invalid .invalid-img img {
+    margin-left: -15px;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    #invalid .invalid-img {
+      height: auto;
+    }
+  
+    #invalid .invalid-img img {
+      margin-left: 0;
+      padding-bottom: 30px;
+    }
+  }
+  
+  #invalid .content h2 {
+    color: #0c2e8a;
+    font-weight: 700;
+    font-size: 36px;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #invalid .content h3 {
+    color: #555;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    font-style: italic;
+  }
+  
+  #invalid .content p {
+    line-height: 26px;
+  }
+  
+  #invalid .content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  #invalid .content i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #50d8af;
+  }
+  
+  #invalid .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #invalid .content ul li {
+    padding-bottom: 10px;
+  }
+    

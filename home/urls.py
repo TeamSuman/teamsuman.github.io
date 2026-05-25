@@ -1,7 +1,7 @@
 # from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.conf import settings # type: ignore
-from django.conf.urls.static import static # type: ignore
-from django.urls import path    # type: ignore
+from django.conf import settings  # type: ignore
+from django.conf.urls.static import static  # type: ignore
+from django.urls import path  # type: ignore
 
 from . import views
 
@@ -16,10 +16,10 @@ urlpatterns = [
     path("gallery", views.gallery, name="gallery"),
     path("news", views.news, name="news"),
     path("research", views.research, name="research"),
-    path("research2", views.research2, name="research2"),
     path("publication", views.publication, name="publication"),
     path("softwares", views.softwares, name="softwares"),
     path("positions", views.positions, name="positions"),
+    path("research/<int:pk>/", views.research_detail, name="research_detail"),
 ]
 # urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

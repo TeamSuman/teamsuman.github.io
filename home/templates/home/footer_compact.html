@@ -1,0 +1,55 @@
+{% load static %}
+<footer class="footer-compact">
+    <div class="container h-100">
+        <div class="row align-items-center h-100 m-0">
+            <div class="col-md-6 text-center text-md-start p-0">
+                <p class="mb-0 text-white-50" style="letter-spacing: 0.5px; line-height: 1; white-space: nowrap;">
+                    &copy; <span id="current-year">2024</span> <a href="{% url 'home' %}" class="fw-semibold text-white text-decoration-none px-1" style="font-family: 'Lora', serif; font-size: 0.95rem; letter-spacing: 1px;">Chakrabarty Lab</a> <span class="mx-1 opacity-50">|</span> <span style="font-size: 0.70rem; text-transform: uppercase; letter-spacing: 1px;">All rights reserved.</span>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end p-0 mt-2 mt-md-0">
+                <div class="footer-compact-socials d-inline-flex gap-3 align-items-center mb-0">
+                    <a href="https://www.linkedin.com/in/namusite/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/namussite" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/teamsuman" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/user/sumanc" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer-compact {
+        background: #0f172a; /* Slate 900 */
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        color: #94a3b8;
+    }
+    
+    .footer-compact a {
+        transition: color 0.3s ease;
+        color: #94a3b8;
+    }
+
+    .footer-compact a:hover {
+        color: #ffffff;
+    }
+
+    .footer-compact-socials a i {
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .footer-compact-socials a:hover i {
+        transform: translateY(-2px);
+        color: #14b8a6; /* Premium Teal accent */
+    }
+</style>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

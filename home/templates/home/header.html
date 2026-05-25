@@ -1,0 +1,36 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <a href="{% url 'home' %}" class="navbar-brand p-0" style="text-decoration: none">
+        <h1 class="m-0 lora">Chakrabarty Lab</h1>
+    </a>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a href="{% url 'home' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+            <a href="{% url 'news' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'news' %}active{% endif %}">Announcements</a>
+            <a href="{% url 'research' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'research' %}active{% endif %}">Research</a>
+            <a href="{% url 'publication' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'publication' %}active{% endif %}">Publications</a>
+            <a href="{% url 'softwares' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'softwares' %}active{% endif %}">Software</a>
+            <a href="{% url 'team' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}">Team</a>
+            <a href="{% url 'positions' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'positions' %}active{% endif %}">Positions</a>
+            <a href="{% url 'gallery' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">Gallery</a>
+            <a href="{% url 'contacts' %}"
+                class="nav-item nav-link {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}">Contact</a>
+        </div>
+    </div>
+</nav>

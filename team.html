@@ -6,69 +6,345 @@
     <meta charset="utf-8">
     <title>Team Suman | Members</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+
+    <!-- Include  meta tags -->
+    <!-- Meta tags -->
+    <meta name="description" content="Meet the members of the Chakrabarty Lab (Team Suman), including Prof. Suman Chakrabarty, PhD scholars, postdoctoral fellows, and alumni.">
+    <meta name="keywords" content="Chakrabarty Lab, Team Suman members, PhD students, postdoctoral fellows, SCLab alumni, research group members, SN Bose Centre faculty">
+    <meta name="author" content="Suman Chakrabarty">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
-        integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
     <!-- CSS Libraries -->
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Bootstrap & Custom CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
+
+    <style>
+        /* HTML: <div class="loader"></div> */
+.loader {
+  height: 60px;
+  aspect-ratio: 1;
+  border: 3px solid #524656;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CF4647;
+  animation:
+    l8-0 .57s infinite alternate linear -.13s,
+    l8-1 .35s infinite alternate linear -.23s;
+}
+.loader:after {
+  background: #45ADA8;
+  animation:
+    l8-0 .29s infinite alternate linear -.11s,
+    l8-1 .51s infinite alternate linear -.34s;
+}
+@keyframes l8-0 {
+  0%,5%  {bottom: 0%}
+  95%,to {bottom: 80%}
+}
+@keyframes l8-1 {
+  0%,5%  {left: 0%}
+  95%,to {left: 80%}
+}
+    </style>
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
-        integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-<link href="/static/css/style.css" rel="stylesheet">
-<link href="/static/css/team_style.css" rel="stylesheet">
+<link href="static/css/style.css" rel="stylesheet">
+<!-- team_style.css will be modernized separately, but we'll override key parts here -->
+<style>
+  :root {
+    --team-accent: #0d9488; /* Muted Academic Teal */
+    --bs-secondary: #0f172a; /* Slate 900 */
+    --font-heading: 'Lora', serif;
+    --font-body: 'Outfit', sans-serif;
+  }
 
+  /* Structural refined spacing */
+  .section-padding {
+    padding: 100px 0;
+  }
+
+  .bg-light-slate {
+    background-color: #f8fafc;
+  }
+
+  /* Typography Overrides */
+  .section-subtitle {
+    font-family: var(--font-body);
+    color: var(--team-accent);
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    opacity: 0.8;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    color: var(--bs-secondary);
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 2.25rem;
+    letter-spacing: -0.01em;
+    text-transform: none !important; /* Avoid all-caps for a smoother look */
+  }
+
+  /* Reset global clutter from style.css */
+  .section-title::before {
+    display: none !important;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: var(--team-accent);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    border: none !important;
+    top: auto !important;
+    margin: 0 !important;
+  }
+
+  /* PI Section Refinement */
+  .pi-section {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+  }
+
+  .pi-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .pi-card:hover .pi-image-wrapper img {
+    transform: scale(1.02);
+  }
+
+  .pi-details {
+    padding: 4rem;
+  }
+
+  .pi-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--bs-secondary);
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pi-role {
+    color: var(--team-accent);
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    font-family: var(--font-heading);
+    font-style: italic;
+  }
+
+  .pi-bio {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #1e293b; /* Darker for better contrast */
+  }
+
+  .interest-mark {
+    background: none;
+    color: var(--bs-secondary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--team-accent);
+    font-family: var(--font-heading);
+  }
+
+  /* Social Icons */
+  .social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px; /* More formal square-ish */
+    background: #f8fafc;
+    color: #475569;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .social-link:hover {
+    background: var(--bs-secondary);
+    color: #ffffff;
+    border-color: var(--bs-secondary);
+    transform: translateY(-2px);
+  }
+
+  /* Member Cards */
+  .member-card {
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+    padding: 3rem 2rem !important;
+  }
+
+  .member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: #e2e8f0;
+  }
+
+  .member-img-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #f1f5f9;
+    padding: 4px;
+    background: #fff;
+    margin: 0 auto 2rem;
+  }
+
+  .member-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .member-name {
+    font-family: var(--font-heading);
+    color: var(--bs-secondary);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+  }
+
+  .member-role {
+    color: var(--team-accent);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+
+  .member-interest {
+    font-size: 0.95rem;
+    color: #334155; /* Darker for better contrast */
+    line-height: 1.7;
+    font-family: var(--font-body);
+  }
+
+  /* Alumni Section */
+  .alumni-card {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 2rem;
+    border: 1px solid #f1f5f9;
+    box-shadow: none;
+    transition: all 0.2s ease;
+  }
+
+  .alumni-card:hover {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+  }
+
+  .bg-gradient-slate {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading) !important;
+  }
+
+  /* Watermark cleanup */
+  #watermark { display: none; }
+</style>
 
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="loader"></div>
+    </div>
+    <!-- Spinner End -->
     
+
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="/" class="navbar-brand p-0" style="text-decoration: none;">
+    <a href="index.html" class="navbar-brand p-0" style="text-decoration: none">
         <h1 class="m-0 lora">Chakrabarty Lab</h1>
     </a>
+
+    <!-- Hamburger -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
+
+    <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="/" class="nav-item nav-link">Home</a>
-            <a href="/news"
-                class="nav-item nav-link ">News</a>
-            <a href="/research"
+            <a href="index.html"
+                class="nav-item nav-link ">Home</a>
+            <a href="news.html"
+                class="nav-item nav-link ">Announcements</a>
+            <a href="research.html"
                 class="nav-item nav-link ">Research</a>
-            <a href="/publication"
+            <a href="publication.html"
                 class="nav-item nav-link ">Publications</a>
-            <a href="/softwares"
+            <a href="softwares.html"
                 class="nav-item nav-link ">Software</a>
-            <a href=" /team"
+            <a href="team.html"
                 class="nav-item nav-link active">Team</a>
-            <a href="/positions"
+            <a href="positions.html"
                 class="nav-item nav-link ">Positions</a>
-            <a href="/gallery"
+            <a href="gallery.html"
                 class="nav-item nav-link ">Gallery</a>
-            <a href="/contacts"
+            <a href="contacts.html"
                 class="nav-item nav-link ">Contact</a>
         </div>
     </div>
@@ -81,529 +357,653 @@
         <div class="container text-center py-5" style="max-width: 900px;">
             <h3 class="text-white display-3 mb-4">Members</h1>
                 <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active text-white">Team</li>
                 </ol>
         </div>
     </div>
     <!-- Header End -->
-    <section class="section about-section gray-bg p-0" id="about" style="margin-top: 50px;">
+    <!-- Dynamic Content -->
+    
+    <section class="section-padding bg-light-slate">
         <div class="container">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-lg-12">
-                    <div class="fredericka" style="text-align: center;">
-                        <h2 class="redressed"> Chakrabarty Lab, 2024</h2>
+            <!-- Group Image Section -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-11 text-center">
+                    <h2 class="section-subtitle">Chakrabarty Lab</h2>
+                    <h1 class="section-title mb-4">Chakrabarty Lab, 2026</h1>
+                    
+                    <div class="group-image-card shadow-lg rounded-4 overflow-hidden mb-4">
+                        <img src="media/images/team_photo_2026_76IQp5S.webp" class="img-fluid w-100" alt="Group Photo" loading="lazy">
                     </div>
-
-                    <div class="about-avatar text-center">
-                        <img src="/static/img/group5.webp" title="" alt="" id="photo">
-                    </div>
-                </div>
-                <div class="col-lg-12 mt-2">
-                    <div id="photo_text" style="margin: auto;">
-                        <p style="font-family:Crimson Text; color: midnightblue; text-align: center;">
-                            <span style="color: gray;">(From left)</span> Sreyan Bhowmick, Shivam Pandit, Dibyendu
-                            Maity,
-                            Suman Chakrabarty, Sutanu Mukhopadhyay, Krishnendu Sinha, Sudipta Mitra, Muskan Sharma,
-                            Shaheerah Shahid and Sayari Bhattacharya
+                    
+                    <div class="mt-3">
+                        <p class="pi-bio text-center italic" style="font-style: italic;">
+                            <span style="color: gray;">(From left)</span>Sutanu Mukhopadhyay,  Sayari Bhattacharya, Dibyendu Maity, Suman Chakrabarty, Sauptik Sadhukhan, Shaheerah Shahid and Sreyan Bhowmick
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section about-section gray-bg" id="about">
-        <div class="container">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-lg-6">
-                    <div class="about-avatar text-center">
-                        <img src="/static/img/suman.webp" title="" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-text go-to">
-                        <h2 class="dark-color">Dr. Suman Chakrabarty</h2>
-                        <h6 class="theme-color lead mb-0">
-                            Professor &amp; Group Leader</h6>
 
-                        <p class="mt-0 mb-0"><a href="https://newweb.bose.res.in/departments/CBS/Faculty.jsp"><small>Department of Chemical and Biological Sciences</small></a></p>
-                        <p class="mt-0 mb-3"><a href="https://newweb.bose.res.in">
-                            <small>S. N. Bose National Centre for Basic Sciences, Kolkata</small></a></p>
-                        <p>
-                            <mark>Research and Scholarly Interests:</mark> Molecular Simulation, Statistical
+            <!-- PI Section -->
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <div class="pi-section pi-card d-flex flex-column flex-lg-row">
+                        <div class="pi-image-wrapper col-lg-5 p-0">
+                            <img src="media/images/suman.webp" alt="Dr. Suman Chakrabarty" loading="lazy">
+                        </div>
+                        <div class="pi-details col-lg-7 d-flex flex-column justify-content-center">
+                            <span class="section-subtitle">Principal Investigator</span>
+                            <h2 class="pi-name">Dr. Suman Chakrabarty</h2>
+                            <span class="pi-role">Professor &amp; Group Leader</span>
+                            
+                            <div class="affiliation-links mb-4">
+                                <p class="mb-1">
+                                    <a href="https://newweb.bose.res.in/departments/CBS/Faculty.jsp" class="text-decoration-none text-slate-600 hover-teal small">
+                                        <i class="fas fa-building me-2"></i>Department of Chemical and Biological Sciences
+                                    </a>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="https://newweb.bose.res.in" class="text-decoration-none text-slate-600 hover-teal small">
+                                        <i class="fas fa-university me-2"></i>S. N. Bose National Centre for Basic Sciences, Kolkata
+                                    </a>
+                                </p>
+                            </div>
+
+                            <p class="pi-bio mb-4">
+                                <span class="interest-mark">Research Interests:</span> Molecular Simulation, Statistical
                             Mechanics in Chemistry and Biology,
                             Machine Learning, Enhanced Sampling,
                             Protein Signaling, Allostery, Protein Folding, Self-Assembly
-                        </p>
-                    </div>
-                    <div class="main__socials">
-                        <a href="mailto:sumanc@bose.res.in">
-                            <button class="Link__email">
-                                <i class="fa fa-envelope email" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <a href="https://scholar.google.com/citations?user=dcj-bnsAAAAJ&hl=en">
-                            <button class="Link__gscholar">
-                                <!-- <i class="fab fa-facebook facebook" aria-hidden="true" style="font-size: 30px;"></i> -->
-                                <i class="fa-brands fa-google-scholar gscholar" aria-hidden="true" style="font-size: 30px;"></i>
+                            </p>
 
-                            </button></a>
-                        <a href="https://www.linkedin.com/in/sumanphyschem/">
-                            <button class="Link__linkedin">
-                                <i class="fab fa-linkedin linkedin" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <!-- <a href="https://www.instagram.com/namusite/">
-                            <button class="Link__instagram">
-                                <i class="fab fa-instagram instagram" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a> -->
-                        <a href="https://x.com/SumanPhysChem">
-                            <button class="Link__twitter">
-                                <i class="fab fa-twitter twitter" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <a href="https://github.com/namus">
-                            <button class="Link__github">
-                                <i class="fab fa-github github" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a>
-                        <!-- <a href="https://www.youtube.com/user/sumanc">
-                            <button class="Link__youtube">
-                                <i class="fab fa-youtube" aria-hidden="true" style="font-size: 30px;"></i>
-                            </button></a> -->
+                            <div class="pi-socials d-flex gap-3 mt-auto">
+                                
+                                <a href="mailto:sumanc@bose.res.in" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                                
+                                
+                                <a href="https://scholar.google.com/citations?user=dcj-bnsAAAAJ&amp;hl=en" class="social-link" target="_blank" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+                                
+                                
+                                <a href="https://www.linkedin.com/in/sumanphyschem/" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                
+                                
+                                <a href="https://x.com/SumanPhysChem" class="social-link" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                                
+                                
+                                <a href="https://github.com/namus" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    
+
     <!-- Member Start -->
-    <div class="container-fluid blog py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h2 class="section-title px-3">PhD Scholars</h2>
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Our Team</span>
+                <h2 class="section-title">PhD Scholars</h2>
             </div>
             <div class="row g-4 justify-content-center">
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Abhinandan.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Abhinandan Das</strong></h4>
-                                    <span class="job_post text-small"><strong>SRF</strong>/Chemistry</span>
-                                    <p class="mb-0">Acetylcholinesterase - Rational design of inhibitors, protein-ligand interaction and dynamics</p>
-
-                                    <div class="guide-icon rounded-pill p-2 px-0"
-                                        style="display: flex; margin: auto; text-align: left; justify-content: left;">
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="mailto:None"><i class="fa fa-envelope"></i></a>
-                                        
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member-card p-4 text-center">
+                        <div class="member-img-wrapper">
+                            <img src="media/images/ToonMe_Dibyendu.webp" alt="Dibyendu Maity" loading="lazy">
+                        </div>
+                        <h4 class="member-name">Dibyendu Maity</h4>
+                        <span class="member-role">SRF</span>
+                        <p class="member-interest mb-3">Nucleation and growth; Crystalliszation; Enhanced sampling; Machine leaning</p>
+                        
+                        <div class="d-flex justify-content-center gap-2 mt-auto">
+                            <a href="mailto:dibyendumaity1999@bose.res.in" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                            
+                            <a href="https://github.com/dmighty007" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            
+                            
+                            <a href="https://x.com/MAITYDIBYENDU99" class="social-link" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                            
+                            
+                            <a href="https://www.linkedin.com/in/dibyendu-maity-a1909b174/" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Dibyendu.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Dibyendu Maity</strong></h4>
-                                    <span class="job_post text-small"><strong>SRF</strong>/Physics</span>
-                                    <p class="mb-0">Nucleation and growth; Crystalliszation; Enhanced sampling; Machine leaning</p>
-
-                                    <div class="guide-icon rounded-pill p-2 px-0"
-                                        style="display: flex; margin: auto; text-align: left; justify-content: left;">
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="mailto:dibyendumaity1999@bose.res.in"><i class="fa fa-envelope"></i></a>
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://github.com/dmighty007"><i class="fab fa-github"></i></a>
-                                        
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://x.com/MAITYDIBYENDU99"><i class="fab fa-twitter"></i></a>
-                                        
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://www.linkedin.com/in/dibyendu-maity-a1909b174/"><i class="fab fa-linkedin-in"></i></a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member-card p-4 text-center">
+                        <div class="member-img-wrapper">
+                            <img src="media/images/ToonMe_Sutanu.webp" alt="Sutanu Mukhopadhyay" loading="lazy">
+                        </div>
+                        <h4 class="member-name">Sutanu Mukhopadhyay</h4>
+                        <span class="member-role">SRF</span>
+                        <p class="member-interest mb-3">Allosteric regulation; Computer-aided drug design</p>
+                        
+                        <div class="d-flex justify-content-center gap-2 mt-auto">
+                            <a href="mailto:sutanu.mukhopadhyay@bose.res.in" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                            
+                            <a href="https://github.com/mukherjeesutanu" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            
+                            
+                            <a href="https://x.com/sutanu71933293" class="social-link" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                            
+                            
+                            <a href="https://in.linkedin.com/in/sutanu-mukhopadhyay-3681851aa" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Sutanu.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Sutanu Mukhopadhyay</strong></h4>
-                                    <span class="job_post text-small"><strong>SRF</strong>/Chemistry</span>
-                                    <p class="mb-0">Allosteric regulation; Computer-aided drug design</p>
-
-                                    <div class="guide-icon rounded-pill p-2 px-0"
-                                        style="display: flex; margin: auto; text-align: left; justify-content: left;">
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="mailto:sutanu.mukhopadhyay@bose.res.in"><i class="fa fa-envelope"></i></a>
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://github.com/mukherjeesutanu"><i class="fab fa-github"></i></a>
-                                        
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://x.com/sutanu71933293"><i class="fab fa-twitter"></i></a>
-                                        
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://in.linkedin.com/in/sutanu-mukhopadhyay-3681851aa"><i class="fab fa-linkedin-in"></i></a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member-card p-4 text-center">
+                        <div class="member-img-wrapper">
+                            <img src="media/images/ToonMe_Sreyan.webp" alt="Sreyan Bhowmick" loading="lazy">
+                        </div>
+                        <h4 class="member-name">Sreyan Bhowmick</h4>
+                        <span class="member-role">SRF</span>
+                        <p class="member-interest mb-3">Allosteric regulation in Biophysical Systems</p>
+                        
+                        <div class="d-flex justify-content-center gap-2 mt-auto">
+                            <a href="mailto:sreyan.bhowmick@bose.res.in" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Sreyan.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Sreyan Bhowmick</strong></h4>
-                                    <span class="job_post text-small"><strong>SRF</strong>/Physics</span>
-                                    <p class="mb-0">Allosteric regulation in Biophysical Systems</p>
-
-                                    <div class="guide-icon rounded-pill p-2 px-0"
-                                        style="display: flex; margin: auto; text-align: left; justify-content: left;">
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="mailto:sreyan.bhowmick@bose.res.in"><i class="fa fa-envelope"></i></a>
-                                        
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member-card p-4 text-center">
+                        <div class="member-img-wrapper">
+                            <img src="media/images/sayari.webp" alt="Sayari Bhattacharya" loading="lazy">
+                        </div>
+                        <h4 class="member-name">Sayari Bhattacharya</h4>
+                        <span class="member-role">SRF</span>
+                        <p class="member-interest mb-3">Protein folding, Protein aggregation, Protein-ligand interaction, Intrinsically disordered Proteins</p>
+                        
+                        <div class="d-flex justify-content-center gap-2 mt-auto">
+                            <a href="mailto:sayaribhattacharya4@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                            
+                            <a href="https://github.com/bsayari10" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            
+                            
+                            <a href="https://x.com/sayari_2000" class="social-link" target="_blank" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                            
+                            
+                            <a href="https://www.linkedin.com/in/sayari-bhattacharya-25b314219?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" class="social-link" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_sayari.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Sayari Bhattacharya</strong></h4>
-                                    <span class="job_post text-small"><strong>JRF</strong>/Physics</span>
-                                    <p class="mb-0">Protein folding, Protein aggregation, Protein-ligand interaction, Intrinsically disordered Proteins</p>
-
-                                    <div class="guide-icon rounded-pill p-2 px-0"
-                                        style="display: flex; margin: auto; text-align: left; justify-content: left;">
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="mailto:sayaribhattacharya4@gmail.com"><i class="fa fa-envelope"></i></a>
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://github.com/bsayari10"><i class="fab fa-github"></i></a>
-                                        
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://x.com/sayari_2000"><i class="fab fa-twitter"></i></a>
-                                        
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://www.linkedin.com/in/sayari-bhattacharya-25b314219?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member-card p-4 text-center">
+                        <div class="member-img-wrapper">
+                            <img src="media/images/ToonMe_Shaheerah.webp" alt="Shaheerah Shahid" loading="lazy">
+                        </div>
+                        <h4 class="member-name">Shaheerah Shahid</h4>
+                        <span class="member-role">JRF</span>
+                        <p class="member-interest mb-3">Machine learning in molecular dynamics, Protein folding, ANN prediction of drug like molecules</p>
+                        
+                        <div class="d-flex justify-content-center gap-2 mt-auto">
+                            <a href="mailto:shaheerah.shahid@bose.res.in" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                            
+                            <a href="https://github.com/ShahidShaheerah" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Shaheerah.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Shaheerah Shahid</strong></h4>
-                                    <span class="job_post text-small"><strong>JRF</strong>/Physics</span>
-                                    <p class="mb-0">Machine learning in molecular dynamics, Protein folding, ANN prediction of drug like molecules</p>
-
-                                    <div class="guide-icon rounded-pill p-2 px-0"
-                                        style="display: flex; margin: auto; text-align: left; justify-content: left;">
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="mailto:shaheerah.shahid@bose.res.in"><i class="fa fa-envelope"></i></a>
-                                        
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="https://github.com/ShahidShaheerah"><i class="fab fa-github"></i></a>
-                                        
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="member-card p-4 text-center">
+                        <div class="member-img-wrapper">
+                            <img src="media/images/sauptik.webp" alt="Sauptik Sadhukhan" loading="lazy">
+                        </div>
+                        <h4 class="member-name">Sauptik Sadhukhan</h4>
+                        <span class="member-role">JRF</span>
+                        <p class="member-interest mb-3">Machine learning, Method development, Enhanced sampling, protein folding</p>
+                        
+                        <div class="d-flex justify-content-center gap-2 mt-auto">
+                            <a href="mailto:sauptik.sadhukhan@bose.res.in" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                            
+                            <a href="https://github.com/SSadhukhan02" class="social-link" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
                 
             </div>
         </div>
-    </div>
-    <div class="container-fluid guide py-2">
-        <div class="container py-2">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h2 class="section-title px-3">Postdoctoral Fellows</h2>
+    </section>
+    <section class="section-padding bg-light-slate">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Collaborators</span>
+                <h2 class="section-title">Postdoctoral Fellows</h2>
             </div>
             <div class="row g-4 justify-content-center">
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Saheb_QgWvA96.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Saheb Dutta</strong></h4>
-                                    <span class="job_post text-small"><strong>PhD. in Chemistry, Calcutta University</strong></span>
-                                    <p class="mb-0">QM/MM simulation, Molecular reaction</p>
-
-                                    <div class="guide-icon rounded-pill p-2 px-0"
-                                        style="display: flex; margin: auto; text-align: left; justify-content: left;">
-
-                                        <a class="btn btn-square btn-primary rounded-circle mx-1"
-                                            href="mailto:None"><i class="fa fa-envelope"></i></a>
-                                        
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-8">
+                    <div class="pi-section p-5 text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-microscope fa-3x text-teal-500 opacity-50"></i>
                         </div>
+                        <h3 class="member-name mb-3">Join Our Research Lab</h3>
+                        <p class="pi-bio mb-4">
+                            We are currently looking for motivated postdoctoral researchers to join our team. 
+                            If you are passionate about molecular simulation and statistical mechanics, we would love to hear from you.
+                        </p>
+                        <a href="positions.html" class="btn btn-primary rounded-pill px-5 py-3 shadow-sm hover-translate">
+                            Explore Opportunities
+                        </a>
                     </div>
                 </div>
                 
             </div>
         </div>
-    </div>
-    <div class="container-fluid guide py-2">
-        <div class="container py-2">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h2 class="section-title px-3">Project Students</h2>
-            </div>
-            <div class="row g-4 justify-content-center" style="display: flex; justify-content: center;">
-                
-
-                <div class="col-md-6 col-lg-6">
-                    <div class="guide-item col-md-6 col-lg-6" style="text-align: center;">
-                        <div class="guide-img">
-                            <div class="guide-img-efects">
-                                <img src="/static/img/welcome.webp" class="img-fluid w-100 rounded-top" alt="Image">
-                            </div>
-                        </div>
-                        <div class="guide-title text-center rounded-bottom p-4">
-                            <div class="guide-title-inner" style="margin-top:10px;">
-                                <p class="mb-0">Your designation</p>
-                                <h4 class="mt-0">Your name</h4>
-                                <p class="mb-0"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6" style="margin: auto;">
-                    <div class="guide-item">
-                        <h4 class="mt-0 mb-5" style="font-family: 'Crimson Text';">Currently, we have no project students, but we'd love to collaborate with
-                            you! If you're interested in working with us,
-                            please reach out. For more details, click the link below.</h4>
-                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="/positions">
-                            Oportunities</a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid guide py-2">
-        <div class="container py-2">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h2 class="section-title px-3">Alumni</h2>
+    </section>
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Rising Talent</span>
+                <h2 class="section-title">Project Students</h2>
             </div>
             <div class="row g-4 justify-content-center">
                 
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/amit.jpeg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Amit Kumawat</strong></h4>
-                                    <p class="mb-0">PhD and PostDoc(2013-2019)</p>
-                                    <span class="job_post text-small"><strong><span style="color: green;">Currently: </span>Fixed term researcher, Università degli Studi di Cagliari</strong></span>
-                                    <p class="mb-0">amit.kumawat@unica.it</p>
-
-                                </div>
-                            </div>
+                <div class="col-lg-8">
+                    <div class="pi-section p-5 text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-seedling fa-3x text-teal-500 opacity-50"></i>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ipsita.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Ipsita Basu</strong></h4>
-                                    <p class="mb-0">PostDoc (2017-2021)</p>
-                                    <span class="job_post text-small"><strong><span style="color: green;">Currently: </span>Scientist, Biocon</strong></span>
-                                    <p class="mb-0">None</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Sameer2_sxNOQ31_jkiYQu3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Samir Ahamed</strong></h4>
-                                    <p class="mb-0">Post-Doctorate(2023-2025)</p>
-                                    <span class="job_post text-small"><strong><span style="color: green;">Currently: </span>Post-Doctorate</strong></span>
-                                    <p class="mb-0">samirchem@bose.res.in</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xl-6 col-lg-7 col-md-12">
-                    <div class="card profile-header">
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="profile-image float-md-right"> <img src="/media/images/ToonMe_Krish2_bX1PvfU.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-12">
-                                    <h4 class="m-t-0 m-b-0"><strong>Krishnendu Sinha</strong></h4>
-                                    <p class="mb-0">PhD Student(2019-2025)</p>
-                                    <span class="job_post text-small"><strong><span style="color: green;">Currently: </span>Post-Doc at Georgia State University</strong></span>
-                                    <p class="mb-0">krishbappai@gmail.com</p>
-
-                                </div>
-                            </div>
-                        </div>
+                        <h3 class="member-name mb-3">Project & Internship Opportunities</h3>
+                        <p class="pi-bio mb-4">
+                            We are always looking for enthusiastic undergraduate and masters students for short-term projects and internships. 
+                            Gain hands-on experience in computational biophysics and machine learning.
+                        </p>
+                        <a href="positions.html" class="btn btn-primary rounded-pill px-5 py-3 shadow-sm hover-translate">
+                            View Openings
+                        </a>
                     </div>
                 </div>
                 
             </div>
         </div>
-    </div>
-    <!-- Member End -->
-
-    <div id="watermark">
-        <h1 style="color:red">Under active development</h1>
-    </div>
-
+    </section>
 
     <!-- Positions Start -->
-    <div class="container-fluid booking py-5">
+    <section class="section-padding bg-gradient-slate text-white">
         <div class="container text-center py-5">
-            <div class="mx-auto text-center" style="max-width: 900px;">
-                <h1 class="text-white mb-4">We Need You!</h1>
-                <p class="text-white mb-5">
-                    We are looking for bright and motivated students who are curious to unravel the mysteries of nature
-                    from a molecular
-                    point of view! Interest in physical chemistry, chemical physics, biophysics, statistical mechanics
-                    and programming are
-                    desirable. For more information, please visit the <a href="/positions"
-                        style="color: #a9bdff; font-weight: bold;">positions</a> page.
+            <div class="mx-auto" style="max-width: 800px;">
+                <span class="section-subtitle text-teal-400 mb-3" style="color: var(--team-accent) !important;">Open Invitation</span>
+                <h2 class="display-5 font-heading fw-bold mb-4" style="color: #f8fafc;">Join Our Research Journey</h2>
+                <p class="pi-bio text-slate-300 mb-5 leading-relaxed" style="color: #cbd5e1; font-family: var(--font-heading); font-style: italic; font-size: 1.2rem;">
+                    "We are looking for bright and motivated minds curious to unravel the mysteries of nature
+                    from a molecular perspective. We value interdisciplinarity and passion for scientific discovery."
                 </p>
+                <div class="d-flex justify-content-center gap-4">
+                    <a href="positions.html" class="btn btn-primary rounded-pill px-5 py-3 shadow-lg hover-translate" style="background-color: var(--team-accent); border: none;">
+                        Available Positions
+                    </a>
+                    <a href="mailto:sumanc@bose.res.in" class="btn btn-outline-light rounded-pill px-5 py-3 hover-translate">
+                        Contact the PI
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Positions End -->
+    <section class="section-padding bg-light-slate">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Our Legacy</span>
+                <h2 class="section-title">Alumni</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-lg-6">
+                    <div class="alumni-card h-100">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                                <div class="member-img-wrapper m-0" style="width: 100px; height: 100px;">
+                                    <img src="media/images/amit.webp" alt="Amit Kumawat" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4 class="member-name">Amit Kumawat</h4>
+                                <p class="text-teal-600 font-semibold small mb-1">PhD and PostDoc(2013-2019)</p>
+                                <p class="text-slate-500 small mb-2">
+                                    <span class="text-slate-400">Currently:</span> Fixed term researcher, Università degli Studi di Cagliari
+                                </p>
+                                
+                                <a href="mailto:amit.kumawat@unica.it" class="text-decoration-none text-slate-400 hover-teal small">
+                                    <i class="fas fa-envelope me-2"></i>amit.kumawat@unica.it
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="alumni-card h-100">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                                <div class="member-img-wrapper m-0" style="width: 100px; height: 100px;">
+                                    <img src="media/images/ipsita.webp" alt="Ipsita Basu" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4 class="member-name">Ipsita Basu</h4>
+                                <p class="text-teal-600 font-semibold small mb-1">PostDoc (2017-2021)</p>
+                                <p class="text-slate-500 small mb-2">
+                                    <span class="text-slate-400">Currently:</span> Scientist, Biocon
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="alumni-card h-100">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                                <div class="member-img-wrapper m-0" style="width: 100px; height: 100px;">
+                                    <img src="media/images/sameer.webp" alt="Samir Ahamed" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4 class="member-name">Samir Ahamed</h4>
+                                <p class="text-teal-600 font-semibold small mb-1">Post-Doctorate(2023-2025)</p>
+                                <p class="text-slate-500 small mb-2">
+                                    <span class="text-slate-400">Currently:</span> Postdoctoral Researcher, University of Hawaii, USA
+                                </p>
+                                
+                                <a href="mailto:samirchem@bose.res.in" class="text-decoration-none text-slate-400 hover-teal small">
+                                    <i class="fas fa-envelope me-2"></i>samirchem@bose.res.in
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="alumni-card h-100">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                                <div class="member-img-wrapper m-0" style="width: 100px; height: 100px;">
+                                    <img src="media/images/krish.webp" alt="Krishnendu Sinha" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4 class="member-name">Krishnendu Sinha</h4>
+                                <p class="text-teal-600 font-semibold small mb-1">PhD Student(2019-2025)</p>
+                                <p class="text-slate-500 small mb-2">
+                                    <span class="text-slate-400">Currently:</span> Post-Doc at Georgia State University
+                                </p>
+                                
+                                <a href="mailto:krishbappai@gmail.com" class="text-decoration-none text-slate-400 hover-teal small">
+                                    <i class="fas fa-envelope me-2"></i>krishbappai@gmail.com
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="alumni-card h-100">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                                <div class="member-img-wrapper m-0" style="width: 100px; height: 100px;">
+                                    <img src="media/images/saheb.webp" alt="Saheb Dutta" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4 class="member-name">Saheb Dutta</h4>
+                                <p class="text-teal-600 font-semibold small mb-1">Post-Doctorate(2023-2025)</p>
+                                <p class="text-slate-500 small mb-2">
+                                    <span class="text-slate-400">Currently:</span> Research Associate at IACS
+                                </p>
+                                
+                                <a href="mailto:scssd3450@iacs.res.in" class="text-decoration-none text-slate-400 hover-teal small">
+                                    <i class="fas fa-envelope me-2"></i>scssd3450@iacs.res.in
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="alumni-card h-100">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                                <div class="member-img-wrapper m-0" style="width: 100px; height: 100px;">
+                                    <img src="media/images/Vrushali.jpg" alt="Dr. Vrushali Hande" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4 class="member-name">Dr. Vrushali Hande</h4>
+                                <p class="text-teal-600 font-semibold small mb-1">Senior Research Scientist</p>
+                                <p class="text-slate-500 small mb-2">
+                                    <span class="text-slate-400">Currently:</span> Prescience Insilico Pvt. Ltd.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="alumni-card h-100">
+                        <div class="row align-items-center">
+                            <div class="col-sm-4 text-center mb-3 mb-sm-0">
+                                <div class="member-img-wrapper m-0" style="width: 100px; height: 100px;">
+                                    <img src="media/images/ToonMe_Abhinandan_28Hu5wK.webp" alt="Abhinandan Das" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h4 class="member-name">Abhinandan Das</h4>
+                                <p class="text-teal-600 font-semibold small mb-1">PhD Student(2019-2026)</p>
+                                <p class="text-slate-500 small mb-2">
+                                    <span class="text-slate-400">Currently:</span> None
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-subtitle">Impact</span>
+                <h2 class="section-title">Project Alumni</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <div class="project-alumni-list">
+                        
+                        <div class="alumni-card mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <h5 class="member-name mb-1">Shivam Pandit</h5>
+                                    <span class="text-slate-400 small"><i class="far fa-calendar-alt me-2"></i>2023-2024</span>
+                                </div>
+                                <div class="col-md-5">
+                                    <p class="mb-0 text-slate-600 small">
+                                        <i class="fas fa-project-diagram me-2 text-teal-400"></i>
+                                        <strong>Project:</strong> Antibody‐induced mechanical stability of antigen
+                                    </p>
+                                </div>
+                                <div class="col-md-4">
+                                    
+                                    <p class="mb-1 text-slate-500 small">
+                                        <i class="fas fa-briefcase me-2 text-teal-400"></i>
+                                        <span class="text-slate-400">Now:</span> Graduate Student @ The University of Tennessee, Knoxville
+                                    </p>
+                                    
+                                    
+                                    <a href="mailto:spandit4@vols.utk.edu" class="text-decoration-none text-slate-400 hover-teal small">
+                                        <i class="fas fa-envelope me-2"></i>spandit4@vols.utk.edu
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alumni-card mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <h5 class="member-name mb-1">Muskan Sharma</h5>
+                                    <span class="text-slate-400 small"><i class="far fa-calendar-alt me-2"></i>2023-2024</span>
+                                </div>
+                                <div class="col-md-5">
+                                    <p class="mb-0 text-slate-600 small">
+                                        <i class="fas fa-project-diagram me-2 text-teal-400"></i>
+                                        <strong>Project:</strong> Allostery and Signaling
+                                    </p>
+                                </div>
+                                <div class="col-md-4">
+                                    
+                                    <p class="mb-1 text-slate-500 small">
+                                        <i class="fas fa-briefcase me-2 text-teal-400"></i>
+                                        <span class="text-slate-400">Now:</span> Graduate Student @  Czech republic
+                                    </p>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alumni-card mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <h5 class="member-name mb-1">Neharika Chamachi</h5>
+                                    <span class="text-slate-400 small"><i class="far fa-calendar-alt me-2"></i>Project Assistant (2014-16)</span>
+                                </div>
+                                <div class="col-md-5">
+                                    <p class="mb-0 text-slate-600 small">
+                                        <i class="fas fa-project-diagram me-2 text-teal-400"></i>
+                                        <strong>Project:</strong> Protein Folding and Unfolding Mechanism
+                                    </p>
+                                </div>
+                                <div class="col-md-4">
+                                    
+                                    <p class="mb-1 text-slate-500 small">
+                                        <i class="fas fa-briefcase me-2 text-teal-400"></i>
+                                        <span class="text-slate-400">Now:</span> Postdoctoral Scientist at DRESDEN-concept Genome Center
+                                    </p>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Member End -->
+
+
+
+
+
  
 
     
-<div class="container-fluid copyright text-body py-4">
-    <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-md-12 text-center mb-md-0">
-                <i class="fas fa-copyright me-2"></i>
-                <a class="text-white" href="#">teamsuman.org</a>, All rights reserved.
+        
+<footer class="footer-compact">
+    <div class="container h-100">
+        <div class="row align-items-center h-100 m-0">
+            <div class="col-md-6 text-center text-md-start p-0">
+                <p class="mb-0 text-white-50" style="letter-spacing: 0.5px; line-height: 1; white-space: nowrap;">
+                    &copy; <span id="current-year">2024</span> <a href="index.html" class="fw-semibold text-white text-decoration-none px-1" style="font-family: 'Lora', serif; font-size: 0.95rem; letter-spacing: 1px;">Chakrabarty Lab</a> <span class="mx-1 opacity-50">|</span> <span style="font-size: 0.70rem; text-transform: uppercase; letter-spacing: 1px;">All rights reserved.</span>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end p-0 mt-2 mt-md-0">
+                <div class="footer-compact-socials d-inline-flex gap-3 align-items-center mb-0">
+                    <a href="https://www.linkedin.com/in/namusite/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/namussite" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/teamsuman" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/user/sumanc" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
-    <i class="fa fa-arrow-up"></i>
-</a>
+<style>
+    .footer-compact {
+        background: #0f172a; /* Slate 900 */
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        color: #94a3b8;
+    }
+    
+    .footer-compact a {
+        transition: color 0.3s ease;
+        color: #94a3b8;
+    }
 
-<!-- JS Libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/static/lib/easing/easing.min.js"></script>
-<script src="/static/lib/waypoints/waypoints.min.js"></script>
-<script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    .footer-compact a:hover {
+        color: #ffffff;
+    }
 
-<!-- Template JS -->
-<script src="/static/js/main.js"></script>
+    .footer-compact-socials a i {
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
 
+    .footer-compact-socials a:hover i {
+        transform: translateY(-2px);
+        color: #14b8a6; /* Premium Teal accent */
+    }
+</style>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/lib/easing/easing.min.js"></script>
-    <script src="/static/lib/waypoints/waypoints.min.js"></script>
-    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+
+    <!-- Template JS -->
+    <script src="static/js/main.js" defer></script>
 
     
     <script>

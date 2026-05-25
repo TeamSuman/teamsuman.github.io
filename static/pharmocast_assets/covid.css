@@ -1,0 +1,42 @@
+body,html{
+    background-color:#CBDCF7;
+}
+.map-stats{
+    width:90%;
+    position:relative;
+    text-align:center;
+    margin-top:20px;
+    margin-left:20px;
+    margin-bottom:20px;
+    display:flex;
+}
+.stats{
+	display:inline-block;
+	background-color:orange;
+	padding:20px 20px 30px 10px;
+	height:10%;
+	flex:1;
+	font-family:"Comic Sans MS";
+	border:3px black solid;
+
+}
+.is-green{
+	background-color:green;
+	border:3px black solid;
+}
+.is-blue{
+	background-color:blue;
+	color:white;
+	border:3px black solid;
+}
+.is-gray{
+	background-color:silver;
+	border:3px black solid;
+}
+.is-purple{
+	background-color:purple;
+	border:3px black solid;
+}
+.map-stats :hover{
+	background-color:aqua;
+}

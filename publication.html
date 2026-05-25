@@ -6,9 +6,17 @@
     <meta charset="utf-8">
     <title>Team Suman | Publications</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+
+    <!-- Include  meta tags -->
+    <!-- Meta tags -->
+    <meta name="description" content="Browse publications by the Chakrabarty Lab (Team Suman). Our work spans computational biophysics, statistical mechanics, and molecular dynamics simulations.">
+    <meta name="keywords" content="publications, research papers, Chakrabarty Lab publications, computational chemistry papers, biophysics research, molecular dynamics, Chakrabarty Lab publications">
+    <meta name="author" content="Suman Chakrabarty">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -17,14 +25,51 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS Libraries -->
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Bootstrap & Custom CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
+
+    <style>
+        /* HTML: <div class="loader"></div> */
+.loader {
+  height: 60px;
+  aspect-ratio: 1;
+  border: 3px solid #524656;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CF4647;
+  animation:
+    l8-0 .57s infinite alternate linear -.13s,
+    l8-1 .35s infinite alternate linear -.23s;
+}
+.loader:after {
+  background: #45ADA8;
+  animation:
+    l8-0 .29s infinite alternate linear -.11s,
+    l8-1 .51s infinite alternate linear -.34s;
+}
+@keyframes l8-0 {
+  0%,5%  {bottom: 0%}
+  95%,to {bottom: 80%}
+}
+@keyframes l8-1 {
+  0%,5%  {left: 0%}
+  95%,to {left: 80%}
+}
+    </style>
     
-<link href="/static/css/style.css" rel="stylesheet">
+<link href="static/css/style.css" rel="stylesheet">
 <style>
     .publication-card {
         transition: all 0.2s ease-in-out;
@@ -81,32 +126,43 @@
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="loader"></div>
+    </div>
+    <!-- Spinner End -->
     
+
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="/" class="navbar-brand p-0" style="text-decoration: none;">
+    <a href="index.html" class="navbar-brand p-0" style="text-decoration: none">
         <h1 class="m-0 lora">Chakrabarty Lab</h1>
     </a>
+
+    <!-- Hamburger -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
+
+    <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="/" class="nav-item nav-link">Home</a>
-            <a href="/news"
-                class="nav-item nav-link ">News</a>
-            <a href="/research"
+            <a href="index.html"
+                class="nav-item nav-link ">Home</a>
+            <a href="news.html"
+                class="nav-item nav-link ">Announcements</a>
+            <a href="research.html"
                 class="nav-item nav-link ">Research</a>
-            <a href="/publication"
+            <a href="publication.html"
                 class="nav-item nav-link active">Publications</a>
-            <a href="/softwares"
+            <a href="softwares.html"
                 class="nav-item nav-link ">Software</a>
-            <a href=" /team"
+            <a href="team.html"
                 class="nav-item nav-link ">Team</a>
-            <a href="/positions"
+            <a href="positions.html"
                 class="nav-item nav-link ">Positions</a>
-            <a href="/gallery"
+            <a href="gallery.html"
                 class="nav-item nav-link ">Gallery</a>
-            <a href="/contacts"
+            <a href="contacts.html"
                 class="nav-item nav-link ">Contact</a>
         </div>
     </div>
@@ -118,7 +174,7 @@
     <div class="container text-center py-5" style="max-width: 900px;">
         <h3 class="text-white display-4 mb-3">Publications</h3>
         <ol class="breadcrumb justify-content-center mb-0 bg-transparent">
-            <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
             <li class="breadcrumb-item active text-white">Publications</li>
         </ol>
     </div>
@@ -141,6 +197,94 @@
             <div class="col-12 publication-item ">
                 <div class="card publication-card">
                     <div class="card-body p-4">
+                        <a href="https://doi.org/10.1002/cphc.202500907" target="_blank" class="card-title h5 mb-2 d-block">Mapping Protein–Protein Interaction Hotspots and Unveiling a Cryptic Allosteric Pocket in PLK1 PBD via Mixed-Solvent Molecular Dynamics</a>
+                        <p class="text-muted mb-1">Sutanu Mukhopadhyay, Suman Chakrabarty</p>
+                        <p class="journal mb-3">ChemPhysChem, 2026</p>
+                        <a href="https://doi.org/10.1002/cphc.202500907" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item ">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
+                        <a href="https://pubs.aip.org/aip/jcp/article/164/13/134111/3386194" target="_blank" class="card-title h5 mb-2 d-block">CoWERA: A temporal coherence guided binless resampling algorithm for weighted-ensemble based estimation of rare-event kinetics</a>
+                        <p class="text-muted mb-1">Shaheerah Shahid, Dibyendu Maity, Suman Chakrabarty</p>
+                        <p class="journal mb-3">The Journal of Chemical Physics, 2026</p>
+                        <a href="https://pubs.aip.org/aip/jcp/article/164/13/134111/3386194" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item ">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
+                        <a href="https://doi.org/10.1111/pbi.70287" target="_blank" class="card-title h5 mb-2 d-block">Transgenic Tobacco Plants Expressing Synthetic Peptides: A Functional and Structural Analysis for Pathogen Resistance</a>
+                        <p class="text-muted mb-1">Karishma Biswas, Sudipta Mitra, Dibakar Roy, Sanhita Roy, Dibakar Sarkar, DeokHyun Son, Rohit Das, Anuradha Roy, Dulal Senapati, Humaira Ilyas, A. Harikishore, Ranjit Biswas, Suman Chakrabarty, ...</p>
+                        <p class="journal mb-3">Plant Biotechnology Journal, 2026</p>
+                        <a href="https://doi.org/10.1111/pbi.70287" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item ">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
+                        <a href="https://doi.org/10.1002/pro.70413" target="_blank" class="card-title h5 mb-2 d-block">Phosphorylation induces altered protonation states and allosterically regulates Rac1–RhoGDI complex</a>
+                        <p class="text-muted mb-1">Krishnendu Sinha, Amit Kumawat, Hyunbum Jang, Ruth Nussinov, Suman Chakrabarty</p>
+                        <p class="journal mb-3">Protein Science, 2026</p>
+                        <a href="https://doi.org/10.1002/pro.70413" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item ">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
+                        <a href="https://doi.org/10.1007/s12039-025-02449-9" target="_blank" class="card-title h5 mb-2 d-block">PPIscout: Protein–protein interaction site hotspot mapping using mixed amino acid–water molecular dynamics simulation</a>
+                        <p class="text-muted mb-1">Sutanu Mukhopadhyay, Suman Chakrabarty</p>
+                        <p class="journal mb-3">Journal of Chemical Sciences, 2025</p>
+                        <a href="https://doi.org/10.1007/s12039-025-02449-9" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item d-none">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
+                        <a href="https://doi.org/10.1007/s12039-025-02404-8" target="_blank" class="card-title h5 mb-2 d-block">Why [BMIM]+[PF6]− is hydrophobic and [BMIM]+[BF4]− hydrophilic in nature? A quantum chemical investigation</a>
+                        <p class="text-muted mb-1">SK Ahamed, Suman Chakrabarty, Ranjit Biswas</p>
+                        <p class="journal mb-3">Journal of Chemical Sciences, 2025</p>
+                        <a href="https://doi.org/10.1007/s12039-025-02404-8" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item d-none">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
+                        <a href="https://doi.org/10.1021/acs.jpcb.5c05530" target="_blank" class="card-title h5 mb-2 d-block">Mixed-Solvent Molecular Dynamics Simulation Reveals a Druggable Allosteric Pocket in the PCSK9 C-Terminal Domain</a>
+                        <p class="text-muted mb-1">Sutanu Mukhopadhyay, Suman Chakrabarty</p>
+                        <p class="journal mb-3">The Journal of Physical Chemistry B, 2025</p>
+                        <a href="https://doi.org/10.1021/acs.jpcb.5c05530" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item d-none">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
+                        <a href="https://doi.org/10.1021/acs.jctc.5c01244" target="_blank" class="card-title h5 mb-2 d-block">PathGennie: Rapid Generation of Rare Event Pathways via Direction-Guided Adaptive Sampling Using Ultrashort Monitored Trajectories</a>
+                        <p class="text-muted mb-1">Dibyendu Maity, Shaheerah Shahid, Suman Chakrabarty</p>
+                        <p class="journal mb-3">Journal of Chemical Theory and Computation, 2025</p>
+                        <a href="https://doi.org/10.1021/acs.jctc.5c01244" target="_blank" class="btn btn-outline-primary btn-sm align-self-start">View Article &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 publication-item d-none">
+                <div class="card publication-card">
+                    <div class="card-body p-4">
                         <a href="https://doi.org/10.1016/j.jmb.2025.169382" target="_blank" class="card-title h5 mb-2 d-block">Harnessing Allostery to Modulate Protein-Protein Interactions: From Function to Therapeutic Innovations</a>
                         <p class="text-muted mb-1">Sutanu Mukhopadhyay, Krishnendu Sinha, Suman Chakrabarty</p>
                         <p class="journal mb-3">Journal of Molecular Biology (JMB) , 2025</p>
@@ -149,7 +293,7 @@
                 </div>
             </div>
             
-            <div class="col-12 publication-item ">
+            <div class="col-12 publication-item d-none">
                 <div class="card publication-card">
                     <div class="card-body p-4">
                         <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/pro.70201" target="_blank" class="card-title h5 mb-2 d-block">Unraveling antibody‐induced mechanical stability of antigen: Insights from single‐molecule studies</a>
@@ -160,7 +304,7 @@
                 </div>
             </div>
             
-            <div class="col-12 publication-item ">
+            <div class="col-12 publication-item d-none">
                 <div class="card publication-card">
                     <div class="card-body p-4">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=dcj-bnsAAAAJ&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=dcj-bnsAAAAJ:-LHtoeeytlUC" target="_blank" class="card-title h5 mb-2 d-block">WeTICA: A directed search weighted ensemble based enhanced sampling method to estimate rare event kinetics in a reduced dimensional space</a>
@@ -171,7 +315,7 @@
                 </div>
             </div>
             
-            <div class="col-12 publication-item ">
+            <div class="col-12 publication-item d-none">
                 <div class="card publication-card">
                     <div class="card-body p-4">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=dcj-bnsAAAAJ&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=dcj-bnsAAAAJ:JavbeY_VQWIC" target="_blank" class="card-title h5 mb-2 d-block">Mapping conformational landscape in protein folding: Benchmarking dimensionality reduction and clustering techniques on the Trp-Cage mini-protein</a>
@@ -182,7 +326,7 @@
                 </div>
             </div>
             
-            <div class="col-12 publication-item ">
+            <div class="col-12 publication-item d-none">
                 <div class="card publication-card">
                     <div class="card-body p-4">
                         <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=dcj-bnsAAAAJ&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=dcj-bnsAAAAJ:puFLaqDw8dcC" target="_blank" class="card-title h5 mb-2 d-block">Ion-Pairing Propensity in Guanidinium Salts Dictates Their Protein (De) stabilization Behavior</a>
@@ -954,42 +1098,80 @@
 
 
     
-<div class="container-fluid copyright text-body py-4">
-    <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-md-12 text-center mb-md-0">
-                <i class="fas fa-copyright me-2"></i>
-                <a class="text-white" href="#">teamsuman.org</a>, All rights reserved.
+        
+<footer class="footer-compact">
+    <div class="container h-100">
+        <div class="row align-items-center h-100 m-0">
+            <div class="col-md-6 text-center text-md-start p-0">
+                <p class="mb-0 text-white-50" style="letter-spacing: 0.5px; line-height: 1; white-space: nowrap;">
+                    &copy; <span id="current-year">2024</span> <a href="index.html" class="fw-semibold text-white text-decoration-none px-1" style="font-family: 'Lora', serif; font-size: 0.95rem; letter-spacing: 1px;">Chakrabarty Lab</a> <span class="mx-1 opacity-50">|</span> <span style="font-size: 0.70rem; text-transform: uppercase; letter-spacing: 1px;">All rights reserved.</span>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end p-0 mt-2 mt-md-0">
+                <div class="footer-compact-socials d-inline-flex gap-3 align-items-center mb-0">
+                    <a href="https://www.linkedin.com/in/namusite/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/namussite" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/teamsuman" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/user/sumanc" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
-    <i class="fa fa-arrow-up"></i>
-</a>
+<style>
+    .footer-compact {
+        background: #0f172a; /* Slate 900 */
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        color: #94a3b8;
+    }
+    
+    .footer-compact a {
+        transition: color 0.3s ease;
+        color: #94a3b8;
+    }
 
-<!-- JS Libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/static/lib/easing/easing.min.js"></script>
-<script src="/static/lib/waypoints/waypoints.min.js"></script>
-<script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    .footer-compact a:hover {
+        color: #ffffff;
+    }
 
-<!-- Template JS -->
-<script src="/static/js/main.js"></script>
+    .footer-compact-socials a i {
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
 
+    .footer-compact-socials a:hover i {
+        transform: translateY(-2px);
+        color: #14b8a6; /* Premium Teal accent */
+    }
+</style>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/lib/easing/easing.min.js"></script>
-    <script src="/static/lib/waypoints/waypoints.min.js"></script>
-    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+
+    <!-- Template JS -->
+    <script src="static/js/main.js" defer></script>
 
     
 <script>

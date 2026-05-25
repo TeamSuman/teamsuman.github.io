@@ -1,14 +1,33 @@
-import os
-import pandas as pd
-from django.conf import settings  # type: ignore
+# import pandas as pd
 from django.core.mail import send_mail  # type: ignore
-from django.http import HttpResponse, HttpResponseRedirect  # type: ignore
-from django.shortcuts import reverse  # type: ignore
-from django.shortcuts import redirect, render  # type: ignore
-from django.template.loader import render_to_string # type: ignore
+from django.http import HttpResponseRedirect  # type: ignore
+from django.shortcuts import (  # type: ignore
+    get_object_or_404,
+    render,
+    reverse,  # type: ignore
+)
+from django.template.loader import render_to_string  # type: ignore
 
-from .forms import ContactForm
-from .models import PHD, Alumni, Colab, Gallery, News, PostDoc, Project, Publication, Research, Publication_Research
+from .models import (
+    PHD,
+    Alumni,
+    Colab,
+    Gallery,
+    Animation,
+    Poster,
+    News,
+    PostDoc,
+    Project,
+    Publication,
+    # Publication_Research,
+    Research,
+    SoftwareProject,
+    ProjectAlumni,
+    ProjectAlumni,
+    TeamPage,
+    HomePageConfiguration,
+    HeroSlide,
+)
 
 sync = False
 
@@ -19,36 +38,21 @@ def error_404(request, exception):
 
 def home(request):
     query = Colab.objects.all()
-    news = News.objects.all()
-    result = ""
-    form = ""
-    # if request.method == "POST":
-    #     form = ContactForm(request.POST)
-    #     if form.is_valid():
-    #         send_mail(
-    #             form.cleaned_data["subject"],  # subject
-    #             f"Via website : Message from {form.cleaned_data['name']} <{form.cleaned_data['email']}>\n\n"
-    #             f"{form.cleaned_data['message']}",  # message
-    #             {form.cleaned_data["email"]},  # from email
-    #             ["dibyendumaity1999@bose.res.in"],  # replace with your email
-    #         )
-    #         result = "Your message has been sent!"
-    #         return HttpResponseRedirect(reverse("home"))
-    # else:
-    #     form = ContactForm()
-
-    research = Research.objects.all()
-    pr = Publication_Research.objects.all()
-    list_result = [entry for entry in pr.values()]
-    df = pd.DataFrame(list_result)
-    df.groupby('research_id').apply(lambda x: x['link'].tolist(), include_groups=False)
-    for i in range(len(research)):
-        research[i].publication = df[df['research_id'] == research[i].id]['link'].tolist()
-
+    #research = Research.objects.prefetch_related("publication_research_set")
+    research = Research.objects.defer("description", "content").prefetch_related(
+        "publication_research_set"
+    )
+    home_config = HomePageConfiguration.objects.first()
+    slides = HeroSlide.objects.filter(is_active=True).order_by("my_order")
     text = render(
         request,
         "home/home.html",
-        {"object": query, "news": news, "form": form, "result": result, "research": research},
+        {
+            "object": query,
+            "research": research,
+            "home_config": home_config,
+            "slides": slides,
+        },
     )
     if sync:
         with open("index.html", "wb") as f:
@@ -61,11 +65,20 @@ def team(request):
     postdoc = PostDoc.objects.all()
     project = Project.objects.all()
     alumni = Alumni.objects.all()
+    project_alumni = ProjectAlumni.objects.all()
+    team_page = TeamPage.objects.first()
 
     text = render(
         request,
         "home/team.html",
-        {"phd": phd, "postdoc": postdoc, "project": project, "alumni": alumni},
+        {
+            "phd": phd,
+            "postdoc": postdoc,
+            "project": project,
+            "alumni": alumni,
+            "project_alumni": project_alumni,
+            "team_page": team_page,
+        },
     )
     if sync:
         with open("team.html", "wb") as f:
@@ -117,32 +130,36 @@ def formated_mail(form):
     return HttpResponseRedirect(reverse("home"))
 
 
-def research2(request):
-    text = render(request, "home/research.html")
-    if sync:
-        with open("research.html", "wb") as f:
-            f.write(text.content)
-    return text
-
 def research(request):
-    research = Research.objects.all()
-    pr = Publication_Research.objects.all()
-    list_result = [entry for entry in pr.values()]
-    df = pd.DataFrame(list_result)
-    df.groupby('research_id').apply(lambda x: x['link'].tolist(), include_groups=False)
-    for i in range(len(research)):
-        research[i].publication = df[df['research_id'] == research[i].id]['link'].tolist()
-    #text = render(request,  "home/research.html", {"research": research})
-    text = render(request,  "home/research2.html", {"research": research})
+    research = Research.objects.prefetch_related("publication_research_set")
 
+    for r in research:
+        # r.publication = list(r.publication_research_set.values_list("link", flat=True))
+        r.publication = [p.link for p in r.publication_research_set.all()]
     if sync:
+        text = render(request, "home/research.html", {"research": research})
         with open("research.html", "wb") as f:
             f.write(text.content)
-    return text
+        return text
+    return render(request, "home/research.html", {"research": research})
+
+
+def research_detail(request, pk):
+    research = get_object_or_404(Research, pk=pk)
+    # research = Research.objects.prefetch_related("publication_research_set")
+    return render(request, "home/research_detail.html", {"research": research})
+
 
 def news(request):
     news = News.objects.all().order_by("-date")
-    text = render(request, "home/news.html", {"news": news})
+    latest_publications = list(Publication.objects.all().order_by("-year", "-id")[:5])
+    
+    for pub in latest_publications:
+        # Extract first author assuming comma or 'and' separation
+        authors_list = pub.authors.replace(" and ", ",").split(",")
+        pub.first_author = authors_list[0].strip() if authors_list else pub.authors
+
+    text = render(request, "home/news.html", {"news": news, "latest_publications": latest_publications})
     if sync:
         with open("news.html", "wb") as f:
             f.write(text.content)
@@ -150,8 +167,8 @@ def news(request):
 
 
 def publication(request):
-    #publication = Publication.objects.all()
-    publication = Publication.objects.all().order_by('created_at').reverse()
+    # publication = Publication.objects.all()
+    publication = Publication.objects.all().order_by("id").reverse()
     text = render(request, "home/publication.html", {"publication": publication})
     if sync:
         with open("publication.html", "wb") as f:
@@ -160,20 +177,40 @@ def publication(request):
 
 
 def gallery(request):
-    gallery = Gallery.objects.all().order_by("-date")
-    text = render(request, "home/gallery.html", {"gallery": gallery})
+    # Get data for all three sections
+    photos = Gallery.objects.all().order_by("-date")
+    animations = Animation.objects.all().order_by("-date")
+    posters = Poster.objects.all().order_by("-date")
+
+    context = {
+        "photos": photos,
+        "animations": animations,
+        "posters": posters,
+    }
+
+    text = render(request, "home/gallery.html", context)
+
+    # Keeping your sync logic
     if sync:
         with open("gallery.html", "wb") as f:
             f.write(text.content)
+
     return text
 
 
-def softwares(request):
-    text = render(request, "home/softwares.html")
-    if sync:
+def softwares(request, sync_local=False):
+    # Fetch all software projects from the database
+    projects = SoftwareProject.objects.all().order_by("my_order")
+
+    # Render the template with the projects context
+    response = render(request, "home/softwares.html", {"projects": projects})
+
+    # Optional: export rendered HTML for static use if sync_local=True
+    if sync_local or sync:
         with open("softwares.html", "wb") as f:
-            f.write(text.content)
-    return text
+            f.write(response.content)
+
+    return response
 
 
 def positions(request):

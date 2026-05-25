@@ -2752,9 +2752,11 @@
         this.firstOrder = parseInt(firstOrder);
         this.orderDirection = parseInt(lastOrder) > this.firstOrder ? 1 : -1;
       }
+      this.tableBody.classList.add("ignore-list-changes");
     }
     async onEnd(evt) {
       var _a, _b, _c;
+      this.tableBody.classList.remove("ignore-list-changes");
       if (typeof evt.newIndex !== "number" || typeof evt.oldIndex !== "number" || typeof this.firstOrder !== "number" || typeof this.orderDirection !== "number" || !(evt.item instanceof HTMLTableRowElement))
         return;
       let firstChild, lastChild2;
@@ -2843,9 +2845,8 @@
     }
   };
   var ActionForm = class {
-    constructor(formElement, config) {
-      formElement.setAttribute("novalidate", "novalidate");
-      this.selectElement = formElement.querySelector('select[name="action"]');
+    constructor(formElement, selectElement, config) {
+      this.selectElement = selectElement;
       this.config = config;
       this.selectElement.addEventListener("change", () => this.actionChanged());
       this.stepInput = document.getElementById("changelist-form-step");
@@ -2954,8 +2955,11 @@
         new ListSortable(table, adminSortableConfig);
       }
       const changelistForm = document.getElementById("changelist-form");
-      if (changelistForm) {
-        new ActionForm(changelistForm, adminSortableConfig);
+      if (changelistForm instanceof HTMLFormElement) {
+        const selectElement = changelistForm.querySelector('select[name="action"]');
+        if (selectElement instanceof HTMLSelectElement) {
+          new ActionForm(changelistForm, selectElement, adminSortableConfig);
+        }
       }
     }
     for (let inlineFieldSet of document.querySelectorAll("fieldset.sortable")) {

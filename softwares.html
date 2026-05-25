@@ -6,9 +6,17 @@
     <meta charset="utf-8">
     <title>Team Suman | Softwares</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="static/img/favicon.png" type="image/x-icon">
+
+    <!-- Include  meta tags -->
+    <!-- Meta tags -->
+    <meta name="description" content="Discover open-source software tools developed by the Chakrabarty Lab (Team Suman) for molecular dynamics simulations, rare-event sampling, and data analysis.">
+    <meta name="keywords" content="scientific software, molecular dynamics tools, open source, biophysics software, rare event sampling, machine learning tools, Team Suman github">
+    <meta name="author" content="Suman Chakrabarty">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
@@ -17,14 +25,51 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS Libraries -->
-    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Bootstrap & Custom CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
+
+    <style>
+        /* HTML: <div class="loader"></div> */
+.loader {
+  height: 60px;
+  aspect-ratio: 1;
+  border: 3px solid #524656;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CF4647;
+  animation:
+    l8-0 .57s infinite alternate linear -.13s,
+    l8-1 .35s infinite alternate linear -.23s;
+}
+.loader:after {
+  background: #45ADA8;
+  animation:
+    l8-0 .29s infinite alternate linear -.11s,
+    l8-1 .51s infinite alternate linear -.34s;
+}
+@keyframes l8-0 {
+  0%,5%  {bottom: 0%}
+  95%,to {bottom: 80%}
+}
+@keyframes l8-1 {
+  0%,5%  {left: 0%}
+  95%,to {left: 80%}
+}
+    </style>
     
-<link href="/static/css/software_style.css" rel="stylesheet">
+<link href="static/css/software_style.css" rel="stylesheet">
 <style>
     .software-card .card-footer a i.bi {
         margin-right: 0;
@@ -36,32 +81,43 @@
 </head>
 
 <body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="loader"></div>
+    </div>
+    <!-- Spinner End -->
     
+
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="/" class="navbar-brand p-0" style="text-decoration: none;">
+    <a href="index.html" class="navbar-brand p-0" style="text-decoration: none">
         <h1 class="m-0 lora">Chakrabarty Lab</h1>
     </a>
+
+    <!-- Hamburger -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
+
+    <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="/" class="nav-item nav-link">Home</a>
-            <a href="/news"
-                class="nav-item nav-link ">News</a>
-            <a href="/research"
+            <a href="index.html"
+                class="nav-item nav-link ">Home</a>
+            <a href="news.html"
+                class="nav-item nav-link ">Announcements</a>
+            <a href="research.html"
                 class="nav-item nav-link ">Research</a>
-            <a href="/publication"
+            <a href="publication.html"
                 class="nav-item nav-link ">Publications</a>
-            <a href="/softwares"
+            <a href="softwares.html"
                 class="nav-item nav-link active">Software</a>
-            <a href=" /team"
+            <a href="team.html"
                 class="nav-item nav-link ">Team</a>
-            <a href="/positions"
+            <a href="positions.html"
                 class="nav-item nav-link ">Positions</a>
-            <a href="/gallery"
+            <a href="gallery.html"
                 class="nav-item nav-link ">Gallery</a>
-            <a href="/contacts"
+            <a href="contacts.html"
                 class="nav-item nav-link ">Contact</a>
         </div>
     </div>
@@ -75,7 +131,7 @@
     <div class="container text-center py-5" style="max-width: 900px;">
         <h3 class="text-white display-3 mb-4">Software</h3>
         <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item active text-white">Software</li>
         </ol>
     </div>
@@ -105,17 +161,17 @@
                         A python project using a variational autoencoder (VAE) with the SOAP descriptor to predict and project ice phases in molecular dynamics simulations.
                     </p>
 
-                    <div class="mb-0">
-                        
-                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">
-                            Autoencoder
-                        </span>
-                        
-                        <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">
-                            Ice phases
-                        </span>
-                        
-                    </div>
+        <div class="mb-0">
+          
+          <span class="badge rounded-pill bg-primary text-white me-1 mb-1">
+            VAE
+          </span>
+          
+          <span class="badge rounded-pill bg-primary text-white me-1 mb-1">
+            Ice phase
+          </span>
+          
+        </div>
                 </div>
 
                 <div class="card-footer p-3 bg-white border-top-1">
@@ -150,17 +206,17 @@
                         A binless Weighted Ensemble (WE) algorithm for efficiently estimating rare event kinetics without complex binning schemes.
                     </p>
 
-                    <div class="mb-0">
-                        
-                        <span class="badge bg-success-subtle text-success-emphasis rounded-pill">
-                            Weighted ensemble
-                        </span>
-                        
-                        <span class="badge bg-success-subtle text-success-emphasis rounded-pill">
-                            Kinetics
-                        </span>
-                        
-                    </div>
+        <div class="mb-0">
+          
+          <span class="badge rounded-pill bg-success text-white me-1 mb-1">
+            Weighted ensemble
+          </span>
+          
+          <span class="badge rounded-pill bg-success text-white me-1 mb-1">
+            kinetics
+          </span>
+          
+        </div>
                 </div>
 
                 <div class="card-footer p-3 bg-white border-top-1">
@@ -195,22 +251,27 @@
                         Uses a direction-guided adaptive sampling strategy to rapidly generate viable rare event pathways
                     </p>
 
-                    <div class="mb-0">
-                        
-                        <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">
-                            Path Generation
-                        </span>
-                        
-                        <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">
-                            Addaptive Sampling
-                        </span>
-                        
-                    </div>
+        <div class="mb-0">
+          
+          <span class="badge rounded-pill bg-danger text-white me-1 mb-1">
+            Adaptive sampling
+          </span>
+          
+          <span class="badge rounded-pill bg-danger text-white me-1 mb-1">
+            Path generation
+          </span>
+          
+        </div>
                 </div>
 
                 <div class="card-footer p-3 bg-white border-top-1">
                     
 
+                    
+                    <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.5c01244" target="_blank"
+                        class="btn btn-outline-danger btn-sm">
+                        Publication
+                    </a>
                     
 
                     
@@ -235,17 +296,62 @@
                         Introduces temporal coherence-based resampling to prioritize trajectories making consistent forward progress.
                     </p>
 
-                    <div class="mb-0">
-                        
-                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">
-                            Coherence
-                        </span>
-                        
-                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">
-                            Resampling
-                        </span>
-                        
-                    </div>
+        <div class="mb-0">
+          
+          <span class="badge rounded-pill bg-warning text-white me-1 mb-1">
+            Coherence
+          </span>
+          
+          <span class="badge rounded-pill bg-warning text-white me-1 mb-1">
+            Resampling
+          </span>
+          
+        </div>
+                </div>
+
+                <div class="card-footer p-3 bg-white border-top-1">
+                    
+
+                    
+                    <a href="https://doi.org/10.1063/5.0320586" target="_blank"
+                        class="btn btn-outline-warning btn-sm">
+                        Publication
+                    </a>
+                    
+
+                    
+                    <a href="https://github.com/TeamSuman/CoWERA.git" target="_blank" class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="col-lg-4 col-md-6 d-flex">
+            <div class="card software-card shadow-sm w-100">
+                <div class="card-body p-4 d-flex flex-column">
+                    <h3 class="card-title text-info">SolOrder</h3>
+
+                    <p class="card-text text-muted mb-4 flex-grow-1">
+                        A module to calculate various structural order parameter related to water molecules. This project initiated with the aim to distinguish between different polymorphs of ice.
+                    </p>
+
+        <div class="mb-0">
+          
+          <span class="badge rounded-pill bg-info text-white me-1 mb-1">
+            Order Parameter
+          </span>
+          
+          <span class="badge rounded-pill bg-info text-white me-1 mb-1">
+            Water
+          </span>
+          
+        </div>
                 </div>
 
                 <div class="card-footer p-3 bg-white border-top-1">
@@ -254,9 +360,11 @@
                     
 
                     
-
+                    <a href="https://github.com/dmighty007/SolOrder.git" target="_blank" class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-github"></i>
+                    </a>
                     
-                    <span class="badge bg-light text-muted border">In Progress</span>
+
                     
                 </div>
             </div>
@@ -286,42 +394,80 @@
 
 
     
-<div class="container-fluid copyright text-body py-4">
-    <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-md-12 text-center mb-md-0">
-                <i class="fas fa-copyright me-2"></i>
-                <a class="text-white" href="#">teamsuman.org</a>, All rights reserved.
+        
+<footer class="footer-compact">
+    <div class="container h-100">
+        <div class="row align-items-center h-100 m-0">
+            <div class="col-md-6 text-center text-md-start p-0">
+                <p class="mb-0 text-white-50" style="letter-spacing: 0.5px; line-height: 1; white-space: nowrap;">
+                    &copy; <span id="current-year">2024</span> <a href="index.html" class="fw-semibold text-white text-decoration-none px-1" style="font-family: 'Lora', serif; font-size: 0.95rem; letter-spacing: 1px;">Chakrabarty Lab</a> <span class="mx-1 opacity-50">|</span> <span style="font-size: 0.70rem; text-transform: uppercase; letter-spacing: 1px;">All rights reserved.</span>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end p-0 mt-2 mt-md-0">
+                <div class="footer-compact-socials d-inline-flex gap-3 align-items-center mb-0">
+                    <a href="https://www.linkedin.com/in/namusite/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/namussite" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/teamsuman" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/user/sumanc" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
-    <i class="fa fa-arrow-up"></i>
-</a>
+<style>
+    .footer-compact {
+        background: #0f172a; /* Slate 900 */
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        color: #94a3b8;
+    }
+    
+    .footer-compact a {
+        transition: color 0.3s ease;
+        color: #94a3b8;
+    }
 
-<!-- JS Libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/static/lib/easing/easing.min.js"></script>
-<script src="/static/lib/waypoints/waypoints.min.js"></script>
-<script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+    .footer-compact a:hover {
+        color: #ffffff;
+    }
 
-<!-- Template JS -->
-<script src="/static/js/main.js"></script>
+    .footer-compact-socials a i {
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
 
+    .footer-compact-socials a:hover i {
+        transform: translateY(-2px);
+        color: #14b8a6; /* Premium Teal accent */
+    }
+</style>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/lib/easing/easing.min.js"></script>
-    <script src="/static/lib/waypoints/waypoints.min.js"></script>
-    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="static/js/wow.min.js"></script>
+
+    <!-- Template JS -->
+    <script src="static/js/main.js" defer></script>
 
     
 </body>

@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
+from importlib.util import find_spec
+
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -23,13 +25,16 @@ from django.urls import include, path, re_path
 handler404 = 'home.views.error_404'
 
 urlpatterns = [
-    re_path(r"^admin/", admin.site.urls),
-    re_path("", include("home.urls"))
+    path("admin/", admin.site.urls),
+    path("pharmocast/", include('pharmocast.urls')),
+    path("", include("home.urls")),
 ]
+
+if find_spec("django_ckeditor_5") is not None:
+    urlpatterns.insert(2, path("ckeditor5/", include("django_ckeditor_5.urls")))
 
 if settings.DEBUG:
     urlpatterns += (
         static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) +
         static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
         )
-

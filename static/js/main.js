@@ -2,14 +2,23 @@
     "use strict";
 
     // Spinner
+    // var spinner = function () {
+    //     setTimeout(function () {
+    //         if ($('#spinner').length > 0) {
+    //             $('#spinner').removeClass('show');
+    //         }
+    //     }, 3000);
+    // };
+    // spinner(1000);
+
     var spinner = function () {
         setTimeout(function () {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
-        }, 1);
+        }, 10);
     };
-    spinner(0);
+    spinner(1000);
 
 
     // Sticky Navbar
