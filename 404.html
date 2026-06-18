@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>Redirecting to www.teamsuman.org...</title>
-  <meta http-equiv="refresh" content="0; url=https://www.teamsuman.org/">
   <link rel="canonical" href="https://www.teamsuman.org/">
-  <script>window.location.replace("https://www.teamsuman.org/");</script>
+  <script>
+    // Preserve the path/query when redirecting sub-URLs
+    var path = window.location.pathname + window.location.search + window.location.hash;
+    window.location.replace("https://www.teamsuman.org" + path);
+  </script>
 </head>
 <body>
   <p>This site has permanently moved to <a href="https://www.teamsuman.org/">www.teamsuman.org</a>. If you are not redirected automatically, please click the link.</p>
